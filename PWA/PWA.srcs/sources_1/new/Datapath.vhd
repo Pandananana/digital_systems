@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Top is
+entity Datapath is
     Port ( Reset : in STD_LOGIC;
            CLK : in STD_LOGIC;
            RW : in STD_LOGIC;
@@ -44,9 +44,9 @@ entity Top is
            Address_Out : out STD_LOGIC_VECTOR (7 downto 0);
            Data_Out : out STD_LOGIC_VECTOR (7 downto 0);
            V,C,N,Z : out STD_LOGIC);
-end Top;
+end Datapath;
 
-architecture Behavioral of Top is
+architecture Behavioral of Datapath is
 
 begin
     -- Test
