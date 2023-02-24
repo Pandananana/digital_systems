@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/16/2023 10:50:30 AM
+-- Create Date: 02/24/2023 02:49:50 PM
 -- Design Name: 
--- Module Name: MUX_2x1 - Behavioral
+-- Module Name: TB_MUX2x1x8 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,16 +31,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity MUX2x1 is
-    Port ( IN1 : in STD_LOGIC;
-           IN2 : in STD_LOGIC;
-           SEL : in STD_LOGIC;
-           O : out STD_LOGIC);
-end MUX2x1;
+entity TB_MUX2x1x8 is
+--  Port ( );
+end TB_MUX2x1x8;
 
-architecture Behavioral of MUX2x1 is
+architecture Behavioral of TB_MUX2x1x8 is
+component MUX2x1x8 IS
+    PORT (
+        R, S : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+        MUX_Select : IN STD_LOGIC;
+        Y : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END component;
 
+
+    signal R, S : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    signal MUX_Select : STD_LOGIC;
+    signal Y : STD_LOGIC_VECTOR (7 DOWNTO 0);
 begin
-    O <= (IN2 AND SEL) OR (IN1 AND (NOT SEL));
+    UUT: MUX2x1x8 port map (R,S,MUX_Select,Y);
+    
+    R <= "00001111";
+    S <= "11110000";
+    MUX_Select <= '1';
 
 end Behavioral;

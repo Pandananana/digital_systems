@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/15/2023 11:02:41 AM
+-- Create Date: 02/16/2023 11:00:19 AM
 -- Design Name: 
--- Module Name: MUX2x1x8 - Behavioral
+-- Module Name: MUX16x1 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -29,25 +29,31 @@ USE IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-ENTITY MUX2x1x8 IS
+ENTITY MUX16x1 IS
     PORT (
-        R, S : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-        MUX_Select : IN STD_LOGIC;
-        Y : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
-END MUX2x1x8;
+        IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8 : IN STD_LOGIC;
+        IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16 : IN STD_LOGIC;
+        SEL1, SEL2, SEL3, SEL4 : IN STD_LOGIC;
+        O : OUT STD_LOGIC);
+END MUX16x1;
 
-ARCHITECTURE Behavioral OF MUX2x1x8 IS
-    COMPONENT MUX2x1 IS
+ARCHITECTURE Behavioral OF MUX16x1 IS
+    COMPONENT MUX4x1
         PORT (
             IN1 : IN STD_LOGIC;
             IN2 : IN STD_LOGIC;
-            SEL : IN STD_LOGIC;
+            IN3 : IN STD_LOGIC;
+            IN4 : IN STD_LOGIC;
+            SEL1 : IN STD_LOGIC;
+            SEL2 : IN STD_LOGIC;
             O : OUT STD_LOGIC);
     END COMPONENT;
-
+    SIGNAL O1, O2, O3, O4 : STD_LOGIC;
 BEGIN
-    MUX2x1x8_gen : FOR i IN 0 TO 7 GENERATE
-        MUX2x1_gen : COMPONENT MUX2x1
-            PORT MAP(R(i), S(i), MUX_Select, Y(i));
-        END GENERATE;
+    U1 : MUX4x1 PORT MAP(IN1, IN2, IN3, IN4, SEL1, SEL2, O1);
+    U2 : MUX4x1 PORT MAP(IN5, IN6, IN7, IN8, SEL1, SEL2, O2);
+    U3 : MUX4x1 PORT MAP(IN9, IN10, IN11, IN12, SEL1, SEL2, O3);
+    U4 : MUX4x1 PORT MAP(IN13, IN14, IN15, IN16, SEL1, SEL2, O4);
+
+    U5 : MUX4x1 PORT MAP(O1, O2, O3, O4, SEL3, SEL4, O);
 END Behavioral;

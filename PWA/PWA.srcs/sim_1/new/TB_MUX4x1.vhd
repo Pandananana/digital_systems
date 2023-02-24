@@ -17,10 +17,8 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,7 +29,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity TB_MUX4x1 is
+ENTITY TB_MUX4x1 IS
     -- Port ( IN1 : in STD_LOGIC;
     --        IN2 : in STD_LOGIC;
     --        IN3 : in STD_LOGIC;
@@ -39,11 +37,16 @@ entity TB_MUX4x1 is
     --        SEL1 : in STD_LOGIC;
     --        SEL2 : in STD_LOGIC;
     --        O : in STD_LOGIC);
-end TB_MUX4x1;
+END TB_MUX4x1;
 
-architecture Behavioral of TB_MUX4x1 is
+ARCHITECTURE Behavioral OF TB_MUX4x1 IS
+    COMPONENT MUX4x1
+        PORT (
+            IN1, IN2, IN3, IN4, SEL1, SEL2 : IN STD_LOGIC;
+            O : OUT STD_LOGIC);
+    END COMPONENT;
 
-begin
+    signal I : std_logic_vector (3 downto 0);
 
-
-end Behavioral;
+BEGIN
+END Behavioral;

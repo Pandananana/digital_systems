@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Feb 16 11:14:19 2023
-# Process ID: 34180
+# Start of session at: Fri Feb 24 15:08:57 2023
+# Process ID: 5885
 # Current directory: /zhome/66/2/168935/uni/digital_systems/PWA/PWA.runs/synth_1
-# Command line: vivado -log MUX4x1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MUX4x1.tcl
-# Log file: /zhome/66/2/168935/uni/digital_systems/PWA/PWA.runs/synth_1/MUX4x1.vds
+# Command line: vivado -log MUX2x1x8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MUX2x1x8.tcl
+# Log file: /zhome/66/2/168935/uni/digital_systems/PWA/PWA.runs/synth_1/MUX2x1x8.vds
 # Journal file: /zhome/66/2/168935/uni/digital_systems/PWA/PWA.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source MUX4x1.tcl -notrace
+source MUX2x1x8.tcl -notrace
