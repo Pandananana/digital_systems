@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Feb 23 09:07:51 2023
+# Process ID: 17076
+# Current directory: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13060 C:\Users\Oliver\Desktop\Digitale systemer\digital_systems\PWA\PWA.xpr
+# Log file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWA/vivado.log
+# Journal file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWA/PWA.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1

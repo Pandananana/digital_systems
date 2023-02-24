@@ -39,8 +39,42 @@ entity ALU is
 end ALU;
 
 architecture Behavioral of ALU is
-
 begin
-    -- Github test 2
+
+    process(A,B,J_select) is
+    begin
+        case J_select is
+            when "0000" =>
+                J <= A;
+            when "0001" =>
+                J <= std_logic_vector(unsigned(A) + 1);
+            when "0010" =>
+                J <= A OR B;
+            when "0011" =>
+                J <= A OR B OR "1";
+            when "0100" =>
+                J <= A OR (not B);
+            when "0101" =>
+                J <= A OR (not B) OR "1";
+            when "0110" =>
+                J <= A OR (not B) OR "1";
+            when "0111" =>
+                J <= A;            
+            when "1000" =>
+                J <= A OR B;
+            when "1001" =>
+                J <= A AND B;
+            when "1010" =>
+                J <= A;
+            when "1011" =>
+                J <= A;
+            when "1100" =>
+                J <= A;
+            when "1101" =>
+                J <= A;
+            when "1110" =>
+                J <= A;
+            when "1111" =>
+                J <= A;              
 
 end Behavioral;
