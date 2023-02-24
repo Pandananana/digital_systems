@@ -408,3 +408,40 @@ selectCodeEditor("ALU.vhd", 563, 169); // ce (w, ck)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 71 MB. Current time: 2/23/23 11:42:56 AM CET
+// [GUI Memory]: 135 MB (+396kb) [02:50:26]
+// [GUI Memory]: 142 MB (+30kb) [02:54:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 71 MB. Current time: 2/23/23 12:12:57 PM CET
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1288 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 70 MB. Current time: 2/23/23 12:42:58 PM CET
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 908 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 908 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 70 MB. Current time: 2/23/23 3:42:15 PM CET
+// Elapsed time: 16138 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MUX4x1(Behavioral) (MUX4x1.vhd)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MUX4x1(Behavioral) (MUX4x1.vhd)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // J
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MUX2x1x8.vhd", 1); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MUX4x1(Behavioral) (MUX4x1.vhd)]", 2); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 72 MB. Current time: 2/23/23 5:35:46 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 71 MB. Current time: 2/23/23 6:05:46 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 65 MB. Current time: 2/23/23 6:35:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 65 MB. Current time: 2/23/23 7:05:50 PM CET
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 210ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 66 MB. Current time: 2/23/23 8:10:49 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 70 MB. Current time: 2/23/23 8:40:49 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 71 MB. Current time: 2/23/23 9:10:51 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 71 MB. Current time: 2/23/23 10:16:17 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 65 MB. Current time: 2/23/23 10:46:19 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 65 MB. Current time: 2/23/23 11:16:20 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 65 MB. Current time: 2/23/23 11:46:21 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 66 MB. Current time: 2/24/23 12:16:23 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 66 MB. Current time: 2/24/23 12:46:25 AM CET
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 33692340ms to process. Increasing delay to 6000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,154 MB. GUI used memory: 66 MB. Current time: 2/24/23 10:14:02 AM CET
