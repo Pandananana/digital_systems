@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1677247735">
-  <File Type="VDS-TIMING-PB" Name="MUX2x1x8_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="MUX2x1x8_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="MUX2x1x8.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="MUX2x1x8_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="MUX2x1x8_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="MUX2x1x8_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="MUX2x1x8.vds"/>
-  <File Type="REPORTS-TCL" Name="MUX2x1x8_reports.tcl"/>
   <File Type="PA-TCL" Name="MUX2x1x8.tcl"/>
+  <File Type="REPORTS-TCL" Name="MUX2x1x8_reports.tcl"/>
+  <File Type="RDS-RDS" Name="MUX2x1x8.vds"/>
+  <File Type="RDS-DCP" Name="MUX2x1x8.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/MUX2x1.vhd">

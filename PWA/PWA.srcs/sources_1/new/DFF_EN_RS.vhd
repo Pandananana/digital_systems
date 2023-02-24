@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/15/2023 11:02:41 AM
+-- Create Date: 02/24/2023 04:20:01 PM
 -- Design Name: 
--- Module Name: MUX2x1x8 - Behavioral
+-- Module Name: DFF_EN_RS - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -29,25 +29,26 @@ USE IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-ENTITY MUX2x1x8 IS
+ENTITY DFF_EN_RS IS
     PORT (
-        R, S : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-        MUX_Select : IN STD_LOGIC;
-        Y : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
-END MUX2x1x8;
+        D : IN STD_LOGIC;
+        Reset : IN STD_LOGIC;
+        Load : IN STD_LOGIC;
+        Clk : IN STD_LOGIC;
+        Q : OUT STD_LOGIC);
+END DFF_EN_RS;
 
-ARCHITECTURE Behavioral OF MUX2x1x8 IS
-    COMPONENT MUX2x1 IS
-        PORT (
-            IN1 : IN STD_LOGIC;
-            IN2 : IN STD_LOGIC;
-            SEL : IN STD_LOGIC;
-            O : OUT STD_LOGIC);
-    END COMPONENT;
+ARCHITECTURE Behavioral OF DFF_EN_RS IS
 
 BEGIN
-    MUX2x1x8_gen : FOR i IN 0 TO 7 GENERATE
-        MUX2x1_gen : MUX2x1
-            PORT MAP(R(i), S(i), MUX_Select, Y(i));
-        END GENERATE;
+    PROCESS (Clk, Reset, Load) IS
+    BEGIN
+        IF reset = '1' THEN
+            Q <= '0';
+        ELSIF rising_edge(clk) THEN
+            IF Load = '1' THEN
+                Q <= D;
+            END IF;
+        END IF;
+    END PROCESS;
 END Behavioral;

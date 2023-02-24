@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_RegisterR16_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_RegisterR16" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1043209843fs"></ZoomEndTime>
+      <Cursor1Time time="10000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject type="logic" fp_name="/TB_RegisterR16/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_RegisterR16/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/LOAD">
+      <obj_property name="ElementShortName">LOAD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LOAD[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/D_Data">
+      <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R0">
+      <obj_property name="ElementShortName">R0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R1">
+      <obj_property name="ElementShortName">R1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R2">
+      <obj_property name="ElementShortName">R2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R3">
+      <obj_property name="ElementShortName">R3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R4">
+      <obj_property name="ElementShortName">R4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R5">
+      <obj_property name="ElementShortName">R5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R6">
+      <obj_property name="ElementShortName">R6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R7">
+      <obj_property name="ElementShortName">R7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R8">
+      <obj_property name="ElementShortName">R8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R9">
+      <obj_property name="ElementShortName">R9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R10">
+      <obj_property name="ElementShortName">R10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R11">
+      <obj_property name="ElementShortName">R11[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R12">
+      <obj_property name="ElementShortName">R12[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R13">
+      <obj_property name="ElementShortName">R13[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R14">
+      <obj_property name="ElementShortName">R14[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterR16/R15">
+      <obj_property name="ElementShortName">R15[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R15[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/TB_RegisterR16/Clk50_period">
+      <obj_property name="ElementShortName">Clk50_period</obj_property>
+      <obj_property name="ObjectShortName">Clk50_period</obj_property>
+   </wvobject>
+</wave_config>
