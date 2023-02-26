@@ -50,7 +50,6 @@ ARCHITECTURE Behavioral OF TB_RegisterR16 IS
     SIGNAL D_Data : STD_LOGIC_VECTOR (7 DOWNTO 0);
     SIGNAL R0, R1, R2, R3, R4, R5, R6, R7 : STD_LOGIC_VECTOR (7 DOWNTO 0);
     SIGNAL R8, R9, R10, R11, R12, R13, R14, R15 : STD_LOGIC_VECTOR (7 DOWNTO 0);
-    SIGNAL counter : integer;
 
     CONSTANT Clk50_period : TIME := 10 ns;
 BEGIN
@@ -68,19 +67,18 @@ BEGIN
         CLK <= '1';
         WAIT FOR Clk50_period/2;
     END PROCESS;
-    
+
     stim_proc : PROCESS
     BEGIN
         Reset <= '0';
-        Load <= "0000000000000000";
+        Load <= "0000000000000001";
         D_Data <= "11110000";
-        counter <= 0;
-        
-        for i in 0 to 255 loop
-            wait for Clk50_period;
-            counter <= counter + 1;
-        end loop;
-        
-        wait;
+
+        FOR i IN 0 TO 255 LOOP
+            WAIT FOR Clk50_period;
+            Load <= Load(14 downto 0) & '0';
+        END LOOP;
+
+        WAIT;
     END PROCESS;
 END Behavioral;

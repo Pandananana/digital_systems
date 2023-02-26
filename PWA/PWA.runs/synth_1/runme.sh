@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log MUX2x1x8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MUX2x1x8.tcl
+EAStep vivado -log RegisterR16.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RegisterR16.tcl

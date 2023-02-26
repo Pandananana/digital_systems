@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log MUX2x1x8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MUX2x1x8.tcl
+    with args -log RegisterR16.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RegisterR16.tcl
 
 
 ****** Vivado v2018.2 (64-bit)
@@ -8,30 +8,123 @@
   **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source MUX2x1x8.tcl -notrace
-Command: synth_design -top MUX2x1x8 -part xc7a100tcsg324-1
+source RegisterR16.tcl -notrace
+Command: synth_design -top RegisterR16 -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5907 
+INFO: Helper process launched with PID 31432 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1399.590 ; gain = 86.836 ; free physical = 31145 ; free virtual = 91549
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1399.586 ; gain = 86.836 ; free physical = 20953 ; free virtual = 124925
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MUX2x1x8' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:39]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-638] synthesizing module 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'MUX2x1' (1#1) [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:41]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-3491] module 'MUX2x1' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd:34' bound to instance 'MUX2x1_gen' of component 'MUX2x1' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'MUX2x1x8' (2#1) [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'RegisterR16' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:42]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'DFF_EN_RS' (1#1) [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:41]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR0_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:54]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR1_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:59]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR2_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:64]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR3_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:69]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR4_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:74]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR5_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:79]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR6_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:84]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR7_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:89]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR8_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:94]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR9_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:99]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR10_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:104]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR11_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:109]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR12_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:114]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR12_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:114]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR12_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:114]
+INFO: [Synth 8-3491] module 'DFF_EN_RS' declared at '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd:32' bound to instance 'UR12_gen' of component 'DFF_EN_RS' [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:114]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'RegisterR16' (2#1) [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd:42]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1444.230 ; gain = 131.477 ; free physical = 31148 ; free virtual = 91553
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1444.227 ; gain = 131.477 ; free physical = 20964 ; free virtual = 124938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -44,10 +137,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1444.230 ; gain = 131.477 ; free physical = 31144 ; free virtual = 91548
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1444.227 ; gain = 131.477 ; free physical = 20963 ; free virtual = 124936
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1444.230 ; gain = 131.477 ; free physical = 31144 ; free virtual = 91548
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1444.227 ; gain = 131.477 ; free physical = 20963 ; free virtual = 124936
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -56,12 +149,6 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc]
 CRITICAL WARNING: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:9]
-WARNING: [Vivado 12-584] No ports matched 'CLK'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:14]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK]'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:14]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:17]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -158,9 +245,6 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'Anode[7]'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:81]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:81]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RESET'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:86]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'BTNC'. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:88]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:88]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -177,32 +261,32 @@ WARNING: [Vivado 12-584] No ports matched 'BTND'. [/zhome/66/2/168935/uni/digita
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc:92]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MUX2x1x8_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/MUX2x1x8_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/zhome/66/2/168935/uni/digital_systems/PWA/PWA.srcs/constrs_1/imports/PWA/Nexys_4_DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RegisterR16_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/RegisterR16_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1811.148 ; gain = 0.000 ; free physical = 30973 ; free virtual = 91377
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1834.668 ; gain = 0.000 ; free physical = 20631 ; free virtual = 124632
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:48 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30889 ; free virtual = 91293
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:53 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20728 ; free virtual = 124729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:48 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30889 ; free virtual = 91293
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:53 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20728 ; free virtual = 124729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:48 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30890 ; free virtual = 91295
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:53 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20730 ; free virtual = 124731
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:48 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30877 ; free virtual = 91281
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:53 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20729 ; free virtual = 124730
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -214,6 +298,8 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 128   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -221,6 +307,10 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module DFF_EN_RS 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -238,7 +328,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:48 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30864 ; free virtual = 91270
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:54 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20719 ; free virtual = 124721
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,13 +340,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30435 ; free virtual = 90841
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:01:08 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20590 ; free virtual = 124599
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30434 ; free virtual = 90840
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:01:08 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20590 ; free virtual = 124599
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -268,7 +358,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30434 ; free virtual = 90840
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:01:08 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20590 ; free virtual = 124599
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,7 +382,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -305,7 +395,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -317,25 +407,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -351,33 +441,154 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |LUT3 |     8|
-|2     |IBUF |    17|
-|3     |OBUF |     8|
+|1     |BUFG |     1|
+|2     |FDCE |   128|
+|3     |IBUF |    26|
+|4     |OBUF |   128|
 +------+-----+------+
 
 Report Instance Areas: 
-+------+-------------------------------+---------+------+
-|      |Instance                       |Module   |Cells |
-+------+-------------------------------+---------+------+
-|1     |top                            |         |    33|
-|2     |  \MUX2x1x8_gen[0].MUX2x1_gen  |MUX2x1   |     1|
-|3     |  \MUX2x1x8_gen[1].MUX2x1_gen  |MUX2x1_0 |     1|
-|4     |  \MUX2x1x8_gen[2].MUX2x1_gen  |MUX2x1_1 |     1|
-|5     |  \MUX2x1x8_gen[3].MUX2x1_gen  |MUX2x1_2 |     1|
-|6     |  \MUX2x1x8_gen[4].MUX2x1_gen  |MUX2x1_3 |     1|
-|7     |  \MUX2x1x8_gen[5].MUX2x1_gen  |MUX2x1_4 |     1|
-|8     |  \MUX2x1x8_gen[6].MUX2x1_gen  |MUX2x1_5 |     1|
-|9     |  \MUX2x1x8_gen[7].MUX2x1_gen  |MUX2x1_6 |     1|
-+------+-------------------------------+---------+------+
++------+------------------------+--------------+------+
+|      |Instance                |Module        |Cells |
++------+------------------------+--------------+------+
+|1     |top                     |              |   283|
+|2     |  \R0_gen[0].UR0_gen    |DFF_EN_RS     |     1|
+|3     |  \R0_gen[1].UR0_gen    |DFF_EN_RS_0   |     1|
+|4     |  \R0_gen[2].UR0_gen    |DFF_EN_RS_1   |     1|
+|5     |  \R0_gen[3].UR0_gen    |DFF_EN_RS_2   |     1|
+|6     |  \R0_gen[4].UR0_gen    |DFF_EN_RS_3   |     1|
+|7     |  \R0_gen[5].UR0_gen    |DFF_EN_RS_4   |     1|
+|8     |  \R0_gen[6].UR0_gen    |DFF_EN_RS_5   |     1|
+|9     |  \R0_gen[7].UR0_gen    |DFF_EN_RS_6   |     1|
+|10    |  \R10_gen[0].UR10_gen  |DFF_EN_RS_7   |     1|
+|11    |  \R10_gen[1].UR10_gen  |DFF_EN_RS_8   |     1|
+|12    |  \R10_gen[2].UR10_gen  |DFF_EN_RS_9   |     1|
+|13    |  \R10_gen[3].UR10_gen  |DFF_EN_RS_10  |     1|
+|14    |  \R10_gen[4].UR10_gen  |DFF_EN_RS_11  |     1|
+|15    |  \R10_gen[5].UR10_gen  |DFF_EN_RS_12  |     1|
+|16    |  \R10_gen[6].UR10_gen  |DFF_EN_RS_13  |     1|
+|17    |  \R10_gen[7].UR10_gen  |DFF_EN_RS_14  |     1|
+|18    |  \R11_gen[0].UR11_gen  |DFF_EN_RS_15  |     1|
+|19    |  \R11_gen[1].UR11_gen  |DFF_EN_RS_16  |     1|
+|20    |  \R11_gen[2].UR11_gen  |DFF_EN_RS_17  |     1|
+|21    |  \R11_gen[3].UR11_gen  |DFF_EN_RS_18  |     1|
+|22    |  \R11_gen[4].UR11_gen  |DFF_EN_RS_19  |     1|
+|23    |  \R11_gen[5].UR11_gen  |DFF_EN_RS_20  |     1|
+|24    |  \R11_gen[6].UR11_gen  |DFF_EN_RS_21  |     1|
+|25    |  \R11_gen[7].UR11_gen  |DFF_EN_RS_22  |     1|
+|26    |  \R12_gen[0].UR12_gen  |DFF_EN_RS_23  |     1|
+|27    |  \R12_gen[1].UR12_gen  |DFF_EN_RS_24  |     1|
+|28    |  \R12_gen[2].UR12_gen  |DFF_EN_RS_25  |     1|
+|29    |  \R12_gen[3].UR12_gen  |DFF_EN_RS_26  |     1|
+|30    |  \R12_gen[4].UR12_gen  |DFF_EN_RS_27  |     1|
+|31    |  \R12_gen[5].UR12_gen  |DFF_EN_RS_28  |     1|
+|32    |  \R12_gen[6].UR12_gen  |DFF_EN_RS_29  |     1|
+|33    |  \R12_gen[7].UR12_gen  |DFF_EN_RS_30  |     1|
+|34    |  \R13_gen[0].UR13_gen  |DFF_EN_RS_31  |     1|
+|35    |  \R13_gen[1].UR13_gen  |DFF_EN_RS_32  |     1|
+|36    |  \R13_gen[2].UR13_gen  |DFF_EN_RS_33  |     1|
+|37    |  \R13_gen[3].UR13_gen  |DFF_EN_RS_34  |     1|
+|38    |  \R13_gen[4].UR13_gen  |DFF_EN_RS_35  |     1|
+|39    |  \R13_gen[5].UR13_gen  |DFF_EN_RS_36  |     1|
+|40    |  \R13_gen[6].UR13_gen  |DFF_EN_RS_37  |     1|
+|41    |  \R13_gen[7].UR13_gen  |DFF_EN_RS_38  |     1|
+|42    |  \R14_gen[0].UR14_gen  |DFF_EN_RS_39  |     1|
+|43    |  \R14_gen[1].UR14_gen  |DFF_EN_RS_40  |     1|
+|44    |  \R14_gen[2].UR14_gen  |DFF_EN_RS_41  |     1|
+|45    |  \R14_gen[3].UR14_gen  |DFF_EN_RS_42  |     1|
+|46    |  \R14_gen[4].UR14_gen  |DFF_EN_RS_43  |     1|
+|47    |  \R14_gen[5].UR14_gen  |DFF_EN_RS_44  |     1|
+|48    |  \R14_gen[6].UR14_gen  |DFF_EN_RS_45  |     1|
+|49    |  \R14_gen[7].UR14_gen  |DFF_EN_RS_46  |     1|
+|50    |  \R15_gen[0].UR15_gen  |DFF_EN_RS_47  |     1|
+|51    |  \R15_gen[1].UR15_gen  |DFF_EN_RS_48  |     1|
+|52    |  \R15_gen[2].UR15_gen  |DFF_EN_RS_49  |     1|
+|53    |  \R15_gen[3].UR15_gen  |DFF_EN_RS_50  |     1|
+|54    |  \R15_gen[4].UR15_gen  |DFF_EN_RS_51  |     1|
+|55    |  \R15_gen[5].UR15_gen  |DFF_EN_RS_52  |     1|
+|56    |  \R15_gen[6].UR15_gen  |DFF_EN_RS_53  |     1|
+|57    |  \R15_gen[7].UR15_gen  |DFF_EN_RS_54  |     1|
+|58    |  \R1_gen[0].UR1_gen    |DFF_EN_RS_55  |     1|
+|59    |  \R1_gen[1].UR1_gen    |DFF_EN_RS_56  |     1|
+|60    |  \R1_gen[2].UR1_gen    |DFF_EN_RS_57  |     1|
+|61    |  \R1_gen[3].UR1_gen    |DFF_EN_RS_58  |     1|
+|62    |  \R1_gen[4].UR1_gen    |DFF_EN_RS_59  |     1|
+|63    |  \R1_gen[5].UR1_gen    |DFF_EN_RS_60  |     1|
+|64    |  \R1_gen[6].UR1_gen    |DFF_EN_RS_61  |     1|
+|65    |  \R1_gen[7].UR1_gen    |DFF_EN_RS_62  |     1|
+|66    |  \R2_gen[0].UR2_gen    |DFF_EN_RS_63  |     1|
+|67    |  \R2_gen[1].UR2_gen    |DFF_EN_RS_64  |     1|
+|68    |  \R2_gen[2].UR2_gen    |DFF_EN_RS_65  |     1|
+|69    |  \R2_gen[3].UR2_gen    |DFF_EN_RS_66  |     1|
+|70    |  \R2_gen[4].UR2_gen    |DFF_EN_RS_67  |     1|
+|71    |  \R2_gen[5].UR2_gen    |DFF_EN_RS_68  |     1|
+|72    |  \R2_gen[6].UR2_gen    |DFF_EN_RS_69  |     1|
+|73    |  \R2_gen[7].UR2_gen    |DFF_EN_RS_70  |     1|
+|74    |  \R3_gen[0].UR3_gen    |DFF_EN_RS_71  |     1|
+|75    |  \R3_gen[1].UR3_gen    |DFF_EN_RS_72  |     1|
+|76    |  \R3_gen[2].UR3_gen    |DFF_EN_RS_73  |     1|
+|77    |  \R3_gen[3].UR3_gen    |DFF_EN_RS_74  |     1|
+|78    |  \R3_gen[4].UR3_gen    |DFF_EN_RS_75  |     1|
+|79    |  \R3_gen[5].UR3_gen    |DFF_EN_RS_76  |     1|
+|80    |  \R3_gen[6].UR3_gen    |DFF_EN_RS_77  |     1|
+|81    |  \R3_gen[7].UR3_gen    |DFF_EN_RS_78  |     1|
+|82    |  \R4_gen[0].UR4_gen    |DFF_EN_RS_79  |     1|
+|83    |  \R4_gen[1].UR4_gen    |DFF_EN_RS_80  |     1|
+|84    |  \R4_gen[2].UR4_gen    |DFF_EN_RS_81  |     1|
+|85    |  \R4_gen[3].UR4_gen    |DFF_EN_RS_82  |     1|
+|86    |  \R4_gen[4].UR4_gen    |DFF_EN_RS_83  |     1|
+|87    |  \R4_gen[5].UR4_gen    |DFF_EN_RS_84  |     1|
+|88    |  \R4_gen[6].UR4_gen    |DFF_EN_RS_85  |     1|
+|89    |  \R4_gen[7].UR4_gen    |DFF_EN_RS_86  |     1|
+|90    |  \R5_gen[0].UR5_gen    |DFF_EN_RS_87  |     1|
+|91    |  \R5_gen[1].UR5_gen    |DFF_EN_RS_88  |     1|
+|92    |  \R5_gen[2].UR5_gen    |DFF_EN_RS_89  |     1|
+|93    |  \R5_gen[3].UR5_gen    |DFF_EN_RS_90  |     1|
+|94    |  \R5_gen[4].UR5_gen    |DFF_EN_RS_91  |     1|
+|95    |  \R5_gen[5].UR5_gen    |DFF_EN_RS_92  |     1|
+|96    |  \R5_gen[6].UR5_gen    |DFF_EN_RS_93  |     1|
+|97    |  \R5_gen[7].UR5_gen    |DFF_EN_RS_94  |     1|
+|98    |  \R6_gen[0].UR6_gen    |DFF_EN_RS_95  |     1|
+|99    |  \R6_gen[1].UR6_gen    |DFF_EN_RS_96  |     1|
+|100   |  \R6_gen[2].UR6_gen    |DFF_EN_RS_97  |     1|
+|101   |  \R6_gen[3].UR6_gen    |DFF_EN_RS_98  |     1|
+|102   |  \R6_gen[4].UR6_gen    |DFF_EN_RS_99  |     1|
+|103   |  \R6_gen[5].UR6_gen    |DFF_EN_RS_100 |     1|
+|104   |  \R6_gen[6].UR6_gen    |DFF_EN_RS_101 |     1|
+|105   |  \R6_gen[7].UR6_gen    |DFF_EN_RS_102 |     1|
+|106   |  \R7_gen[0].UR7_gen    |DFF_EN_RS_103 |     1|
+|107   |  \R7_gen[1].UR7_gen    |DFF_EN_RS_104 |     1|
+|108   |  \R7_gen[2].UR7_gen    |DFF_EN_RS_105 |     1|
+|109   |  \R7_gen[3].UR7_gen    |DFF_EN_RS_106 |     1|
+|110   |  \R7_gen[4].UR7_gen    |DFF_EN_RS_107 |     1|
+|111   |  \R7_gen[5].UR7_gen    |DFF_EN_RS_108 |     1|
+|112   |  \R7_gen[6].UR7_gen    |DFF_EN_RS_109 |     1|
+|113   |  \R7_gen[7].UR7_gen    |DFF_EN_RS_110 |     1|
+|114   |  \R8_gen[0].UR8_gen    |DFF_EN_RS_111 |     1|
+|115   |  \R8_gen[1].UR8_gen    |DFF_EN_RS_112 |     1|
+|116   |  \R8_gen[2].UR8_gen    |DFF_EN_RS_113 |     1|
+|117   |  \R8_gen[3].UR8_gen    |DFF_EN_RS_114 |     1|
+|118   |  \R8_gen[4].UR8_gen    |DFF_EN_RS_115 |     1|
+|119   |  \R8_gen[5].UR8_gen    |DFF_EN_RS_116 |     1|
+|120   |  \R8_gen[6].UR8_gen    |DFF_EN_RS_117 |     1|
+|121   |  \R8_gen[7].UR8_gen    |DFF_EN_RS_118 |     1|
+|122   |  \R9_gen[0].UR9_gen    |DFF_EN_RS_119 |     1|
+|123   |  \R9_gen[1].UR9_gen    |DFF_EN_RS_120 |     1|
+|124   |  \R9_gen[2].UR9_gen    |DFF_EN_RS_121 |     1|
+|125   |  \R9_gen[3].UR9_gen    |DFF_EN_RS_122 |     1|
+|126   |  \R9_gen[4].UR9_gen    |DFF_EN_RS_123 |     1|
+|127   |  \R9_gen[5].UR9_gen    |DFF_EN_RS_124 |     1|
+|128   |  \R9_gen[6].UR9_gen    |DFF_EN_RS_125 |     1|
+|129   |  \R9_gen[7].UR9_gen    |DFF_EN_RS_126 |     1|
++------+------------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 30395 ; free virtual = 90801
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20583 ; free virtual = 124592
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1811.148 ; gain = 131.477 ; free physical = 31358 ; free virtual = 91764
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:01:03 . Memory (MB): peak = 1811.148 ; gain = 498.395 ; free physical = 31368 ; free virtual = 91774
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1834.668 ; gain = 131.477 ; free physical = 20637 ; free virtual = 124646
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:01:09 . Memory (MB): peak = 1834.668 ; gain = 521.918 ; free physical = 20647 ; free virtual = 124656
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -385,11 +596,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 40 Warnings, 41 Critical Warnings and 0 Errors encountered.
+117 Infos, 37 Warnings, 38 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:01:05 . Memory (MB): peak = 1811.148 ; gain = 511.012 ; free physical = 31292 ; free virtual = 91699
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:01:10 . Memory (MB): peak = 1834.668 ; gain = 534.535 ; free physical = 20632 ; free virtual = 124643
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.runs/synth_1/MUX2x1x8.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file MUX2x1x8_utilization_synth.rpt -pb MUX2x1x8_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.50 . Memory (MB): peak = 1811.148 ; gain = 0.000 ; free physical = 31042 ; free virtual = 91449
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 24 15:10:18 2023...
+INFO: [Common 17-1381] The checkpoint '/zhome/66/2/168935/uni/digital_systems/PWA/PWA.runs/synth_1/RegisterR16.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RegisterR16_utilization_synth.rpt -pb RegisterR16_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.48 . Memory (MB): peak = 1834.668 ; gain = 0.000 ; free physical = 20638 ; free virtual = 124650
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 26 17:30:56 2023...
