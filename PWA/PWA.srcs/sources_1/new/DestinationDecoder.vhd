@@ -17,10 +17,8 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,15 +29,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity DestinationDecoder is
-    Port ( WRITE : in STD_LOGIC;
-           DA : in STD_LOGIC_VECTOR (3 downto 0);
-           LOAD : out STD_LOGIC_VECTOR (15 downto 0));
-end DestinationDecoder;
+ENTITY DestinationDecoder IS
+    PORT (
+        WRITE : IN STD_LOGIC;
+        DA : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        LOAD : OUT STD_LOGIC_VECTOR (15 DOWNTO 0));
+END DestinationDecoder;
 
-architecture Behavioral of DestinationDecoder is
+ARCHITECTURE Behavioral OF DestinationDecoder IS
+    COMPONENT Decoder2x4 IS
+        PORT (
+            A : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+            E : IN STD_LOGIC;
+            Y : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
+    END COMPONENT;
+    SIGNAL Y_signal : STD_LOGIC_VECTOR (3 DOWNTO 0);
+BEGIN
 
-begin
+    U1 : Decoder2x4 PORT MAP(DA(3 downto 2), WRITE, Y_signal);
+    U2 : FOR i IN 0 TO 3 GENERATE
+        U2_gen : COMPONENT Decoder2x4
+            PORT MAP(DA(1 downto 0), Y_signal(i), LOAD((i * 4 + 3) DOWNTO (i * 4)));
+    END GENERATE;
 
-
-end Behavioral;
+END Behavioral;
