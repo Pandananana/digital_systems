@@ -47,7 +47,7 @@ begin
             when "0000" =>
                 J <= A;
             when "0001" =>
-                J <= std_logic_vector(unsigned(A) + 1);
+                J <= A;
             when "0010" =>
                 J <= A OR B;
             when "0011" =>
