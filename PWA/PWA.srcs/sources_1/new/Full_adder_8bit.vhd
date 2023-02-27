@@ -52,16 +52,16 @@ Gen_add: for i in 0 to 7 generate
 
 Low_bit: if i=0 generate
 
-        U0: Full_adder port map (y(i),x(i),ci,cc(0),sum(i));
+        U0: Full_adder port map (x(i),y(i),ci,sum(i),cc(0));
         
         end generate Low_bit;
 
 upper_bits: if (i>0 and i<7) generate
-        ux: Full_adder port map (x(i),y(i),cc(i-1),cc(i),sum(i));
+        ux: Full_adder port map (x(i),y(i),cc(i-1),sum(i),cc(i));
         end generate upper_bits; 
         
 msb: if i=7 generate
-    Umsb: Full_adder port map (x(i),y(i),cc(i-1),co,sum(i));
+    Umsb: Full_adder port map (x(i),y(i),cc(i-1),sum(i),co);
     end generate msb;
 
 end generate Gen_add;
