@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -45,7 +47,7 @@ begin
     begin
         case J_select is
             when "0000" =>
-                J <= A;
+                J <= A + B;
             when "0001" =>
                 J <= A;
             when "0010" =>
