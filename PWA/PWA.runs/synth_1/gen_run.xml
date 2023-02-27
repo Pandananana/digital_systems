@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1677428968">
-  <File Type="VDS-TIMING-PB" Name="RegisterR16_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RegisterR16_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="RegisterR16.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="RegisterR16_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="RegisterR16_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="RegisterR16_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="RegisterR16.vds"/>
-  <File Type="REPORTS-TCL" Name="RegisterR16_reports.tcl"/>
-  <File Type="PA-TCL" Name="RegisterR16.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1677494334">
+  <File Type="VDS-TIMING-PB" Name="NegZero_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="NegZero_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="NegZero.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="NegZero_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="NegZero_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="NegZero_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="NegZero.vds"/>
+  <File Type="REPORTS-TCL" Name="NegZero_reports.tcl"/>
+  <File Type="PA-TCL" Name="NegZero.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DFF_EN_RS.vhd">
@@ -103,10 +103,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Decoder2x4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RegisterR16"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="NegZero"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

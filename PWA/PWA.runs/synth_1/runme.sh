@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log RegisterR16.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RegisterR16.tcl
+EAStep vivado -log NegZero.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source NegZero.tcl

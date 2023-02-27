@@ -39,6 +39,7 @@ end NegZero;
 architecture Behavioral of NegZero is
 
 begin
-
+    Z <= NOT (MUXF(7) OR MUXF(6) OR MUXF(5) OR MUXF(4) OR MUXF(3) OR MUXF(2) OR MUXF(1) OR MUXF(0));
+    N <= MUXF(7);
 
 end Behavioral;

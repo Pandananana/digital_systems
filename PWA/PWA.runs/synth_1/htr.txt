@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log RegisterR16.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RegisterR16.tcl
+vivado -log NegZero.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source NegZero.tcl

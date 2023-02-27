@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/15/2023 11:02:41 AM
+-- Create Date: 02/27/2023 11:04:24 AM
 -- Design Name: 
--- Module Name: FunctionSelect - Behavioral
+-- Module Name: TB_NegZero - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -29,15 +29,33 @@ USE IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-ENTITY FunctionSelect IS
-    PORT (
-        FS3, FS2 : IN STD_LOGIC;
-        MF : OUT STD_LOGIC);
-END FunctionSelect;
+ENTITY TB_NegZero IS
+    --  Port ( );
+END TB_NegZero;
 
-ARCHITECTURE Behavioral OF FunctionSelect IS
+ARCHITECTURE Behavioral OF TB_NegZero IS
+    COMPONENT NegZero IS
+        PORT (
+            MUXF : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+            N, Z : OUT STD_LOGIC);
+    END COMPONENT;
+
+    SIGNAL MUXF : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    SIGNAL N, Z : STD_LOGIC;
 
 BEGIN
-    MF <= FS3 AND FS2;
+    UUT : NegZero PORT MAP(
+        MUXF, N, Z
+    );
+
+    stim_proc : PROCESS
+    BEGIN
+        MUXF <= "00000000";
+        WAIT FOR 20 ns;
+        MUXF <= "10000001";
+        wait for 20 ns;
+        MUXF <= "00000000";
+        WAIT;
+    END PROCESS;
 
 END Behavioral;
