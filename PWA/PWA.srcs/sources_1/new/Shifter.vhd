@@ -39,9 +39,9 @@ END Shifter;
 ARCHITECTURE Behavioral OF Shifter IS
 
 BEGIN
-    h <=    B                       WHEN H_Select = "00" ELSE
-            '0' & B(7 DOWNTO 1)     WHEN H_Select = "01" ELSE
-            B(6 DOWNTO 0) & '0'     WHEN H_Select = "10" ELSE
-            B;
+    h <= B                  WHEN H_Select = "00" ELSE
+        '0' & B(7 DOWNTO 1) WHEN H_Select = "01" ELSE
+        B(6 DOWNTO 0) & '0' WHEN H_Select = "10" ELSE
+        B;
 
 END Behavioral;
