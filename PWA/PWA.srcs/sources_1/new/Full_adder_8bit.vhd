@@ -1,22 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 27.02.2023 20:41:31
--- Design Name: 
--- Module Name: Full_adder_8bit - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
 
 
 library IEEE;
@@ -28,7 +9,9 @@ entity Full_adder_8bit is
            ci : in STD_LOGIC;
            x : in STD_LOGIC_VECTOR (7 downto 0);
            sum : out STD_LOGIC_VECTOR (7 downto 0);
-           co : out STD_LOGIC);
+           co : out STD_LOGIC;
+           V: out STD_LOGIC);
+           
 end Full_adder_8bit;
 
 architecture Behavioral of Full_adder_8bit is
@@ -45,6 +28,7 @@ architecture Behavioral of Full_adder_8bit is
                S,C : out STD_LOGIC);
     end component;    
     signal cc: std_logic_vector(7 downto 0);
+    signal co_sig: std_logic;
 
 begin
 
@@ -61,10 +45,14 @@ upper_bits: if (i>0 and i<7) generate
         end generate upper_bits; 
         
 msb: if i=7 generate
-    Umsb: Full_adder port map (x(i),y(i),cc(i-1),sum(i),co);
+    Umsb: Full_adder port map (x(i),y(i),cc(i-1),sum(i),co_sig);
     end generate msb;
 
 end generate Gen_add;
+
+V <= cc(6) xor co_sig;
+co <= co_sig;
+
 
 end Behavioral;
 

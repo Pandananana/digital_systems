@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: LARS
 -- 
 -- Create Date: 02/15/2023 11:02:41 AM
 -- Design Name: 
@@ -24,15 +24,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity ALU is
     Port ( A,B : in STD_LOGIC_VECTOR (7 downto 0);
            J_Select : in STD_LOGIC_VECTOR (3 downto 0);
@@ -41,42 +32,63 @@ entity ALU is
 end ALU;
 
 architecture Behavioral of ALU is
-begin
 
-    process(A,B,J_select) is
-    begin
-        case J_select is
-            when "0000" =>
-                J <= A + B;
-            when "0001" =>
-                J <= A;
-            when "0010" =>
-                J <= A OR B;
-            when "0011" =>
-                J <= A OR B OR "1";
-            when "0100" =>
-                J <= A OR (not B);
-            when "0101" =>
-                J <= A OR (not B) OR "1";
-            when "0110" =>
-                J <= A OR (not B) OR "1";
-            when "0111" =>
-                J <= A;            
-            when "1000" =>
-                J <= A OR B;
-            when "1001" =>
-                J <= A AND B;
-            when "1010" =>
-                J <= A;
-            when "1011" =>
-                J <= A;
-            when "1100" =>
-                J <= A;
-            when "1101" =>
-                J <= A;
-            when "1110" =>
-                J <= A;
-            when "1111" =>
-                J <= A;              
+component Full_adder_8bit is
+    Port ( y : in STD_LOGIC_VECTOR (7 downto 0);
+           ci : in STD_LOGIC;
+           x : in STD_LOGIC_VECTOR (7 downto 0);
+           sum : out STD_LOGIC_VECTOR (7 downto 0);
+           co : out STD_LOGIC;
+           V: out STD_LOGIC);
+end component;
+
+signal           y_sig: STD_LOGIC_VECTOR (7 downto 0);
+signal           ci_sig :  STD_LOGIC;
+signal           x_sig :  STD_LOGIC_VECTOR (7 downto 0);
+signal           sum_sig :  STD_LOGIC_VECTOR (7 downto 0);
+
+
+begin
+    Adder: Full_adder_8bit port map(y_sig,ci_sig,x_sig,sum_sig,C,V);
+    
+            J <= A when J_select = "0000" else
+                 sum_sig when J_select = "0001" else
+                 sum_sig when J_select = "0010" else
+                 sum_sig when J_select = "0011" else
+                 sum_sig when J_select = "0100" else
+                 sum_sig when J_select = "0101" else
+                 sum_sig when J_select = "0110" else
+                 A when J_select = "0111" else
+                 A or B when J_select = "1000" else
+                 A and B when J_select = "1001" else
+                 A xor B when J_select = "1010" else
+                 (not A) when J_select = "1011" else
+                 "00000000";
+                 
+            y_sig <= A;
+            
+            ci_sig <= '0' when J_select = "0000" else
+                 '1' when J_select = "0001" else
+                 '0' when J_select = "0010" else
+                 '1' when J_select = "0011" else
+                 '0' when J_select = "0100" else
+                 '1' when J_select = "0101" else
+                 '0';
+                 
+             x_sig <= "00000000" when J_select = "0000" else
+                  "00000000" when J_select = "0001" else
+                  B when J_select = "0010" else
+                  B when J_select = "0011" else
+                  (not B) when J_select = "0100" else
+                  (not B) when J_select = "0101" else
+                  "11111111" when J_select = "0110" else
+                  "00000000";    
+                
+                 
+                 
+                 
+            
+            
+                 
 
 end Behavioral;

@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Half_adder is
      Port ( x,y : in STD_LOGIC;
-           S,C : out STD_LOGIC);
+           s,c : out STD_LOGIC);
 end Half_adder;
 
 architecture Behavioral of Half_adder is
