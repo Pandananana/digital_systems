@@ -4,9 +4,13 @@
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <application name="pa" timeStamp="Thu Mar  2 10:18:55 2023">
 =======
 <application name="pa" timeStamp="Thu Mar  2 11:36:41 2023">
+>>>>>>> Stashed changes
+=======
+<application name="pa" timeStamp="Thu Mar  2 12:00:28 2023">
 >>>>>>> Stashed changes
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="4e44113e3f1d43c3a0f2cc48742cc15d" type="ProjectID"/>
@@ -28,7 +32,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditDelete" value="1" type="JavaHandler"/>
 <property name="EditProperties" value="2" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
-<property name="OpenProject" value="3" type="JavaHandler"/>
+<property name="OpenProject" value="4" type="JavaHandler"/>
 <property name="RunSynthesis" value="8" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
 <property name="SetSourceEnabled" value="9" type="JavaHandler"/>
@@ -76,9 +80,13 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS" value="322" type="GuiHandlerData"/>
 <property name="DefineModulesDialog_NEW_SOURCE_FILES" value="13" type="GuiHandlerData"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="390" type="GuiHandlerData"/>
 =======
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="374" type="GuiHandlerData"/>
+>>>>>>> Stashed changes
+=======
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="396" type="GuiHandlerData"/>
 >>>>>>> Stashed changes
 <property name="FileSetPanel_MESSAGES" value="5" type="GuiHandlerData"/>
 <property name="FileSetView_EXPAND_ALL" value="1" type="GuiHandlerData"/>
@@ -105,12 +113,18 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MainMenuMgr_CHECKPOINT" value="4" type="GuiHandlerData"/>
 <property name="MainMenuMgr_EDIT" value="16" type="GuiHandlerData"/>
 <property name="MainMenuMgr_EXPORT" value="2" type="GuiHandlerData"/>
+<<<<<<< Updated upstream
 <property name="MainMenuMgr_FILE" value="16" type="GuiHandlerData"/>
 <property name="MainMenuMgr_FLOW" value="15" type="GuiHandlerData"/>
 <property name="MainMenuMgr_HELP" value="2" type="GuiHandlerData"/>
+=======
+<property name="MainMenuMgr_FILE" value="20" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FLOW" value="17" type="GuiHandlerData"/>
+>>>>>>> Stashed changes
 <property name="MainMenuMgr_IP" value="3" type="GuiHandlerData"/>
-<property name="MainMenuMgr_PROJECT" value="6" type="GuiHandlerData"/>
-<property name="MainMenuMgr_REPORTS" value="8" type="GuiHandlerData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="MainMenuMgr_PROJECT" value="9" type="GuiHandlerData"/>
+<property name="MainMenuMgr_REPORTS" value="10" type="GuiHandlerData"/>
 <property name="MainMenuMgr_RUN" value="2" type="GuiHandlerData"/>
 <property name="MainMenuMgr_TEXT_EDITOR" value="3" type="GuiHandlerData"/>
 <property name="MainMenuMgr_TOOLS" value="14" type="GuiHandlerData"/>
@@ -133,7 +147,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_CLOSE_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_EDIT_CONSTRAINT_SETS" value="2" type="GuiHandlerData"/>
 <property name="PACommandNames_NEW_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_OPEN_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_OPEN_PROJECT" value="2" type="GuiHandlerData"/>
 <property name="PACommandNames_PROPERTIES_WINDOW" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_SET_AS_TOP" value="15" type="GuiHandlerData"/>
 <property name="PACommandNames_SET_USED_IN_PROP" value="1" type="GuiHandlerData"/>
@@ -150,7 +164,7 @@ This means code written to parse this file will need to be revisited each subseq
 >>>>>>> Stashed changes
 <property name="PACommandNames_SRC_ENABLE" value="3" type="GuiHandlerData"/>
 <property name="PACommandNames_SRC_REPLACE_FILE" value="3" type="GuiHandlerData"/>
-<property name="PAViews_CODE" value="43" type="GuiHandlerData"/>
+<property name="PAViews_CODE" value="44" type="GuiHandlerData"/>
 <property name="PAViews_DEVICE" value="5" type="GuiHandlerData"/>
 <property name="PAViews_IP_CATALOG" value="1" type="GuiHandlerData"/>
 <property name="PAViews_PROJECT_SUMMARY" value="1" type="GuiHandlerData"/>
@@ -188,7 +202,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SrcMenu_OPEN_SELECTED_SOURCE_FILES" value="2" type="GuiHandlerData"/>
 <property name="SrcMenu_REFRESH_HIERARCHY" value="3" type="GuiHandlerData"/>
 <property name="SrcMenu_SET_LIBRARY" value="2" type="GuiHandlerData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="9" type="GuiHandlerData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="10" type="GuiHandlerData"/>
 <property name="TaskBanner_CLOSE" value="12" type="GuiHandlerData"/>
 <property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="16" type="GuiHandlerData"/>
 <<<<<<< Updated upstream
@@ -196,8 +210,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformView_GOTO_TIME_0" value="1" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="5" type="GuiMode"/>
+<property name="GuiMode" value="8" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
+<<<<<<< Updated upstream
 <property name="TclMode" value="0" type="TclMode"/>
 =======
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="32" type="GuiHandlerData"/>
@@ -207,6 +222,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="GuiMode" value="14" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="8" type="TclMode"/>
+>>>>>>> Stashed changes
+=======
+<property name="TclMode" value="3" type="TclMode"/>
 >>>>>>> Stashed changes
 </item>
 </section>

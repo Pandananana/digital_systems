@@ -40,7 +40,7 @@ entity MicroprogramController is
            Constant_Out : out STD_LOGIC_VECTOR (7 downto 0);
            V,C,N,Z : in STD_LOGIC;
            DX,AX,BX,FS : out STD_LOGIC_VECTOR (3 downto 0);
-           MB.MD,RW,MM,MW : out STD_LOGIC);
+           MB,MD,RW,MM,MW : out STD_LOGIC);
 end MicroprogramController;
 
 architecture Behavioral of MicroprogramController is

@@ -39,6 +39,12 @@ end SignExtender;
 architecture Behavioral of SignExtender is
 
 begin
-
-
+    Extended_8(0) <= IR(0);
+    Extended_8(1) <= IR(1);
+    Extended_8(2) <= IR(2);
+    Extended_8(3) <= IR(6); 
+    Extended_8(4) <= IR(7);
+    Extended_8(5) <= IR(8);
+    Extended_8(6) <= IR(8);
+    Extended_8(7) <= IR(8); 
 end Behavioral;
