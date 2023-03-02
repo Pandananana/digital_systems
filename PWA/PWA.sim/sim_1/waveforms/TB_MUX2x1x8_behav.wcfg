@@ -3,34 +3,146 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="TB_Shifter_behav.wdb" id="1">
+      <db_ref path="TB_RegisterFile_behav.wdb" id="1">
          <top_modules>
-            <top_module name="TB_Shifter" />
+            <top_module name="TB_RegisterFile" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="100000001fs"></ZoomEndTime>
+      <ZoomStartTime time="16666667fs"></ZoomStartTime>
+      <ZoomEndTime time="116666667fs"></ZoomEndTime>
       <Cursor1Time time="100000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
-   <wvobject type="array" fp_name="/TB_Shifter/B">
-      <obj_property name="ElementShortName">B[7:0]</obj_property>
-      <obj_property name="ObjectShortName">B[7:0]</obj_property>
+   <WVObjectSize size="30" />
+   <wvobject type="logic" fp_name="/TB_RegisterFile/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_RegisterFile/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_RegisterFile/RW">
+      <obj_property name="ElementShortName">RW</obj_property>
+      <obj_property name="ObjectShortName">RW</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/DA">
+      <obj_property name="ElementShortName">DA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DA[3:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TB_Shifter/H_Select">
-      <obj_property name="ElementShortName">H_Select[1:0]</obj_property>
-      <obj_property name="ObjectShortName">H_Select[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Shifter/h">
-      <obj_property name="ElementShortName">h[7:0]</obj_property>
-      <obj_property name="ObjectShortName">h[7:0]</obj_property>
+   <wvobject type="array" fp_name="/TB_RegisterFile/AA">
+      <obj_property name="ElementShortName">AA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AA[3:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/BA">
+      <obj_property name="ElementShortName">BA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BA[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/D_Data">
+      <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/A_Data">
+      <obj_property name="ElementShortName">A_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A_Data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/B_Data">
+      <obj_property name="ElementShortName">B_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B_Data[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider36" type="divider">
+      <obj_property name="label">R16</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_RegisterFile/uut/U2/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_RegisterFile/uut/U2/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/LOAD">
+      <obj_property name="ElementShortName">LOAD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LOAD[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/D_Data">
+      <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R0">
+      <obj_property name="ElementShortName">R0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R1">
+      <obj_property name="ElementShortName">R1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R2">
+      <obj_property name="ElementShortName">R2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R3">
+      <obj_property name="ElementShortName">R3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R4">
+      <obj_property name="ElementShortName">R4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R5">
+      <obj_property name="ElementShortName">R5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R6">
+      <obj_property name="ElementShortName">R6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R7">
+      <obj_property name="ElementShortName">R7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R8">
+      <obj_property name="ElementShortName">R8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R9">
+      <obj_property name="ElementShortName">R9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R10">
+      <obj_property name="ElementShortName">R10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R11">
+      <obj_property name="ElementShortName">R11[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R12">
+      <obj_property name="ElementShortName">R12[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R13">
+      <obj_property name="ElementShortName">R13[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R14">
+      <obj_property name="ElementShortName">R14[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_RegisterFile/uut/U2/R15">
+      <obj_property name="ElementShortName">R15[7:0]</obj_property>
+      <obj_property name="ObjectShortName">R15[7:0]</obj_property>
    </wvobject>
 </wave_config>
