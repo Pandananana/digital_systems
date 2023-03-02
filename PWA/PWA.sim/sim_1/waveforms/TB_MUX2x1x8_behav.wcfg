@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="58210000fs"></ZoomStartTime>
-      <ZoomEndTime time="354616252fs"></ZoomEndTime>
-      <Cursor1Time time="192031000fs"></Cursor1Time>
+      <ZoomStartTime time="507290000fs"></ZoomStartTime>
+      <ZoomEndTime time="887490001fs"></ZoomEndTime>
+      <Cursor1Time time="520494000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="25" />
    <wvobject type="logic" fp_name="/TB_Datapath/Reset">
@@ -67,6 +67,7 @@
    <wvobject type="array" fp_name="/TB_Datapath/Data_Out">
       <obj_property name="ElementShortName">Data_Out[7:0]</obj_property>
       <obj_property name="ObjectShortName">Data_Out[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/TB_Datapath/V">
       <obj_property name="ElementShortName">V</obj_property>
