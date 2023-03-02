@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="55874405fs"></ZoomEndTime>
-      <Cursor1Time time="90155000fs"></Cursor1Time>
+      <ZoomStartTime time="58210000fs"></ZoomStartTime>
+      <ZoomEndTime time="354616252fs"></ZoomEndTime>
+      <Cursor1Time time="192031000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="25" />
    <wvobject type="logic" fp_name="/TB_Datapath/Reset">
       <obj_property name="ElementShortName">Reset</obj_property>
       <obj_property name="ObjectShortName">Reset</obj_property>
@@ -54,6 +54,7 @@
    <wvobject type="array" fp_name="/TB_Datapath/DataIn">
       <obj_property name="ElementShortName">DataIn[7:0]</obj_property>
       <obj_property name="ObjectShortName">DataIn[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/TB_Datapath/MD">
       <obj_property name="ElementShortName">MD</obj_property>
@@ -87,13 +88,9 @@
       <obj_property name="ElementShortName">Clk50_period</obj_property>
       <obj_property name="ObjectShortName">Clk50_period</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/TB_Datapath/UUT/RegFile/U2/RESET">
-      <obj_property name="ElementShortName">RESET</obj_property>
-      <obj_property name="ObjectShortName">RESET</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TB_Datapath/UUT/RegFile/U2/CLK">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
+   <wvobject type="array" fp_name="/TB_Datapath/FS_vector">
+      <obj_property name="ElementShortName">FS_vector[3:0]</obj_property>
+      <obj_property name="ObjectShortName">FS_vector[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/LOAD">
       <obj_property name="ElementShortName">LOAD[15:0]</obj_property>
@@ -102,73 +99,78 @@
    <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/D_Data">
       <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
       <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R0">
       <obj_property name="ElementShortName">R0[7:0]</obj_property>
       <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R1">
       <obj_property name="ElementShortName">R1[7:0]</obj_property>
       <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R2">
       <obj_property name="ElementShortName">R2[7:0]</obj_property>
       <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R3">
       <obj_property name="ElementShortName">R3[7:0]</obj_property>
       <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R4">
-      <obj_property name="ElementShortName">R4[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R4[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R5">
-      <obj_property name="ElementShortName">R5[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R5[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R6">
-      <obj_property name="ElementShortName">R6[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R6[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R7">
-      <obj_property name="ElementShortName">R7[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R7[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R8">
-      <obj_property name="ElementShortName">R8[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R8[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R9">
-      <obj_property name="ElementShortName">R9[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R9[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R10">
-      <obj_property name="ElementShortName">R10[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R10[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R11">
-      <obj_property name="ElementShortName">R11[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R11[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R12">
-      <obj_property name="ElementShortName">R12[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R12[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R13">
-      <obj_property name="ElementShortName">R13[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R13[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R14">
-      <obj_property name="ElementShortName">R14[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R14[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R15">
-      <obj_property name="ElementShortName">R15[7:0]</obj_property>
-      <obj_property name="ObjectShortName">R15[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TB_Datapath/FS_vector">
-      <obj_property name="ElementShortName">FS_vector[3:0]</obj_property>
-      <obj_property name="ObjectShortName">FS_vector[3:0]</obj_property>
+   <wvobject type="group" fp_name="group39">
+      <obj_property name="label">R4:15</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R4">
+         <obj_property name="ElementShortName">R4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R5">
+         <obj_property name="ElementShortName">R5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R6">
+         <obj_property name="ElementShortName">R6[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R7">
+         <obj_property name="ElementShortName">R7[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R8">
+         <obj_property name="ElementShortName">R8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R9">
+         <obj_property name="ElementShortName">R9[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R10">
+         <obj_property name="ElementShortName">R10[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R11">
+         <obj_property name="ElementShortName">R11[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R12">
+         <obj_property name="ElementShortName">R12[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R13">
+         <obj_property name="ElementShortName">R13[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R14">
+         <obj_property name="ElementShortName">R14[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TB_Datapath/UUT/RegFile/U2/R15">
+         <obj_property name="ElementShortName">R15[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R15[7:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

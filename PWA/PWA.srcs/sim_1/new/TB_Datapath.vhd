@@ -87,7 +87,7 @@ BEGIN
         RW <= '0';
         DA <= (others =>'0');
         AA <= (others =>'0');
-        BA <= (others =>'0');
+        BA <= "0001";
         ConstantIn <= (others =>'0');
         MB <= '0';
         DataIn <= (others =>'0');
@@ -128,13 +128,146 @@ BEGIN
         
         wait for 5*Clk50_period;
 
+
+        -- Testing all operations
         FS_vector <= "0000";
         DA <= "0011";
         wait for Clk50_period;
         RW <= '1';
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
         RW <= '0';
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
+
+        FS_vector <= "0001";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "0010";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "0010";
+        DA <= "0011";
+        BA <= "0010";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        BA <= "0001";
+
+        FS_vector <= "0011";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "0100";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "0101";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "0110";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "0111";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "1000";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "1001";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "1010";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "1011";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "1100";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "1101";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
+        FS_vector <= "1110";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+
+        FS_vector <= "1111";
+        DA <= "0011";
+        wait for Clk50_period;
+        RW <= '1';
+        wait for Clk50_period;
+        RW <= '0';
+        wait for Clk50_period;
+        
 
 
 
