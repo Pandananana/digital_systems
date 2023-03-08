@@ -39,6 +39,6 @@ end ZeroFiller;
 architecture Behavioral of ZeroFiller is
 
 begin
-
+    ZeroFilled_8 <= "00000" & IR(2 downto 0);
 
 end Behavioral;

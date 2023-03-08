@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/02/2023 10:26:10 AM
+-- Create Date: 03/08/2023 09:21:03 PM
 -- Design Name: 
--- Module Name: SignExtender - Behavioral
+-- Module Name: TB_Zerofiller - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,15 +31,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity SignExtender is
-    Port ( IR : in STD_LOGIC_VECTOR (15 downto 0);
-           Extended_8 : out STD_LOGIC_VECTOR (7 downto 0));
-end SignExtender;
+entity TB_Zerofiller is
+--  Port ( );
+end TB_Zerofiller;
 
-architecture Behavioral of SignExtender is
+architecture Behavioral of TB_Zerofiller is
+    component ZeroFiller is
+        Port ( IR : in STD_LOGIC_VECTOR (15 downto 0);
+               ZeroFilled_8 : out STD_LOGIC_VECTOR (7 downto 0));
+    end component;
+
+    signal IR :  STD_LOGIC_VECTOR (15 downto 0);
+    signal ZeroFilled_8 :  STD_LOGIC_VECTOR (7 downto 0);
+
 
 begin
-    Extended_8 <= "000" & IR(7 downto 6) & IR(2 downto 0) when IR(8) = '0' else
-        "111" & IR(7 downto 6) & IR(2 downto 0);
+    UUT: ZeroFiller port map (
+        IR,ZeroFilled_8
+    );
+
+    IR <= "1111100111111101";
+
 
 end Behavioral;
