@@ -55,9 +55,11 @@ begin
                 PC <= x"00";
             elsif rising_edge(CLK) then
                 if PS = "01" then
-                    PCSig <= PCSig+1;
-                elsif
-                        
+                    PCSig <= PCSig + 1;
+                elsif PS = "10" then
+                    PCSig <= PCSig + Offset;
+                elsif PS = "11" then
+                    PCSig <= Adress_In;           
                 else
                     NULL;
                 end if;

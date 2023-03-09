@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="/zhome/66/2/168935/uni/digital_systems/PWB/PWB.xpr">
+<Project Version="7" Minor="38" Path="/zhome/47/2/156834/uni/digital_systems/PWB/PWB.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="55271ff80f134bc98abff9654ec21120"/>
@@ -81,7 +81,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/ProgramCounter.vhd">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
