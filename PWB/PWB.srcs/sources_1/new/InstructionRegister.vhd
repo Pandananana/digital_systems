@@ -45,16 +45,12 @@ begin
     process_IR : process(RESET,CLK,IL)
     begin
         if RESET = '1' then
-            IR <= "0xFF";
+            IR <= x"FF";
         elsif rising_edge(CLK) then
             if IL = '1' then
                 IR <= Instruction_in;
-            else
-                NULL;
             end if;
         end if;
     end process;
-            
-    
 
 end Behavioral;
