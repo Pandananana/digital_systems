@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Lars
 -- 
 -- Create Date: 03/02/2023 10:26:10 AM
 -- Design Name: 
@@ -45,10 +45,12 @@ begin
     process_IR : process(RESET,CLK,IL)
     begin
         if RESET = '1' then
-            IR <= x"FF";
+            IR <= "0xFF";
         elsif rising_edge(CLK) then
             if IL = '1' then
                 IR <= Instruction_in;
+            else
+                NULL;
             end if;
         end if;
     end process;
