@@ -46,15 +46,16 @@ end MicroprogramController;
 architecture Behavioral of MicroprogramController is
 
 -- ProgramCounter signals
-signal PS :  STD_LOGIC_VECTOR(1 downto 0);
-signal Offset : STD_LOGIC_VECTOR(7 downto 0); -- Extended_8 i IR
-signal PC : STD_LOGIC_VECTOR(7 downto 0);
+signal PS_sig :  STD_LOGIC_VECTOR(1 downto 0);
+signal Offset_sig : STD_LOGIC_VECTOR(7 downto 0); -- Extended_8 i IR
+signal PC_sig : STD_LOGIC_VECTOR(7 downto 0);
 -- InstructionRegister signals
-signal IL : STD_LOGIC;
-signal IR : STD_LOGIC_VECTOR(15 downto 0);
+signal IL_sig : STD_LOGIC;
+signal IR_sig : STD_LOGIC_VECTOR(15 downto 0);
 -- Instruction Decoder/Controller
-signal state, nextstate : statetype;
-signal opcode : STD_LOGIC_VECTOR(6 DOWNTO 0);
+TYPE statetype IS (ex0, ex1, ex2, ex3, ex4, inf);
+signal state_sig, nextstate_sig : statetype;
+signal opcode_sig : STD_LOGIC_VECTOR(6 DOWNTO 0);
 signal dx_sig, bx_sig, ax_sig : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
     component ProgramCounter is
@@ -82,7 +83,7 @@ signal dx_sig, bx_sig, ax_sig : STD_LOGIC_VECTOR(2 DOWNTO 0);
     component ZeroFiller is
         Port ( IR : in STD_LOGIC_VECTOR (15 downto 0);
                ZeroFilled_8 : out STD_LOGIC_VECTOR (7 downto 0));
-    end componenet;
+    end component;
     
     component InstructionDecoderController IS
         PORT (
@@ -95,7 +96,27 @@ signal dx_sig, bx_sig, ax_sig : STD_LOGIC_VECTOR(2 DOWNTO 0);
             DX, AX, BX, FS : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
             MB, MD, RW, MM, MW : OUT STD_LOGIC);
     END component;    
+begin
 
-    
-
+    InstReg: InstructionRegister
+        port map (
+            RESET, CLK, Instruction_in, IL_sig, IR_sig
+        );
+    InstDecCont: InstructionDecoderController
+        port map (
+            RESET, CLK, IR_sig, V, C, N, Z, PS_sig, IL_sig, DX, AX, BX, FS, MB, MD, RW, MM, MW
+        );
+    ProgCount: ProgramCounter
+        port map (
+            RESET, CLK, Adress_In, PS_Sig, offset_sig, PC_sig
+        );
+    SigExt: SignExtender
+        port map (
+            IR_sig, Offset_sig
+        );
+    ZerFil: ZeroFiller
+        port map (
+            IR_sig, Constant_Out
+        );
+        
 end Behavioral;
