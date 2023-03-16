@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PWB.srcs/sources_1/new/Opg6_1.vhd" \
+"../../../../PWB.srcs/sim_1/new/TB_Opg6_1.vhd" \
+
+# Do not sort compile order
+nosort

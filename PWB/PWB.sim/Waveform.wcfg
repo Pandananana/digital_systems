@@ -3,30 +3,45 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="TB_SignExtender_behav.wdb" id="1">
+      <db_ref path="TB_Opg6_1_behav.wdb" id="1">
          <top_modules>
-            <top_module name="TB_SignExtender" />
+            <top_module name="TB_Opg6_1" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="999993391fs"></ZoomStartTime>
-      <ZoomEndTime time="1000001322fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="16550000fs"></ZoomStartTime>
+      <ZoomEndTime time="96250001fs"></ZoomEndTime>
+      <Cursor1Time time="43800000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="70"></ValueColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="2" />
-   <wvobject type="array" fp_name="/TB_SignExtender/IR">
-      <obj_property name="ElementShortName">IR[15:0]</obj_property>
-      <obj_property name="ObjectShortName">IR[15:0]</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject type="logic" fp_name="/TB_Opg6_1/Reset">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_Opg6_1/Clk">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_Opg6_1/ID">
+      <obj_property name="ElementShortName">ID</obj_property>
+      <obj_property name="ObjectShortName">ID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TB_Opg6_1/IL">
+      <obj_property name="ElementShortName">IL</obj_property>
+      <obj_property name="ObjectShortName">IL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TB_Opg6_1/PS">
+      <obj_property name="ElementShortName">PS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[1:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TB_SignExtender/Extended_8">
-      <obj_property name="ElementShortName">Extended_8[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Extended_8[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="other" fp_name="/TB_Opg6_1/Clk50_period">
+      <obj_property name="ElementShortName">Clk50_period</obj_property>
+      <obj_property name="ObjectShortName">Clk50_period</obj_property>
    </wvobject>
 </wave_config>
