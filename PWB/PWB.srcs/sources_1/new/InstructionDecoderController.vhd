@@ -360,6 +360,9 @@ BEGIN
                         RW <= '1';
                         MM <= '-';
                         MW <= '0';
+                    WHEN OTHERS =>
+                        nextstate <= inf;
+
                 END CASE;
 
             WHEN ex1 =>
@@ -413,6 +416,8 @@ BEGIN
                         RW <= '1';
                         MM <= '-';
                         MW <= '0';
+                    WHEN OTHERS =>
+                        nextstate <= inf;
                 END CASE;
 
             WHEN ex2 =>
@@ -443,6 +448,8 @@ BEGIN
                         MM <= '-';
                         MW <= '0';
                         nextstate <= ex3;
+                    WHEN OTHERS =>
+                        nextstate <= inf;
                 END CASE;
 
             WHEN ex3 =>
@@ -481,6 +488,8 @@ BEGIN
                         RW <= '1';
                         MM <= '-';
                         MW <= '0';
+                    WHEN OTHERS =>
+                        nextstate <= inf;
                 END CASE;
 
             WHEN ex4 =>
@@ -497,6 +506,8 @@ BEGIN
                         RW <= '1';
                         MM <= '-';
                         MW <= '0';
+                        nextstate <= inf;
+                    WHEN OTHERS =>
                         nextstate <= inf;
                 END CASE;
         END CASE;

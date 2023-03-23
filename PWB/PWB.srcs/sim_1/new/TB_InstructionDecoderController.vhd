@@ -80,10 +80,7 @@ BEGIN
         n <= '0';
         z <= '0';
         IR <= (OTHERS => '0');
-        wait for 2*Clk50_period;
         IR(8 downto 0) <= (OTHERS => '1');
-
-        IR(15 downto 9) <= "0000000";
         wait for 2*Clk50_period;
 
         IR(15 downto 9) <= "0000001";
@@ -126,12 +123,12 @@ BEGIN
         wait for 2*Clk50_period;
 
         IR(15 downto 9) <= "1100000";
-        Z <= '1';
         wait for 2*Clk50_period;
+        Z <= '1';
 
         IR(15 downto 9) <= "1100000";
-        Z <= '0';
         wait for 2*Clk50_period;
+        Z <= '0';
 
         IR(15 downto 9) <= "1100001";
         N <= '1';
@@ -152,33 +149,33 @@ BEGIN
 
         IR(15 downto 9) <= "0001101";
         Z <= '0';
-        wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '1';
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
 
         IR(15 downto 9) <= "0001101";
         Z <= '0';
-        wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '1';
-        wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
 
         IR(15 downto 9) <= "0001101";
         Z <= '0';
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
 
         IR(15 downto 9) <= "0001101";
         Z <= '1';
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
+
+        IR(15 downto 9) <= "0001101";
+        wait for Clk50_period;
+
+        IR(15 downto 9) <= "0001101";
+        Z <= '0';
+        wait for Clk50_period;
+
+        IR(15 downto 9) <= "0001101";
+        Z <= '1';
+        wait for Clk50_period;
         
         IR(15 downto 9) <= "0001101";
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
 
         IR(15 downto 9) <= "0001110";
         Z <= '0';
