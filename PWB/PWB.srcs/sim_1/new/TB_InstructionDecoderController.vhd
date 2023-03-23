@@ -20,6 +20,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.Numeric_Std.ALL;
+USE std.env.finish;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -83,6 +84,8 @@ BEGIN
         IR(8 downto 0) <= (OTHERS => '1');
         wait for 2*Clk50_period;
 
+        -------------------------------------------------
+
         IR(15 downto 9) <= "0000001";
         wait for 2*Clk50_period;
 
@@ -127,87 +130,77 @@ BEGIN
         Z <= '1';
 
         IR(15 downto 9) <= "1100000";
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
         Z <= '0';
 
         IR(15 downto 9) <= "1100001";
+        wait for Clk50_period;
         N <= '1';
-        wait for 2*Clk50_period;
+        wait for Clk50_period;
 
-        IR(15 downto 9) <= "1100001";
         N <= '0';
-        wait for 2*Clk50_period;
-
         IR(15 downto 9) <= "1110000";
         wait for 2*Clk50_period;
 
+        -------------------------------------------------
+
         IR(15 downto 9) <= "0010001";
         wait for 2*Clk50_period;
         
         IR(15 downto 9) <= "0010001";
+        wait for Clk50_period;
+
+        -------------------------------------------------
+    
+        IR(15 downto 9) <= "0001101";
+        wait for Clk50_period;
+        Z <= '1';
+        wait for Clk50_period;
+
+        Z <= '0';
         wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '0';
-        wait for Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '0';
-        wait for Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '0';
-        wait for Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '1';
-        wait for Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        wait for Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '0';
-        wait for Clk50_period;
-
-        IR(15 downto 9) <= "0001101";
-        Z <= '1';
-        wait for Clk50_period;
         
-        IR(15 downto 9) <= "0001101";
+        Z <= '1';
         wait for Clk50_period;
 
-        IR(15 downto 9) <= "0001110";
+        Z <= '0';
+        wait for Clk50_period;
+
+        Z <= '0';
+        wait for 2*Clk50_period;
+        
         Z <= '0';
         wait for 2*Clk50_period;
 
-        IR(15 downto 9) <= "0001110";
         Z <= '1';
-        wait for 2*Clk50_period;
+        wait for 3*Clk50_period;
+
+        -------------------------------------------------
 
         IR(15 downto 9) <= "0001110";
+        wait for Clk50_period;
+        Z <= '1';
+        wait for Clk50_period;
+
+        Z <= '0';
+        wait for 2*Clk50_period;
+        
+        Z <= '1';
+        wait for Clk50_period;
+
+        Z <= '0';
+        wait for Clk50_period;
+
+        Z <= '0';
+        wait for 2*Clk50_period;
+        
         Z <= '0';
         wait for 2*Clk50_period;
 
-        IR(15 downto 9) <= "0001110";
         Z <= '1';
-        wait for 2*Clk50_period;
+        wait for 3*Clk50_period;
 
-        IR(15 downto 9) <= "0001110";
-        wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001110";
-        Z <= '0';
-        wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001110";
-        Z <= '1';
-        wait for 2*Clk50_period;
-
-        IR(15 downto 9) <= "0001110";
-        wait for 2*Clk50_period;
-
-        WAIT;
+        finish;
     END PROCESS;
 
 END Behavioral;
