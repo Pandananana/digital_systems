@@ -76,15 +76,17 @@ BEGIN
     stim_proc : PROCESS
     BEGIN
         reset <= '0';
-        v <= '0';
-        c <= '0';
-        n <= '0';
-        z <= '0';
-        IR <= (OTHERS => '0');
+        v <= '-';
+        c <= '-';
+        n <= '-';
+        z <= '-';
+        IR <= (OTHERS => '-');
         IR(8 downto 0) <= (OTHERS => '1');
         wait for 2*Clk50_period;
 
         -------------------------------------------------
+        IR(15 downto 9) <= "0000000";
+        wait for 2*Clk50_period;
 
         IR(15 downto 9) <= "0000001";
         wait for 2*Clk50_period;
