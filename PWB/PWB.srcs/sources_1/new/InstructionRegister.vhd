@@ -42,10 +42,10 @@ end InstructionRegister;
 architecture Behavioral of InstructionRegister is
 
 begin
-    process_IR : process(RESET,CLK,IL)
+    process_IR : process(RESET,CLK)
     begin
         if RESET = '1' then
-            IR <= x"FF";
+            IR <= (others=>'0');
         elsif rising_edge(CLK) then
             if IL = '1' then
                 IR <= Instruction_in;

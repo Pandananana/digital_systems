@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+USE std.env.finish;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -48,8 +49,17 @@ begin
     UUT: SignExtender port map (
         IR,Extended_8
     );
-
-    IR <= "1111111111111010";
+    
+    sim_process: process
+    begin
+        IR <= "000000" & "00" & "11000111";
+        wait for 10ns;
+        IR <= "000000" & "11" & "11000111";
+        wait for 10ns;
+        finish;
+    end process;
+    
+    
 
 
 end Behavioral;
