@@ -58,6 +58,7 @@ BEGIN
     Control_state : PROCESS (RESET, CLK)
     BEGIN
         IF RESET = '1' THEN
+            -- Skal nextstate også være inf under reset?
             state <= inf;
         ELSIF CLK'event AND CLK = '1' THEN
             state <= Nextstate;

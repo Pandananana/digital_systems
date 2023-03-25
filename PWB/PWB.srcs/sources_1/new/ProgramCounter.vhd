@@ -17,12 +17,10 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,37 +31,36 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ProgramCounter is
-    Port ( RESET : in STD_LOGIC;
-           CLK : in STD_LOGIC;
-           Adress_In : in STD_LOGIC_VECTOR (7 downto 0);
-           PS : in STD_LOGIC_VECTOR (1 downto 0);
-           Offset : in STD_LOGIC_VECTOR (7 downto 0);
-           PC : out STD_LOGIC_VECTOR (7 downto 0));
-end ProgramCounter;
+ENTITY ProgramCounter IS
+    PORT (
+        RESET : IN STD_LOGIC;
+        CLK : IN STD_LOGIC;
+        Adress_In : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+        PS : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+        Offset : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+        PC : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
+END ProgramCounter;
 
-architecture Behavioral of ProgramCounter is
+ARCHITECTURE Behavioral OF ProgramCounter IS
 
-    signal PCSig : STD_LOGIC_VECTOR (7 downto 0);
+BEGIN
+    process_PC : PROCESS (RESET, CLK)
 
-begin
+        VARIABLE PC_var : STD_LOGIC_VECTOR (7 DOWNTO 0);
 
-    process_PC : process(RESET,CLK,PS)
-    begin
-        PC <= PCSig;
-            if RESET = '1' then
-                PC <= x"00";
-            elsif rising_edge(CLK) then
-                if PS = "01" then
-                    PCSig <= PCSig + 1;
-                elsif PS = "10" then
-                    PCSig <= PCSig + Offset;
-                elsif PS = "11" then
-                    PCSig <= Adress_In;           
-                else
-                    NULL;
-                end if;
-            end if;
-        end process;
+    BEGIN
+        IF RESET = '1' THEN
+            PC_var := x"00";
+        ELSIF rising_edge(CLK) THEN
+            IF PS = "01" THEN
+                PC_var := PC_var + 1;
+            ELSIF PS = "10" THEN
+                PC_var := PC_var + Offset;
+            ELSIF PS = "11" THEN
+                PC_var := Adress_In;
+            END IF;
+        END IF;
+        PC <= PC_var;
+    END PROCESS;
 
-end Behavioral;
+END Behavioral;

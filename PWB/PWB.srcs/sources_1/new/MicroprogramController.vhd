@@ -48,15 +48,14 @@ architecture Behavioral of MicroprogramController is
 -- ProgramCounter signals
 signal PS_sig :  STD_LOGIC_VECTOR(1 downto 0);
 signal Offset_sig : STD_LOGIC_VECTOR(7 downto 0); -- Extended_8 i IR
-signal PC_sig : STD_LOGIC_VECTOR(7 downto 0);
 -- InstructionRegister signals
 signal IL_sig : STD_LOGIC;
 signal IR_sig : STD_LOGIC_VECTOR(15 downto 0);
 -- Instruction Decoder/Controller
-TYPE statetype IS (ex0, ex1, ex2, ex3, ex4, inf);
-signal state_sig, nextstate_sig : statetype;
-signal opcode_sig : STD_LOGIC_VECTOR(6 DOWNTO 0);
-signal dx_sig, bx_sig, ax_sig : STD_LOGIC_VECTOR(2 DOWNTO 0);
+-- TYPE statetype IS (ex0, ex1, ex2, ex3, ex4, inf);
+-- signal state_sig, nextstate_sig : statetype;
+-- signal opcode_sig : STD_LOGIC_VECTOR(6 DOWNTO 0);
+-- signal dx_sig, bx_sig, ax_sig : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
     component ProgramCounter is
         Port ( RESET : in STD_LOGIC;
@@ -108,7 +107,7 @@ begin
         );
     ProgCount: ProgramCounter
         port map (
-            RESET, CLK, Adress_In, PS_Sig, offset_sig, PC_sig
+            RESET, CLK, Adress_In, PS_sig, offset_sig, Adress_out
         );
     SigExt: SignExtender
         port map (
