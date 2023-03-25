@@ -1,0 +1,1 @@
+-wto "55271ff80f134bc98abff9654ec21120" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "MicroprogramController_tb_behav" "xil_defaultlib.MicroprogramController_tb" -log "elaborate.log" 

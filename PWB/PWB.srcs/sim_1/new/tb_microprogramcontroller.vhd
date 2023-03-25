@@ -74,7 +74,7 @@ begin
     Reset<='0';
     wait for clk_period;
     
-    V<='-';C<='-';N<='-';Z<='-';
+    V<='-';C<='-';N<='-';Z<='-';Adress_In<=(others => '0');
     
     Instruction_In <= (OTHERS => '-');
             Instruction_In(8 downto 0) <= (OTHERS => '1');
@@ -82,7 +82,7 @@ begin
     
             -------------------------------------------------
             Instruction_In(15 downto 9) <= "0000000";
-            wait for 2*clk_period;
+            wait for 3*clk_period;
             
             Instruction_In(15 downto 9) <= "0001000";
             wait for 2*clk_period;
