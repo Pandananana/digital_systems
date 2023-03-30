@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Mar 30 11:23:16 2023
+# Process ID: 31165
+# Current directory: /zhome/47/2/156834/uni/digital_systems
+# Command line: vivado
+# Log file: /zhome/47/2/156834/uni/digital_systems/vivado.log
+# Journal file: /zhome/47/2/156834/uni/digital_systems/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /zhome/47/2/156834/uni/digital_systems/PWB/PWB.xpr
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_ProgCounter.vhd w ]
+add_files -fileset sim_1 /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_ProgCounter.vhd
+close [ open /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_InstReg.vhd w ]
+add_files -fileset sim_1 /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_InstReg.vhd
+export_ip_user_files -of_objects  [get_files /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_InstReg.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_InstReg.vhd
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_InstRegister.vhd w ]
+add_files -fileset sim_1 /zhome/47/2/156834/uni/digital_systems/PWB/PWB.srcs/sim_1/new/TB_InstRegister.vhd
