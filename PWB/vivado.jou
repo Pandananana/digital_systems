@@ -2,43 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Mar 25 15:24:05 2023
-# Process ID: 26544
+# Start of session at: Thu Mar 30 11:10:07 2023
+# Process ID: 10336
 # Current directory: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16280 C:\Users\Oliver\Desktop\Digitale systemer\digital_systems\PWB\PWB.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15136 C:\Users\Oliver\Desktop\Digitale systemer\digital_systems\PWB\PWB.xpr
 # Log file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/vivado.log
 # Journal file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/PWB.xpr}
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top MicroprogramController_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-launch_simulation
-open_wave_config {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/PWB.sim/Waveform.wcfg}
-source MicroprogramController_tb.tcl
-current_wave_config {Waveform.wcfg}
-add_wave {{/MicroprogramController_tb}} 
-run all
-restart
-run 600 ns
-save_wave_config {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/PWB.sim/Waveform.wcfg}
-close_sim
-launch_simulation
-open_wave_config {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/PWB.sim/Waveform.wcfg}
-source MicroprogramController_tb.tcl
-restart
-run 600 ns
-current_wave_config {Waveform.wcfg}
-add_wave {{/MicroprogramController_tb/uut/InstDecCont/opcode}} 
-restart
-run 600 ns
-save_wave_config {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/PWB.sim/Waveform.wcfg}
-close_sim
-launch_simulation
-open_wave_config {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/PWB.sim/Waveform.wcfg}
-source MicroprogramController_tb.tcl
-synth_design -rtl -name rtl_1
