@@ -32,13 +32,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ZeroFiller2 is
-    Port ( Y : in STD_LOGIC_VECTOR (15 downto 0);
-           ZeroFilled_8 : out STD_LOGIC_VECTOR (7 downto 0));
+    Port (  X : in STD_LOGIC_VECTOR (7 downto 0);
+            Y : out STD_LOGIC_VECTOR (15 downto 0));
 end ZeroFiller2;
 
 architecture Behavioral of ZeroFiller2 is
 
 begin
-    ZeroFilled_8 <= "00000" & Y(2 downto 0);
+    Y <= "00000000" & X;
 
 end Behavioral;
