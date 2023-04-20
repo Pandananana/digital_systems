@@ -17,10 +17,12 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+LIBRARY UNISIM;
+USE UNISIM.vcomponents.ALL;
+LIBRARY UNIMACRO;
+USE unimacro.Vcomponents.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,27 +33,33 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Ram256X16 is
-    Port ( clk : in STD_LOGIC;
-           Reset : in STD_LOGIC;
-           Data_in : in STD_LOGIC_VECTOR (15 downto 0);
-           Adress_in : in STD_LOGIC_VECTOR (7 downto 0);
-           MW : in STD_LOGIC;
-           Data_outM : out STD_LOGIC_VECTOR (15 downto 0));
-end Ram256X16;
+ENTITY Ram256X16 IS
+   PORT (
+      clk : IN STD_LOGIC;
+      Reset : IN STD_LOGIC;
+      Data_in : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+      Adress_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+      MW : IN STD_LOGIC;
+      Data_outM : OUT STD_LOGIC_VECTOR (15 DOWNTO 0));
+END Ram256X16;
 
-architecture Behavioral of Ram256X16 is begin
+ARCHITECTURE Behavioral OF Ram256X16 IS
 
-BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
-   generic map (
+   SIGNAL ADDR_sig : STD_LOGIC_VECTOR(9 DOWNTO 0);
+   SIGNAL MW_sig : STD_LOGIC_VECTOR(1 DOWNTO 0);
+
+BEGIN
+
+   BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
+   GENERIC MAP(
       BRAM_SIZE => "18Kb", -- Target BRAM, "18Kb" or "36Kb" 
       DEVICE => "7SERIES", -- Target Device: "VIRTEX5", "7SERIES", "VIRTEX6, "SPARTAN6" 
       DO_REG => 0, -- Optional output register (0 or 1)
-      INIT => X"000000000000000000",   --  Initial values on output port
+      INIT => X"000000000000000000", --  Initial values on output port
       INIT_FILE => "NONE",
-      WRITE_WIDTH => 16,   -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
-      READ_WIDTH => 16,   -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
-      SRVAL => X"000000000000000000",   -- Set/Reset value for port output
+      WRITE_WIDTH => 16, -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
+      READ_WIDTH => 16, -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
+      SRVAL => X"000000000000000000", -- Set/Reset value for port output
       WRITE_MODE => "WRITE_FIRST", -- "WRITE_FIRST", "READ_FIRST" or "NO_CHANGE" 
       -- The following INIT_xx declarations specify the initial contents of the RAM
       INIT_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -118,7 +126,7 @@ BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
       INIT_3D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_3E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_3F => X"0000000000000000000000000000000000000000000000000000000000000000",
-      
+
       -- The next set of INIT_xx are valid when configured as 36Kb
       INIT_40 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_41 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -184,7 +192,7 @@ BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
       INIT_7D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_7E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_7F => X"0000000000000000000000000000000000000000000000000000000000000000",
-      
+
       -- The next set of INITP_xx are for the parity bits
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -194,7 +202,7 @@ BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
       INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      
+
       -- The next set of INIT_xx are valid when configured as 36Kb
       INITP_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -204,18 +212,18 @@ BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
       INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000")
-   port map (
-      DO => Data_outM,      -- Output data, width defined by READ_WIDTH parameter
-      ADDR => "00" & Adress_in,  -- Input address, width defined by read/write port depth
-      CLK => clk,    -- 1-bit input clock
-      DI => Data_in,      -- Input data port, width defined by WRITE_WIDTH parameter
-      EN => '1',      -- 1-bit input RAM enable
+   PORT MAP(
+      DO => Data_outM, -- Output data, width defined by READ_WIDTH parameter
+      ADDR => ADDR_sig, -- Input address, width defined by read/write port depth
+      CLK => clk, -- 1-bit input clock
+      DI => Data_in, -- Input data port, width defined by WRITE_WIDTH parameter
+      EN => '1', -- 1-bit input RAM enable
       REGCE => '0', -- 1-bit input output register enable
-      RST => Reset,    -- 1-bit input reset
-      WE => '0' & MW       -- Input write enable, width defined by write port depth
+      RST => Reset, -- 1-bit input reset
+      WE => MW_sig -- Input write enable, width defined by write port depth
    );
 
-   -- Make address 10 bit
-   -- Lav MW 2 bit
+   ADDR_sig <= "00" & Adress_in;
+   MW_sig <= '0' & MW;
 
-end Behavioral;
+END Behavioral;
