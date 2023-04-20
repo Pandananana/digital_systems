@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr 20 10:36:58 2023
-# Process ID: 2096
+# Start of session at: Thu Apr 13 19:57:34 2023
+# Process ID: 21560
 # Current directory: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31544 C:\Users\Oliver\Desktop\Digitale systemer\digital_systems\PWB\PWB.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31752 C:\Users\Oliver\Desktop\Digitale systemer\digital_systems\PWB\PWB.xpr
 # Log file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB/vivado.log
 # Journal file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWB\vivado.jou
 #-----------------------------------------------------------

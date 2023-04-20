@@ -70,7 +70,7 @@ ARCHITECTURE Behavioral OF PWF IS
     SIGNAL PR_Address_In_sig : STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL Data_outR_sig : STD_LOGIC_VECTOR(15 DOWNTO 0);
     SIGNAL Data_outM_sig : STD_LOGIC_VECTOR(15 DOWNTO 0);
-    SIGNAL D_word_sig : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL D_word_sig : STD_LOGIC_VECTOR(15 DOWNTO 0);
     SIGNAL MMR_sig : STD_LOGIC;
     SIGNAL ZFILL_OUT : STD_LOGIC_VECTOR(15 DOWNTO 0);
     COMPONENT PortReg8X8 IS
@@ -112,7 +112,7 @@ ARCHITECTURE Behavioral OF PWF IS
             Data_in : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
             Adress_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
             MW : IN STD_LOGIC;
-            Data_outM : IN STD_LOGIC_VECTOR (15 DOWNTO 0)); -- STEMMER IKKE OVERENS MED RAMBLOCK
+            Data_outM : OUT STD_LOGIC_VECTOR (15 DOWNTO 0));
     END COMPONENT;
 
     COMPONENT ZeroFiller2 IS
@@ -177,7 +177,20 @@ BEGIN
 
     Port_Register : PortReg8X8
     PORT MAP(
-        clk, MW_sig, DP_Data_out_sig, PR_Address_In_sig, SW, BTNC, BTNU, BTNL, BTNR, BTND, MMR_sig, D_word_sig, Data_outR_sig, LED
+        clk => clk,
+        MW => MW_sig,
+        Data_in => DP_Data_out_sig,
+        Adress_in => PR_Address_In_sig,
+        SW => SW,
+        BTNC => BTNC,
+        BTNU => BTNU,
+        BTNL => BTNL,
+        BTNR => BTNR,
+        BTND => BTND,
+        MMR => MMR_sig,
+        D_word => D_word_sig,
+        Data_outR => Data_outR_sig,
+        LED => LED
     );
 
     MuxMR : MUX2x1x16
