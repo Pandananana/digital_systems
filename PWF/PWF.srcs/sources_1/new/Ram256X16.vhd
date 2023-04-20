@@ -36,8 +36,8 @@ entity Ram256X16 is
            Reset : in STD_LOGIC;
            Data_in : in STD_LOGIC_VECTOR (15 downto 0);
            Adress_in : in STD_LOGIC_VECTOR (7 downto 0);
-           MW : in STD_LOGIC_VECTOR (1 downto 0);
-           Data_outM : in STD_LOGIC);
+           MW : in STD_LOGIC;
+           Data_outM : out STD_LOGIC_VECTOR (15 downto 0));
 end Ram256X16;
 
 architecture Behavioral of Ram256X16 is begin
@@ -206,13 +206,16 @@ BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
       INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
       DO => Data_outM,      -- Output data, width defined by READ_WIDTH parameter
-      ADDR => Adress_in,  -- Input address, width defined by read/write port depth
+      ADDR => "00" & Adress_in,  -- Input address, width defined by read/write port depth
       CLK => clk,    -- 1-bit input clock
       DI => Data_in,      -- Input data port, width defined by WRITE_WIDTH parameter
-      EN => EN,      -- 1-bit input RAM enable
-      REGCE => REGCE, -- 1-bit input output register enable
+      EN => '1',      -- 1-bit input RAM enable
+      REGCE => '0', -- 1-bit input output register enable
       RST => Reset,    -- 1-bit input reset
-      WE => MW       -- Input write enable, width defined by write port depth
+      WE => '0' & MW       -- Input write enable, width defined by write port depth
    );
+
+   -- Make address 10 bit
+   -- Lav MW 2 bit
 
 end Behavioral;
