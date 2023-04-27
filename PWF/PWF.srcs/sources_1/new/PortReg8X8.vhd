@@ -116,21 +116,7 @@ BEGIN
     MR_Process: process (clk)
     begin
         if rising_edge(CLK) then
-            if MW='1' then
-                case Adress_in is
-                    when "11111000" =>
-                        MR0 <= Data_in;
-
-                    when "11111001" =>
-                        MR1 <= Data_in;
-
-                    when "11111010" =>
-                        MR2 <= Data_in;
-                
-                    when others =>
-                        null;
-                end case;
-            else
+            if MW='0' then
                 MMR <= '1';
                 case Adress_in is
                     when "11111000" =>

@@ -52,7 +52,6 @@ ARCHITECTURE Behavioral OF PWF IS
     SIGNAL Z_sig : STD_LOGIC;
 
     -- Microprogram Controller Signals
-    SIGNAL MPC_Address_in_sig : STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL MPC_Address_Out_sig : STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL MPC_Instruction_In_sig : STD_LOGIC_VECTOR(15 DOWNTO 0);
     SIGNAL MW_sig : STD_LOGIC;
@@ -72,10 +71,10 @@ ARCHITECTURE Behavioral OF PWF IS
     SIGNAL D_word_sig : STD_LOGIC_VECTOR(15 DOWNTO 0);
     SIGNAL MMR_sig : STD_LOGIC;
     SIGNAL ZFILL_OUT : STD_LOGIC_VECTOR(15 DOWNTO 0);
-    
+
     -- Clock Scaling
-    SIGNAL SCLK : STD_LOGIC;
-    
+    SIGNAL SCLK : STD_LOGIC := '0';
+
     COMPONENT PortReg8X8 IS
         PORT (
             clk : IN STD_LOGIC;
@@ -161,30 +160,45 @@ ARCHITECTURE Behavioral OF PWF IS
             MB, MD, RW, MM, MW : OUT STD_LOGIC);
     END COMPONENT;
 
+    SIGNAL counter : INTEGER RANGE 0 TO 1 := 0;
+
 BEGIN
 
-    ClockDiv: process(clk)
-    begin
-        if reset = '1' then
-            SCLK <= '0';
-        elsif(rising_edge(clk)) then
-            SCLK <= not SCLK;
-        end if;
-    end process;
+    ClockDiv : PROCESS (clk)
+    BEGIN
+        IF rising_edge(clk) THEN
+            counter <= counter + 1;
+            IF counter = 1 THEN
+                counter <= 0;
+                sclk <= NOT sclk;
+            END IF;
+        END IF;
+    END PROCESS;
+    
+    DP_Data_in_sig <= MPC_Instruction_In_sig(7 downto 0);
 
     MuxM : MUX2x1x8
     PORT MAP(
-        DP_Address_out_sig, MPC_Address_Out_sig, MM_sig, PR_Address_In_sig
+        R => DP_Address_out_sig,
+        S => MPC_Address_Out_sig,
+        MUX_Select => MM_sig,
+        Y => PR_Address_In_sig
     );
 
     ZeroFiller : ZeroFiller2
     PORT MAP(
-        DP_Data_out_sig, ZFILL_OUT
+        X => DP_Data_out_sig,
+        Y => ZFILL_OUT
     );
 
     RAM : Ram256X16
     PORT MAP(
-        clk, Reset, ZFILL_OUT, PR_Address_In_sig, MW_sig, Data_outM_sig
+        clk         =>   clk,
+        Reset       =>   Reset,
+        Data_in     =>   ZFILL_OUT,    
+        Adress_in   =>   PR_Address_In_sig,
+        MW          =>   MW_sig,
+        Data_outM   =>   Data_outM_sig
     );
 
     Port_Register : PortReg8X8
@@ -207,7 +221,10 @@ BEGIN
 
     MuxMR : MUX2x1x16
     PORT MAP(
-        Data_outM_sig, Data_outR_sig, MMR_sig, MPC_Instruction_In_sig
+        R               => Data_outM_sig,
+        S               => Data_outR_sig,
+        MUX_Select      => MMR_sig,        
+        Y               => MPC_Instruction_In_sig
     );
 
     SevenSeg : SevenSeg4
@@ -217,14 +234,49 @@ BEGIN
 
     DataPathComp : DataPath
     PORT MAP(
-        Reset, sCLK, RW_sig, DX_sig, AX_sig, BX_sig, Cconstant_in_sig, MB_sig, FS_sig(3), FS_sig(2), FS_sig(1), FS_sig(0), 
-        DP_Data_in_sig, MD_sig, DP_Address_out_sig, DP_Data_Out_sig, V_sig, C_sig, N_sig, Z_sig
+        Reset           => Reset,    
+        CLK             => sCLK,    
+        RW              => RW_sig,
+        DA              => DX_sig,
+        AA              => AX_sig,
+        BA              => BX_sig,
+        ConstantIn      => Cconstant_in_sig,        
+        MB              => MB_sig,
+        FS3             => FS_sig(3),    
+        FS2             => FS_sig(2),    
+        FS1             => FS_sig(1),    
+        FS0             => FS_sig(0),    
+        DataIn          => DP_Data_in_sig,    
+        MD              => MD_sig,
+        Address_Out     => DP_Address_out_sig,            
+        Data_Out        => DP_Data_Out_sig,        
+        V               => V_sig,
+        C               => C_sig,
+        N               => N_sig,
+        Z               => Z_sig
     );
 
     MPC : MicroprogramController
     PORT MAP(
-        RESET, sCLK, MPC_Address_in_sig, MPC_Address_Out_sig, MPC_Instruction_In_sig, Cconstant_in_sig,
-        V_sig, C_sig, N_sig, Z_sig, DX_sig, AX_sig, BX_sig, FS_sig, MB_sig, MD_sig, RW_sig, MM_sig, MW_sig
+        RESET           =>  RESET,     
+        CLK             =>  sCLK, 
+        Adress_In       =>  DP_Address_out_sig,         
+        Adress_out      =>  MPC_Address_Out_sig,         
+        Instruction_In  =>  MPC_Instruction_In_sig,             
+        Constant_Out    =>  Cconstant_in_sig,             
+        V               =>  V_sig, 
+        C               =>  C_sig, 
+        N               =>  N_sig, 
+        Z               =>  Z_sig, 
+        DX              =>  DX_sig, 
+        AX              =>  AX_sig, 
+        BX              =>  BX_sig, 
+        FS              =>  FS_sig, 
+        MB              =>  MB_sig,
+        MD              =>  MD_sig,
+        RW              =>  RW_sig,
+        MM              =>  MM_sig,
+        MW              =>  MW_sig
     );
 
 END Behavioral;
