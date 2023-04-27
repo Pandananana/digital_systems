@@ -43,7 +43,6 @@ component PWF IS
         CLK, RESET : IN STD_LOGIC;
         SW : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
         BTNC, BTNU, BTNL, BTNR, BTND : IN STD_LOGIC;
-        BTN : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
         LED : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
         Cathode : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
         Anode : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
@@ -52,7 +51,6 @@ END component;
         SIGNAL CLK, RESET : STD_LOGIC;
         SIGNAL SW : STD_LOGIC_VECTOR (7 DOWNTO 0);
         SIGNAL BTNC, BTNU, BTNL, BTNR, BTND : STD_LOGIC;
-        SIGNAL BTN : STD_LOGIC_VECTOR (7 DOWNTO 0);
         SIGNAL LED :  STD_LOGIC_VECTOR (7 DOWNTO 0);
         SIGNAL Cathode :  STD_LOGIC_VECTOR (6 DOWNTO 0);
         SIGNAL Anode :  STD_LOGIC_VECTOR (3 DOWNTO 0);
@@ -62,7 +60,7 @@ CONSTANT Clk50_period : TIME := 10 ns;
 begin
 
 UUT : PWF PORT MAP(
-        CLK, RESET,SW,BTNC, BTNU, BTNL, BTNR, BTND,BTN,LED,Cathode,Anode
+        CLK, RESET,SW,BTNC, BTNU, BTNL, BTNR, BTND,LED,Cathode,Anode
     );
 
 Clk50_process : PROCESS
@@ -76,10 +74,26 @@ Clk50_process : PROCESS
 stimulus : PROCESS
     BEGIN
         Reset <= '1';
-        WAIT FOR clk50_period;
+        WAIT FOR clk50_period*2;
         Reset <= '0';
-        WAIT FOR 100 ns;
+        WAIT FOR clk50_period*20;
         
-        finish;
+        SW <= x"02";
+        BTNC <= '0';
+        BTNU <= '1';
+        BTNL <= '0';
+        BTNR <= '0';
+        BTND <= '0';
+        wait for clk50_period*2;
+        BTNU <= '0';
+        wait for clk50_period*2;
+        
+        SW <= x"03";
+        BTND <= '1';
+        wait for clk50_period*2;
+        BTND <= '0';
+        wait for clk50_period*65;
+        
+        wait;
     end process;
 end Behavioral;

@@ -135,12 +135,15 @@ BEGIN
                 case Adress_in is
                     when "11111000" =>
                         Data_outR <= "00000000" & MR0;
+                        D_word <= MR1 & MR0;
 
                     when "11111001" =>
                         Data_outR <= "00000000" & MR1;
+                        D_word <= MR1 & MR0;
 
                     when "11111010" =>
                         Data_outR <= "00000000" & MR2;
+                        LED <= MR2;
 
                     when "11111011" =>
                         Data_outR <= "00000000" & MR3;

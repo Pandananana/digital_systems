@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Webtalk v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr 20 11:03:12 2023
-# Process ID: 20300
-# Current directory: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/xsim.dir/PWF_testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Thu Apr 27 12:19:46 2023
+# Process ID: 8198
+# Current directory: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/xsim.dir/TB_RAM_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Oliver/Desktop/Digitale -notrace
+source /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/xsim.dir/TB_RAM_behav/webtalk/xsim_webtalk.tcl -notrace

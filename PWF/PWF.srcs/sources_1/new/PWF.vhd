@@ -34,7 +34,6 @@ ENTITY PWF IS
         CLK, RESET : IN STD_LOGIC;
         SW : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
         BTNC, BTNU, BTNL, BTNR, BTND : IN STD_LOGIC;
-        BTN : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
         LED : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
         Cathode : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
         Anode : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
@@ -73,6 +72,10 @@ ARCHITECTURE Behavioral OF PWF IS
     SIGNAL D_word_sig : STD_LOGIC_VECTOR(15 DOWNTO 0);
     SIGNAL MMR_sig : STD_LOGIC;
     SIGNAL ZFILL_OUT : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    
+    -- Clock Scaling
+    SIGNAL SCLK : STD_LOGIC;
+    
     COMPONENT PortReg8X8 IS
         PORT (
             clk : IN STD_LOGIC;
@@ -160,6 +163,15 @@ ARCHITECTURE Behavioral OF PWF IS
 
 BEGIN
 
+    ClockDiv: process(clk)
+    begin
+        if reset = '1' then
+            SCLK <= '0';
+        elsif(rising_edge(clk)) then
+            SCLK <= not SCLK;
+        end if;
+    end process;
+
     MuxM : MUX2x1x8
     PORT MAP(
         DP_Address_out_sig, MPC_Address_Out_sig, MM_sig, PR_Address_In_sig
@@ -177,7 +189,7 @@ BEGIN
 
     Port_Register : PortReg8X8
     PORT MAP(
-        clk => clk,
+        clk => sclk,
         MW => MW_sig,
         Data_in => DP_Data_out_sig,
         Adress_in => PR_Address_In_sig,
@@ -200,18 +212,18 @@ BEGIN
 
     SevenSeg : SevenSeg4
     PORT MAP(
-        Reset, Clk, D_word_sig, Cathode, Anode
+        Reset, sClk, D_word_sig, Cathode, Anode
     );
 
     DataPathComp : DataPath
     PORT MAP(
-        Reset, CLK, RW_sig, DX_sig, AX_sig, BX_sig, Cconstant_in_sig, MB_sig, FS_sig(3), FS_sig(2), FS_sig(1), FS_sig(0), 
+        Reset, sCLK, RW_sig, DX_sig, AX_sig, BX_sig, Cconstant_in_sig, MB_sig, FS_sig(3), FS_sig(2), FS_sig(1), FS_sig(0), 
         DP_Data_in_sig, MD_sig, DP_Address_out_sig, DP_Data_Out_sig, V_sig, C_sig, N_sig, Z_sig
     );
 
     MPC : MicroprogramController
     PORT MAP(
-        RESET, CLK, MPC_Address_in_sig, MPC_Address_Out_sig, MPC_Instruction_In_sig, Cconstant_in_sig,
+        RESET, sCLK, MPC_Address_in_sig, MPC_Address_Out_sig, MPC_Instruction_In_sig, Cconstant_in_sig,
         V_sig, C_sig, N_sig, Z_sig, DX_sig, AX_sig, BX_sig, FS_sig, MB_sig, MD_sig, RW_sig, MM_sig, MW_sig
     );
 
