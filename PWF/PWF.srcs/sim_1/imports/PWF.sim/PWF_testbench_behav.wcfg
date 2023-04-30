@@ -10,15 +10,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1394667fs"></ZoomStartTime>
-      <ZoomEndTime time="276994668fs"></ZoomEndTime>
-      <Cursor1Time time="26195000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="274987808fs"></ZoomEndTime>
+      <Cursor1Time time="12400000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="188"></NameColumnWidth>
+      <NameColumnWidth column_width="225"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="24" />
+   <wvobject type="logic" fp_name="/PWF_testbench/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/PWF_testbench/CLK">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -27,17 +31,13 @@
       <obj_property name="ElementShortName">SCLK</obj_property>
       <obj_property name="ObjectShortName">SCLK</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/PWF_testbench/RESET">
-      <obj_property name="ElementShortName">RESET</obj_property>
-      <obj_property name="ObjectShortName">RESET</obj_property>
-   </wvobject>
    <wvobject type="group" fp_name="group238">
       <obj_property name="label">Debug</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group413">
          <obj_property name="label">Address</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/PWF_testbench/UUT/MuxM/R">
             <obj_property name="ElementShortName">R[7:0]</obj_property>
             <obj_property name="ObjectShortName">R[7:0]</obj_property>
@@ -58,6 +58,7 @@
       <wvobject type="group" fp_name="group417">
          <obj_property name="label">InstReg</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/InstDecCont/IR">
             <obj_property name="ElementShortName">IR[15:0]</obj_property>
             <obj_property name="ObjectShortName">IR[15:0]</obj_property>
@@ -94,6 +95,7 @@
       <wvobject type="group" fp_name="group765">
          <obj_property name="label">Datapath</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/D_Data">
             <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
             <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
@@ -120,120 +122,36 @@
             <obj_property name="ObjectShortName">S[7:0]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="group845">
-         <obj_property name="label">RegFile</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/LOAD">
-            <obj_property name="ElementShortName">LOAD[15:0]</obj_property>
-            <obj_property name="ObjectShortName">LOAD[15:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/D_Data">
-            <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
-            <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R0">
-            <obj_property name="ElementShortName">R0[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R0[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R1">
-            <obj_property name="ElementShortName">R1[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R1[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R2">
-            <obj_property name="ElementShortName">R2[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R2[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R3">
-            <obj_property name="ElementShortName">R3[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R3[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R4">
-            <obj_property name="ElementShortName">R4[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R4[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R5">
-            <obj_property name="ElementShortName">R5[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R5[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R6">
-            <obj_property name="ElementShortName">R6[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R6[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R7">
-            <obj_property name="ElementShortName">R7[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R7[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R8">
-            <obj_property name="ElementShortName">R8[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R8[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R9">
-            <obj_property name="ElementShortName">R9[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R9[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R10">
-            <obj_property name="ElementShortName">R10[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R10[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R11">
-            <obj_property name="ElementShortName">R11[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R11[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R12">
-            <obj_property name="ElementShortName">R12[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R12[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R13">
-            <obj_property name="ElementShortName">R13[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R13[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R14">
-            <obj_property name="ElementShortName">R14[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R14[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R15">
-            <obj_property name="ElementShortName">R15[7:0]</obj_property>
-            <obj_property name="ObjectShortName">R15[7:0]</obj_property>
-         </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2576">
+      <obj_property name="label">MUXB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/MB">
+         <obj_property name="ElementShortName">MB</obj_property>
+         <obj_property name="ObjectShortName">MB</obj_property>
       </wvobject>
-      <wvobject type="group" fp_name="group194">
-         <obj_property name="label">X Issue</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXB/R">
+         <obj_property name="ElementShortName">R[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R[7:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
-         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/D_Data">
-            <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
-            <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
-         </wvobject>
-         <wvobject type="group" fp_name="group199">
-            <obj_property name="label">MUX D</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="isExpanded"></obj_property>
-            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/R">
-               <obj_property name="ElementShortName">R[7:0]</obj_property>
-               <obj_property name="ObjectShortName">R[7:0]</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/S">
-               <obj_property name="ElementShortName">S[7:0]</obj_property>
-               <obj_property name="ObjectShortName">S[7:0]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/MUX_Select">
-               <obj_property name="ElementShortName">MUX_Select</obj_property>
-               <obj_property name="ObjectShortName">MUX_Select</obj_property>
-            </wvobject>
-            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/Y">
-               <obj_property name="ElementShortName">Y[7:0]</obj_property>
-               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
-            </wvobject>
-         </wvobject>
       </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXB/Y">
+         <obj_property name="ElementShortName">Y[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/PWF_testbench/UUT/RAM/Data_outM">
+      <obj_property name="ElementShortName">Data_outM[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_outM[15:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/PWF_testbench/UUT/RAM/Adress_in">
       <obj_property name="ElementShortName">Adress_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">Adress_in[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PWF_testbench/UUT/RAM/Data_outM">
-      <obj_property name="ElementShortName">Data_outM[15:0]</obj_property>
-      <obj_property name="ObjectShortName">Data_outM[15:0]</obj_property>
+   <wvobject type="array" fp_name="/PWF_testbench/UUT/MuxMR/Y">
+      <obj_property name="ElementShortName">Y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Y[15:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R1">
       <obj_property name="ElementShortName">R1[7:0]</obj_property>
@@ -294,5 +212,661 @@
    <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/FS">
       <obj_property name="ElementShortName">FS[3:0]</obj_property>
       <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group256">
+      <obj_property name="label">Address Bug</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group257">
+         <obj_property name="label">DataPath</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/A_Data_sig">
+            <obj_property name="ElementShortName">A_Data_sig[7:0]</obj_property>
+            <obj_property name="ObjectShortName">A_Data_sig[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/AA">
+            <obj_property name="ElementShortName">AA[3:0]</obj_property>
+            <obj_property name="ObjectShortName">AA[3:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group255">
+            <obj_property name="label">MUXA</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R0">
+               <obj_property name="ElementShortName">R0[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R1">
+               <obj_property name="ElementShortName">R1[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R2">
+               <obj_property name="ElementShortName">R2[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R3">
+               <obj_property name="ElementShortName">R3[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R4">
+               <obj_property name="ElementShortName">R4[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R5">
+               <obj_property name="ElementShortName">R5[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R6">
+               <obj_property name="ElementShortName">R6[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R7">
+               <obj_property name="ElementShortName">R7[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R8">
+               <obj_property name="ElementShortName">R8[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R9">
+               <obj_property name="ElementShortName">R9[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R10">
+               <obj_property name="ElementShortName">R10[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R11">
+               <obj_property name="ElementShortName">R11[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R12">
+               <obj_property name="ElementShortName">R12[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R13">
+               <obj_property name="ElementShortName">R13[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R14">
+               <obj_property name="ElementShortName">R14[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R15">
+               <obj_property name="ElementShortName">R15[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R15[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/D_Select">
+               <obj_property name="ElementShortName">D_Select[3:0]</obj_property>
+               <obj_property name="ObjectShortName">D_Select[3:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/Y_Data">
+               <obj_property name="ElementShortName">Y_Data[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y_Data[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group277">
+            <obj_property name="label">Registers</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/LOAD">
+               <obj_property name="ElementShortName">LOAD[15:0]</obj_property>
+               <obj_property name="ObjectShortName">LOAD[15:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/D_Data">
+               <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
+               <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R0">
+               <obj_property name="ElementShortName">R0[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R1">
+               <obj_property name="ElementShortName">R1[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R2">
+               <obj_property name="ElementShortName">R2[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R3">
+               <obj_property name="ElementShortName">R3[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R4">
+               <obj_property name="ElementShortName">R4[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R5">
+               <obj_property name="ElementShortName">R5[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R6">
+               <obj_property name="ElementShortName">R6[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R7">
+               <obj_property name="ElementShortName">R7[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R8">
+               <obj_property name="ElementShortName">R8[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R9">
+               <obj_property name="ElementShortName">R9[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R10">
+               <obj_property name="ElementShortName">R10[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R11">
+               <obj_property name="ElementShortName">R11[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R12">
+               <obj_property name="ElementShortName">R12[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R13">
+               <obj_property name="ElementShortName">R13[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R14">
+               <obj_property name="ElementShortName">R14[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R15">
+               <obj_property name="ElementShortName">R15[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R15[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/D_Data">
+            <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/LoadSig">
+            <obj_property name="ElementShortName">LoadSig[15:0]</obj_property>
+            <obj_property name="ObjectShortName">LoadSig[15:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group284">
+            <obj_property name="label">MUXD</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/R">
+               <obj_property name="ElementShortName">R[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R[7:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/S">
+               <obj_property name="ElementShortName">S[7:0]</obj_property>
+               <obj_property name="ObjectShortName">S[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/MUX_Select">
+               <obj_property name="ElementShortName">MUX_Select</obj_property>
+               <obj_property name="ObjectShortName">MUX_Select</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/Y">
+               <obj_property name="ElementShortName">Y[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group289">
+            <obj_property name="label">MUXF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/R">
+               <obj_property name="ElementShortName">R[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/S">
+               <obj_property name="ElementShortName">S[7:0]</obj_property>
+               <obj_property name="ObjectShortName">S[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/MUX_Select">
+               <obj_property name="ElementShortName">MUX_Select</obj_property>
+               <obj_property name="ObjectShortName">MUX_Select</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/Y">
+               <obj_property name="ElementShortName">Y[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group293">
+            <obj_property name="label">Shifter</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/Shifter_comp/B">
+               <obj_property name="ElementShortName">B[7:0]</obj_property>
+               <obj_property name="ObjectShortName">B[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/Shifter_comp/H_Select">
+               <obj_property name="ElementShortName">H_Select[1:0]</obj_property>
+               <obj_property name="ObjectShortName">H_Select[1:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/Shifter_comp/h">
+               <obj_property name="ElementShortName">h[7:0]</obj_property>
+               <obj_property name="ObjectShortName">h[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/B">
+            <obj_property name="ElementShortName">B[7:0]</obj_property>
+            <obj_property name="ObjectShortName">B[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group299">
+            <obj_property name="label">MUXB</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXB/R">
+               <obj_property name="ElementShortName">R[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R[7:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXB/S">
+               <obj_property name="ElementShortName">S[7:0]</obj_property>
+               <obj_property name="ObjectShortName">S[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/MUXB/MUX_Select">
+               <obj_property name="ElementShortName">MUX_Select</obj_property>
+               <obj_property name="ObjectShortName">MUX_Select</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXB/Y">
+               <obj_property name="ElementShortName">Y[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group301">
+         <obj_property name="label">MPC</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group311">
+            <obj_property name="label">InstDecCon</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="other" fp_name="/PWF_testbench/UUT/MPC/InstDecCont/state">
+               <obj_property name="ElementShortName">state</obj_property>
+               <obj_property name="ObjectShortName">state</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/InstDecCont/opcode">
+               <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+               <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/Constant_Out">
+            <obj_property name="ElementShortName">Constant_Out[7:0]</obj_property>
+            <obj_property name="ObjectShortName">Constant_Out[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group304">
+            <obj_property name="label">Zerofiller</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/ZerFil/IR">
+               <obj_property name="ElementShortName">IR[15:0]</obj_property>
+               <obj_property name="ObjectShortName">IR[15:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/ZerFil/ZeroFilled_8">
+               <obj_property name="ElementShortName">ZeroFilled_8[7:0]</obj_property>
+               <obj_property name="ObjectShortName">ZeroFilled_8[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group323">
+            <obj_property name="label">Output</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MPC/IL_sig">
+               <obj_property name="ElementShortName">IL_sig</obj_property>
+               <obj_property name="ObjectShortName">IL_sig</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/PS_sig">
+               <obj_property name="ElementShortName">PS_sig[1:0]</obj_property>
+               <obj_property name="ObjectShortName">PS_sig[1:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/DX">
+               <obj_property name="ElementShortName">DX[3:0]</obj_property>
+               <obj_property name="ObjectShortName">DX[3:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/AX">
+               <obj_property name="ElementShortName">AX[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AX[3:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/BX">
+               <obj_property name="ElementShortName">BX[3:0]</obj_property>
+               <obj_property name="ObjectShortName">BX[3:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MPC/MB">
+               <obj_property name="ElementShortName">MB</obj_property>
+               <obj_property name="ObjectShortName">MB</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/FS">
+               <obj_property name="ElementShortName">FS[3:0]</obj_property>
+               <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MPC/MD">
+               <obj_property name="ElementShortName">MD</obj_property>
+               <obj_property name="ObjectShortName">MD</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MPC/RW">
+               <obj_property name="ElementShortName">RW</obj_property>
+               <obj_property name="ObjectShortName">RW</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MPC/MM">
+               <obj_property name="ElementShortName">MM</obj_property>
+               <obj_property name="ObjectShortName">MM</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MPC/MW">
+               <obj_property name="ElementShortName">MW</obj_property>
+               <obj_property name="ObjectShortName">MW</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/ProgCount/PC">
+               <obj_property name="ElementShortName">PC[7:0]</obj_property>
+               <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group586">
+         <obj_property name="label">Jones</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group591">
+            <obj_property name="label">MUXM</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MuxM/R">
+               <obj_property name="ElementShortName">R[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MuxM/S">
+               <obj_property name="ElementShortName">S[7:0]</obj_property>
+               <obj_property name="ObjectShortName">S[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/MuxM/MUX_Select">
+               <obj_property name="ElementShortName">MUX_Select</obj_property>
+               <obj_property name="ObjectShortName">MUX_Select</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/MuxM/Y">
+               <obj_property name="ElementShortName">Y[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/A_Data">
+            <obj_property name="ElementShortName">A_Data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">A_Data[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group611">
+            <obj_property name="label">MUXA</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R0">
+               <obj_property name="ElementShortName">R0[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R1">
+               <obj_property name="ElementShortName">R1[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R2">
+               <obj_property name="ElementShortName">R2[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R3">
+               <obj_property name="ElementShortName">R3[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R4">
+               <obj_property name="ElementShortName">R4[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R5">
+               <obj_property name="ElementShortName">R5[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R6">
+               <obj_property name="ElementShortName">R6[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R7">
+               <obj_property name="ElementShortName">R7[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R8">
+               <obj_property name="ElementShortName">R8[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R9">
+               <obj_property name="ElementShortName">R9[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R10">
+               <obj_property name="ElementShortName">R10[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R11">
+               <obj_property name="ElementShortName">R11[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R12">
+               <obj_property name="ElementShortName">R12[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R13">
+               <obj_property name="ElementShortName">R13[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R14">
+               <obj_property name="ElementShortName">R14[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/R15">
+               <obj_property name="ElementShortName">R15[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R15[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/D_Select">
+               <obj_property name="ElementShortName">D_Select[3:0]</obj_property>
+               <obj_property name="ObjectShortName">D_Select[3:0]</obj_property>
+               <obj_property name="Radix">BINARYRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/muxA/Y_Data">
+               <obj_property name="ElementShortName">Y_Data[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y_Data[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group630">
+            <obj_property name="label">Register</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/CLK">
+               <obj_property name="ElementShortName">CLK</obj_property>
+               <obj_property name="ObjectShortName">CLK</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/LOAD">
+               <obj_property name="ElementShortName">LOAD[15:0]</obj_property>
+               <obj_property name="ObjectShortName">LOAD[15:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/D_Data">
+               <obj_property name="ElementShortName">D_Data[7:0]</obj_property>
+               <obj_property name="ObjectShortName">D_Data[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R0">
+               <obj_property name="ElementShortName">R0[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R1">
+               <obj_property name="ElementShortName">R1[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R2">
+               <obj_property name="ElementShortName">R2[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R2[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R3">
+               <obj_property name="ElementShortName">R3[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R3[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R4">
+               <obj_property name="ElementShortName">R4[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R4[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R5">
+               <obj_property name="ElementShortName">R5[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R5[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R6">
+               <obj_property name="ElementShortName">R6[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R7">
+               <obj_property name="ElementShortName">R7[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R7[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R8">
+               <obj_property name="ElementShortName">R8[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R8[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R9">
+               <obj_property name="ElementShortName">R9[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R9[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R10">
+               <obj_property name="ElementShortName">R10[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R10[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R11">
+               <obj_property name="ElementShortName">R11[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R11[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R12">
+               <obj_property name="ElementShortName">R12[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R12[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R13">
+               <obj_property name="ElementShortName">R13[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R13[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R14">
+               <obj_property name="ElementShortName">R14[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R14[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R15">
+               <obj_property name="ElementShortName">R15[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R15[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group636">
+            <obj_property name="label">MUXD</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/R">
+               <obj_property name="ElementShortName">R[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/S">
+               <obj_property name="ElementShortName">S[7:0]</obj_property>
+               <obj_property name="ObjectShortName">S[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/MUX_Select">
+               <obj_property name="ElementShortName">MUX_Select</obj_property>
+               <obj_property name="ObjectShortName">MUX_Select</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/MUXD/Y">
+               <obj_property name="ElementShortName">Y[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group3727">
+            <obj_property name="label">MUXF</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/R">
+               <obj_property name="ElementShortName">R[7:0]</obj_property>
+               <obj_property name="ObjectShortName">R[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/S">
+               <obj_property name="ElementShortName">S[7:0]</obj_property>
+               <obj_property name="ObjectShortName">S[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/MUX_Select">
+               <obj_property name="ElementShortName">MUX_Select</obj_property>
+               <obj_property name="ObjectShortName">MUX_Select</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF/Y">
+               <obj_property name="ElementShortName">Y[7:0]</obj_property>
+               <obj_property name="ObjectShortName">Y[7:0]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS3">
+               <obj_property name="ElementShortName">FS3</obj_property>
+               <obj_property name="ObjectShortName">FS3</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS2">
+               <obj_property name="ElementShortName">FS2</obj_property>
+               <obj_property name="ObjectShortName">FS2</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS1">
+               <obj_property name="ElementShortName">FS1</obj_property>
+               <obj_property name="ObjectShortName">FS1</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS0">
+               <obj_property name="ElementShortName">FS0</obj_property>
+               <obj_property name="ObjectShortName">FS0</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group4706">
+         <obj_property name="label">FunctionUnit</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/A">
+            <obj_property name="ElementShortName">A[7:0]</obj_property>
+            <obj_property name="ObjectShortName">A[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/B">
+            <obj_property name="ElementShortName">B[7:0]</obj_property>
+            <obj_property name="ObjectShortName">B[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS3">
+            <obj_property name="ElementShortName">FS3</obj_property>
+            <obj_property name="ObjectShortName">FS3</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS2">
+            <obj_property name="ElementShortName">FS2</obj_property>
+            <obj_property name="ObjectShortName">FS2</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS1">
+            <obj_property name="ElementShortName">FS1</obj_property>
+            <obj_property name="ObjectShortName">FS1</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/FS0">
+            <obj_property name="ElementShortName">FS0</obj_property>
+            <obj_property name="ObjectShortName">FS0</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/V">
+            <obj_property name="ElementShortName">V</obj_property>
+            <obj_property name="ObjectShortName">V</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/C">
+            <obj_property name="ElementShortName">C</obj_property>
+            <obj_property name="ObjectShortName">C</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/N">
+            <obj_property name="ElementShortName">N</obj_property>
+            <obj_property name="ObjectShortName">N</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/Z">
+            <obj_property name="ElementShortName">Z</obj_property>
+            <obj_property name="ObjectShortName">Z</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/F">
+            <obj_property name="ElementShortName">F[7:0]</obj_property>
+            <obj_property name="ObjectShortName">F[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/J_sig">
+            <obj_property name="ElementShortName">J_sig[7:0]</obj_property>
+            <obj_property name="ObjectShortName">J_sig[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/H_sig">
+            <obj_property name="ElementShortName">H_sig[7:0]</obj_property>
+            <obj_property name="ObjectShortName">H_sig[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MUXF_sig">
+            <obj_property name="ElementShortName">MUXF_sig[7:0]</obj_property>
+            <obj_property name="ObjectShortName">MUXF_sig[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PWF_testbench/UUT/DataPathComp/FU/MF_sig">
+            <obj_property name="ElementShortName">MF_sig</obj_property>
+            <obj_property name="ObjectShortName">MF_sig</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
 </wave_config>

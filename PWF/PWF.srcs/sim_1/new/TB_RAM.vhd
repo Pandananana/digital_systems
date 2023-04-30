@@ -62,29 +62,29 @@ BEGIN
 
     Clk50_process : PROCESS
     BEGIN
-        CLK <= '0';
-        WAIT FOR Clk50_period/2;
         CLK <= '1';
+        WAIT FOR Clk50_period/2;
+        CLK <= '0';
         WAIT FOR Clk50_period/2;
     END PROCESS;
 
     stimulus : PROCESS
     BEGIN
         Reset <= '1';
-        MW <= '0';
-        Data_in <= (others=>'1');
-        Adress_in <= "00000000";
-        WAIT FOR Clk50_period*2;
+        WAIT FOR Clk50_period;
         Reset <= '0';
-        WAIT FOR Clk50_period*2;
-        Adress_in <= "00000001";
-        WAIT FOR Clk50_period*2;
-        Adress_in <= "00000010";
-        WAIT FOR Clk50_period*2;
-        Adress_in <= "00000011";
 
-
-
+        Data_in <= x"B6A7";
+        Adress_in <= x"0A";
+        MW <= '0';
+        WAIT FOR Clk50_period;
+        MW <= '1';
+        WAIT FOR Clk50_period*2;
+        MW <= '0';
+        Adress_in <= x"0B";
+        WAIT FOR Clk50_period;
+        Adress_in <= x"0A";
+        WAIT FOR Clk50_period;
 
         WAIT;
     END PROCESS;
