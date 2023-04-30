@@ -39,7 +39,6 @@ end SignExtender;
 architecture Behavioral of SignExtender is
 
 begin
-    Extended_8 <= "000" & IR(7 downto 6) & IR(2 downto 0) when IR(8) = '0' else
-        "111" & IR(7 downto 6) & IR(2 downto 0);
+    Extended_8 <= IR(8) & IR(8) & IR(8) & IR(7 downto 6) & IR(2 downto 0);
 
 end Behavioral;

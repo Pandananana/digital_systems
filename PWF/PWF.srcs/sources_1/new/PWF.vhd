@@ -77,6 +77,7 @@ ARCHITECTURE Behavioral OF PWF IS
 
     COMPONENT PortReg8X8 IS
         PORT (
+            Reset : IN STD_LOGIC;
             clk : IN STD_LOGIC;
             MW : IN STD_LOGIC;
             Data_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -150,7 +151,7 @@ ARCHITECTURE Behavioral OF PWF IS
     COMPONENT MicroprogramController IS
         PORT (
             RESET : IN STD_LOGIC;
-            CLK : IN STD_LOGIC;
+            CLK, FCLK : IN STD_LOGIC;
             Adress_In : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
             Adress_out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
             Instruction_In : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
@@ -203,6 +204,7 @@ BEGIN
 
     Port_Register : PortReg8X8
     PORT MAP(
+        Reset => Reset,
         clk => sclk,
         MW => MW_sig,
         Data_in => DP_Data_out_sig,
@@ -260,6 +262,7 @@ BEGIN
     PORT MAP(
         RESET           =>  RESET,     
         CLK             =>  sCLK, 
+        FCLK            =>  CLK,
         Adress_In       =>  DP_Address_out_sig,         
         Adress_out      =>  MPC_Address_Out_sig,         
         Instruction_In  =>  MPC_Instruction_In_sig,             

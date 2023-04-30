@@ -41,6 +41,10 @@ end MUX2x1;
 architecture Behavioral of MUX2x1 is
 
 begin
-    O <= (IN2 AND SEL) OR (IN1 AND (NOT SEL));
+    with Sel select
+        O <=    IN1 when '0',
+                IN2 when '1',
+                '0' when others;
+    
 
 end Behavioral;

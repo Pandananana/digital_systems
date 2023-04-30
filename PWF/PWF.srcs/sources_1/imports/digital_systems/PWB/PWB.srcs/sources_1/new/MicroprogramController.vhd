@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MicroprogramController is
     Port ( RESET : in STD_LOGIC;
-           CLK : in STD_LOGIC;
+           CLK, FCLK : in STD_LOGIC;
            Adress_In : in STD_LOGIC_VECTOR (7 downto 0);
            Adress_out : out STD_LOGIC_VECTOR (7 downto 0);
            Instruction_In : in STD_LOGIC_VECTOR (15 downto 0);
@@ -99,7 +99,7 @@ begin
 
     InstReg: InstructionRegister
         port map (
-            RESET, CLK, Instruction_in, IL_sig, IR_sig
+            RESET, FCLK, Instruction_in, IL_sig, IR_sig
         );
     InstDecCont: InstructionDecoderController
         port map (

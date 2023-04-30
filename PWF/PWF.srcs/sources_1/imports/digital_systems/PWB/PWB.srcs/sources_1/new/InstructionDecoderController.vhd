@@ -43,30 +43,45 @@ END InstructionDecoderController;
 
 ARCHITECTURE Behavioral OF InstructionDecoderController IS
 
-    TYPE statetype IS (ex0, ex1, ex2, ex3, ex4, inf);
+    TYPE statetype IS (ex0, ex1, ex2, ex3, ex4, inf, rst);
     SIGNAL state, nextstate : statetype;
     SIGNAL opcode : STD_LOGIC_VECTOR(6 DOWNTO 0);
     SIGNAL dx_sig, bx_sig, ax_sig : STD_LOGIC_VECTOR(2 DOWNTO 0);
 
 BEGIN
 
-    opcode <= IR(15 DOWNTO 9);
-    dx_sig <= IR(8 DOWNTO 6);
-    bx_sig <= IR(5 DOWNTO 3);
-    ax_sig <= IR(2 DOWNTO 0);
 
     Control_state : PROCESS (RESET, CLK)
     BEGIN
         IF RESET = '1' THEN
-            -- Skal nextstate også være inf under reset?
-            state <= inf;
+            state <= rst;
         ELSIF CLK'event AND CLK = '1' THEN
             state <= Nextstate;
         END IF;
     END PROCESS;
-    Control_logic : PROCESS (state, IR, V, C, N, Z)
+
+    Control_logic : PROCESS (state, IR, N, Z)
     BEGIN
         CASE state IS
+            when RST =>
+                IL <= '0';
+                PS <= "00";
+                DX <= "0000"; 
+                AX <= "0000"; 
+                BX <= "0000";
+                MB <= '0';
+                FS <= "0000";
+                MD <= '0';
+                RW <= '0';
+                MM <= '0';
+                MW <= '0';
+                opcode <= (others=>'0');
+                dx_sig <= (others=>'0');
+                bx_sig <= (others=>'0');
+                ax_sig <= (others=>'0');
+                NextState <= INF;
+                
+
             WHEN inf =>
                 IL <= '1';
                 PS <= "00";
@@ -79,6 +94,10 @@ BEGIN
                 RW <= '0';
                 MM <= '1';
                 MW <= '0';
+                opcode <= IR(15 DOWNTO 9);
+                dx_sig <= IR(8 DOWNTO 6);
+                ax_sig <= IR(5 DOWNTO 3);
+                bx_sig <= IR(2 DOWNTO 0);
                 nextstate <= ex0;
 
             WHEN ex0 =>

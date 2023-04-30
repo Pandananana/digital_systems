@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity PortReg8X8 is
-    Port ( clk : in STD_LOGIC;
+    Port ( Reset : in std_logic;
+           clk : in STD_LOGIC;
            MW : in STD_LOGIC;
            Data_in : in STD_LOGIC_VECTOR (7 downto 0);
            Adress_in : in STD_LOGIC_VECTOR (7 downto 0);
@@ -66,56 +67,61 @@ BEGIN
 
     ---- Register 8x8 ----
 
-    load <= "001" when Adress_in = "11111000" else
-            "010" when Adress_in = "11111001" else
-            "100" when Adress_in = "11111010" else
-            "000";
+    load <= "001" when Adress_in = "11111000" and MW = '1' else
+        "010" when Adress_in = "11111001" and MW = '1' else
+        "100" when Adress_in = "11111010" and MW = '1' else
+        "000";
 
     MR0_gen : FOR i IN 0 TO 7 GENERATE
         UMR0_gen : component DFF_EN_RS
-        PORT MAP(Data_in(i), '0', load(0), Clk, MR0(i));
+        PORT MAP(Data_in(i), Reset, load(0), Clk, MR0(i));
     END GENERATE;
 
     MR1_gen : FOR i IN 0 TO 7 GENERATE
         UMR1_gen : component DFF_EN_RS
-        PORT MAP(Data_in(i), '0', load(1), Clk, MR1(i));
+        PORT MAP(Data_in(i), Reset, load(1), Clk, MR1(i));
     END GENERATE;
 
     MR2_gen : FOR i IN 0 TO 7 GENERATE
         UMR2_gen : component DFF_EN_RS
-        PORT MAP(Data_in(i), '0', load(2), Clk, MR2(i));
+        PORT MAP(Data_in(i), Reset, load(2), Clk, MR2(i));
     END GENERATE;
 
     MR3_gen : FOR i IN 0 TO 7 GENERATE
         UMR3_gen : component DFF_EN_RS
-        PORT MAP(SW(i), '0', BTNR, Clk, MR3(i));
+        PORT MAP(SW(i), Reset, BTNR, Clk, MR3(i));
     END GENERATE;
 
     MR4_gen : FOR i IN 0 TO 7 GENERATE
         UMR4_gen : component DFF_EN_RS
-        PORT MAP(SW(i), '0', BTNL, Clk, MR4(i));
+        PORT MAP(SW(i), Reset, BTNL, Clk, MR4(i));
     END GENERATE;
 
     MR5_gen : FOR i IN 0 TO 7 GENERATE
         UMR5_gen : component DFF_EN_RS
-        PORT MAP(SW(i), '0', BTND, Clk, MR5(i));
+        PORT MAP(SW(i), Reset, BTND, Clk, MR5(i));
     END GENERATE;
 
     MR6_gen : FOR i IN 0 TO 7 GENERATE
         UMR6_gen : component DFF_EN_RS
-        PORT MAP(SW(i), '0', BTNU, Clk, MR6(i));
+        PORT MAP(SW(i), Reset, BTNU, Clk, MR6(i));
     END GENERATE;
 
     MR7_gen : FOR i IN 0 TO 7 GENERATE
         UMR7_gen : component DFF_EN_RS
-        PORT MAP(SW(i), '0', BTNC, Clk, MR7(i));
+        PORT MAP(SW(i), Reset, BTNC, Clk, MR7(i));
     END GENERATE;
 
 
     ---- Write and read
-    MR_Process: process (clk)
+    MR_Process: process (reset,clk)
     begin
-        if rising_edge(CLK) then
+        if reset = '1' then
+            MMR <= '0';
+            D_word <= (others=>'0');
+            LED <= (others=>'0');
+            Data_outR <= (others=>'0');
+        elsif rising_edge(CLK) then
             if MW='0' then
                 MMR <= '1';
                 case Adress_in is
