@@ -45,7 +45,7 @@ component PWF IS
         BTNC, BTNU, BTNL, BTNR, BTND : IN STD_LOGIC;
         LED : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
         Cathode : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
-        Anode : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
+        Anode : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
 END component;
 
         SIGNAL CLK, RESET : STD_LOGIC;
@@ -53,7 +53,7 @@ END component;
         SIGNAL BTNC, BTNU, BTNL, BTNR, BTND : STD_LOGIC;
         SIGNAL LED :  STD_LOGIC_VECTOR (7 DOWNTO 0);
         SIGNAL Cathode :  STD_LOGIC_VECTOR (6 DOWNTO 0);
-        SIGNAL Anode :  STD_LOGIC_VECTOR (3 DOWNTO 0);
+        SIGNAL Anode :  STD_LOGIC_VECTOR (7 DOWNTO 0);
 
 CONSTANT Clk50_period : TIME := 10 ns;
 
@@ -73,9 +73,9 @@ Clk50_process : PROCESS
     
 stimulus : PROCESS
     BEGIN
-        Reset <= '1';
-        WAIT FOR clk50_period*2;
         Reset <= '0';
+        WAIT FOR clk50_period*2;
+        Reset <= '1';
         WAIT FOR clk50_period*20;
         
         SW <= x"02";

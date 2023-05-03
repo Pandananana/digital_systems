@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1683098172">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="PWF.drc"/>
+  <File Type="BG-BGN" Name="PWF.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="PWF.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="PWF.ltx"/>
+  <File Type="BITSTR-MMI" Name="PWF.mmi"/>
+  <File Type="BITSTR-BMM" Name="PWF_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="PWF.nky"/>
+  <File Type="BITSTR-RBT" Name="PWF.rbt"/>
+  <File Type="BITSTR-MSK" Name="PWF.msk"/>
+  <File Type="BG-BIN" Name="PWF.bin"/>
+  <File Type="BG-BIT" Name="PWF.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="PWF_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="PWF_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="PWF_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="PWF.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="PWF_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="PWF_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="PWF_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="PWF_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PWF_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="PWF_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="PWF_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="PWF_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="PWF_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="PWF_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="PWF_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="PWF_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="PWF_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="PWF_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="PWF_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="PWF_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PWF_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PWF_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="PWF_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="PWF_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="PWF_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="PWF_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="PWF_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="PWF_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="PWF_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="PWF_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="PWF_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="PWF_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="PWF_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="PWF_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="PWF_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="PWF_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="PWF_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="PWF_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="PWF_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="PWF_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="PWF_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="PWF_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="PWF_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="PWF_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="PWF_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="PWF_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="PWF_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="PWF.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="PWF_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="PWF_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="PWF_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="PWF_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="PWF_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="PWF_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="PWF_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="PWF.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/ALU.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/ALU.vhd"/>
+        <Attr Name="ImportTime" Val="1677704719"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/DFF_EN_RS.vhd"/>
+        <Attr Name="ImportTime" Val="1677252335"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/Datapath.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/Datapath.vhd"/>
+        <Attr Name="ImportTime" Val="1677665600"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/Decoder2x4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/Decoder2x4.vhd"/>
+        <Attr Name="ImportTime" Val="1677432028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/DestinationDecoder.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/DestinationDecoder.vhd"/>
+        <Attr Name="ImportTime" Val="1677435436"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/Full_adder.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/Full_adder.vhd"/>
+        <Attr Name="ImportTime" Val="1677528026"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/Full_adder_8bit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/Full_adder_8bit.vhd"/>
+        <Attr Name="ImportTime" Val="1677704719"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/FunctionSelect.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/FunctionSelect.vhd"/>
+        <Attr Name="ImportTime" Val="1677490845"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/FunctionUnit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/FunctionUnit.vhd"/>
+        <Attr Name="ImportTime" Val="1677664403"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/Half-adder.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/Half-adder.vhd"/>
+        <Attr Name="ImportTime" Val="1677704719"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWB/PWB.srcs/sources_1/new/InstructionDecoderController.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWB/PWB.srcs/sources_1/new/InstructionDecoderController.vhd"/>
+        <Attr Name="ImportTime" Val="1679773137"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWB/PWB.srcs/sources_1/new/InstructionRegister.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWB/PWB.srcs/sources_1/new/InstructionRegister.vhd"/>
+        <Attr Name="ImportTime" Val="1679581177"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/MUX16x1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/MUX16x1.vhd"/>
+        <Attr Name="ImportTime" Val="1677248798"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/MUX16x1x8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/MUX16x1x8.vhd"/>
+        <Attr Name="ImportTime" Val="1677249685"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/MUX2x1.vhd"/>
+        <Attr Name="ImportTime" Val="1677247551"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX2x1x16.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/MUX2x1x8.vhd"/>
+        <Attr Name="ImportTime" Val="1677662277"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/MUX4x1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/MUX4x1.vhd"/>
+        <Attr Name="ImportTime" Val="1676542369"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWB/PWB.srcs/sources_1/new/MicroprogramController.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWB/PWB.srcs/sources_1/new/MicroprogramController.vhd"/>
+        <Attr Name="ImportTime" Val="1679771021"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/NegZero.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/NegZero.vhd"/>
+        <Attr Name="ImportTime" Val="1677494031"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PortReg8X8.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWB/PWB.srcs/sources_1/new/ProgramCounter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWB/PWB.srcs/sources_1/new/ProgramCounter.vhd"/>
+        <Attr Name="ImportTime" Val="1679772156"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Ram256X16.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterFile.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/RegisterFile.vhd"/>
+        <Attr Name="ImportTime" Val="1677744170"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/RegisterR16.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/RegisterR16.vhd"/>
+        <Attr Name="ImportTime" Val="1677256012"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/SevenSeg4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../SevenSeg4.vhd"/>
+        <Attr Name="ImportTime" Val="1681376510"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWA/PWA.srcs/sources_1/new/Shifter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWA/PWA.srcs/sources_1/new/Shifter.vhd"/>
+        <Attr Name="ImportTime" Val="1677661069"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWB/PWB.srcs/sources_1/new/SignExtender.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWB/PWB.srcs/sources_1/new/SignExtender.vhd"/>
+        <Attr Name="ImportTime" Val="1678307859"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/digital_systems/PWB/PWB.srcs/sources_1/new/ZeroFiller.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWB/PWB.srcs/sources_1/new/ZeroFiller.vhd"/>
+        <Attr Name="ImportTime" Val="1678306750"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Zerofiller2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PWF.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="PWF"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/Nexys_4_DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/Nexys_4_DDR_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1680165304"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

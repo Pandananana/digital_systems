@@ -8,7 +8,7 @@ entity SevenSeg4 is
     Port ( Rst,Clk: in  std_logic;    
 	        Data :   in  std_logic_vector (15 downto 0); -- Binary data
            cat :    out std_logic_vector(6 downto 0);  -- Common cathodes
-           an :     out std_logic_vector(3 downto 0)); -- Common Anodes
+           an :     out std_logic_vector(7 downto 0)); -- Common Anodes
 end SevenSeg4;
 
 architecture SevenSeg_arch of SevenSeg4 is
@@ -33,16 +33,16 @@ begin
 	begin
 	  case DispCount is
 	    when 0 => 
-		   an <= "1110";        --  Display 1 activated
+		   an <= "11111110";        --  Display 1 activated
 			DataN <= Data(3 downto 0);
 	    when 1 => 
-		   an <= "1101";        --  Display 1 activated
+		   an <= "11111101";        --  Display 1 activated
 			DataN <= Data(7 downto 4);
 	    when 2 => 
-		   an <= "1011";        --  Display 1 activated
+		   an <= "11111011";        --  Display 1 activated
 			DataN <= Data(11 downto 8);
 	    when others => 
-		   an <= "0111";        --  Display 1 activated
+		   an <= "11110111";        --  Display 1 activated
 			DataN <= Data(15 downto 12);
      end case;
     end process DispCountDec;

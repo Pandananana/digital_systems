@@ -36,7 +36,7 @@ ENTITY PWF IS
         BTNC, BTNU, BTNL, BTNR, BTND : IN STD_LOGIC;
         LED : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
         Cathode : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
-        Anode : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
+        Anode : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
 END PWF;
 
 ARCHITECTURE Behavioral OF PWF IS
@@ -74,6 +74,9 @@ ARCHITECTURE Behavioral OF PWF IS
 
     -- Clock Scaling
     SIGNAL SCLK : STD_LOGIC := '0';
+    
+    -- Inverted Clock
+    SIGNAL inv_Reset : STD_LOGIC;
 
     COMPONENT PortReg8X8 IS
         PORT (
@@ -129,7 +132,7 @@ ARCHITECTURE Behavioral OF PWF IS
             Rst, Clk : IN STD_LOGIC;
             Data : IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- Binary data
             cat : OUT STD_LOGIC_VECTOR(6 DOWNTO 0); -- Common cathodes
-            an : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)); -- Common Anodes
+            an : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)); -- Common Anodes
     END COMPONENT;
 
     COMPONENT Datapath IS
@@ -195,7 +198,7 @@ BEGIN
     RAM : Ram256X16
     PORT MAP(
         clk         =>   clk,
-        Reset       =>   Reset,
+        Reset       =>   inv_Reset,
         Data_in     =>   ZFILL_OUT,    
         Adress_in   =>   PR_Address_In_sig,
         MW          =>   MW_sig,
@@ -204,7 +207,7 @@ BEGIN
 
     Port_Register : PortReg8X8
     PORT MAP(
-        Reset => Reset,
+        Reset => inv_Reset,
         clk => sclk,
         MW => MW_sig,
         Data_in => DP_Data_out_sig,
@@ -231,12 +234,12 @@ BEGIN
 
     SevenSeg : SevenSeg4
     PORT MAP(
-        Reset, sClk, D_word_sig, Cathode, Anode
+        inv_Reset, sClk, D_word_sig, Cathode, Anode
     );
 
     DataPathComp : DataPath
     PORT MAP(
-        Reset           => Reset,    
+        Reset           => inv_Reset,    
         CLK             => sCLK,    
         RW              => RW_sig,
         DA              => DX_sig,
@@ -260,7 +263,7 @@ BEGIN
 
     MPC : MicroprogramController
     PORT MAP(
-        RESET           =>  RESET,     
+        RESET           =>  inv_Reset,     
         CLK             =>  sCLK, 
         FCLK            =>  CLK,
         Adress_In       =>  DP_Address_out_sig,         
@@ -281,5 +284,7 @@ BEGIN
         MM              =>  MM_sig,
         MW              =>  MW_sig
     );
+    
+    inv_Reset <= NOT Reset;
 
 END Behavioral;
