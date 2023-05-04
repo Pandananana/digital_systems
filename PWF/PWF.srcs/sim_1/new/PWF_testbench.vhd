@@ -78,20 +78,20 @@ stimulus : PROCESS
         Reset <= '1';
         WAIT FOR clk50_period*20;
         
-        SW <= x"02";
-        BTNC <= '0';
-        BTNU <= '1';
-        BTNL <= '0';
-        BTNR <= '0';
-        BTND <= '0';
-        wait for clk50_period*2;
-        BTNU <= '0';
-        wait for clk50_period*2;
+--        SW <= x"02";
+--        BTNC <= '0';
+--        BTNU <= '1';
+--        BTNL <= '0';
+--        BTNR <= '0';
+--        BTND <= '0';
+--        wait for clk50_period*2;
+--        BTNU <= '0';
+--        wait for clk50_period*2;
         
-        SW <= x"03";
-        BTND <= '1';
-        wait for clk50_period*2;
-        BTND <= '0';
+--        SW <= x"03";
+--        BTND <= '1';
+--        wait for clk50_period*2;
+--        BTND <= '0';
         wait for clk50_period*65;
         
         wait;

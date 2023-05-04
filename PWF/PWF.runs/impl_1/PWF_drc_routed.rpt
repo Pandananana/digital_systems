@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed May  3 09:20:44 2023
+| Date         : Thu May  4 12:03:47 2023
 | Host         : n-62-27-19 running 64-bit Scientific Linux release 7.9 (Nitrogen)
 | Command      : report_drc -file PWF_drc_routed.rpt -pb PWF_drc_routed.pb -rpx PWF_drc_routed.rpx
 | Design       : PWF
@@ -72,17 +72,17 @@ Related violations: <none>
 
 REQP-1840#1 Warning
 RAMB18 async control check  
-The RAMB18E1 RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: RAM/BRAM_SINGLE_MACRO_inst/PR_Address_In_sig[6]) which is driven by a register (DataPathComp/RegFile/U2/R13_gen[6].UR13_gen/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: RAM/BRAM_SINGLE_MACRO_inst/PR_Address_In_sig[6]) which is driven by a register (DataPathComp/RegFile/U2/R6_gen[6].UR6_gen/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#2 Warning
 RAMB18 async control check  
-The RAMB18E1 RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: RAM/BRAM_SINGLE_MACRO_inst/PR_Address_In_sig[6]) which is driven by a register (DataPathComp/RegFile/U2/R14_gen[6].UR14_gen/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: RAM/BRAM_SINGLE_MACRO_inst/PR_Address_In_sig[6]) which is driven by a register (DataPathComp/RegFile/U2/R7_gen[6].UR7_gen/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#3 Warning
 RAMB18 async control check  
-The RAMB18E1 RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: RAM/BRAM_SINGLE_MACRO_inst/PR_Address_In_sig[6]) which is driven by a register (DataPathComp/RegFile/U2/R1_gen[6].UR1_gen/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl has an input control pin RAM/BRAM_SINGLE_MACRO_inst/ramb_bl.ramb18_sin_bl.ram18_bl/ADDRARDADDR[10] (net: RAM/BRAM_SINGLE_MACRO_inst/PR_Address_In_sig[6]) which is driven by a register (DataPathComp/RegFile/U2/R8_gen[6].UR8_gen/Q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#4 Warning

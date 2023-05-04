@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Wed May  3 09:20:50 2023
+| Date             : Thu May  4 12:03:55 2023
 | Host             : n-62-27-19 running 64-bit Scientific Linux release 7.9 (Nitrogen)
 | Command          : report_power -file PWF_power_routed.rpt -pb PWF_power_summary_routed.pb -rpx PWF_power_routed.rpx
 | Design           : PWF
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.104        |
+| Total On-Chip Power (W)  | 0.108        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.007        |
+| Dynamic (W)              | 0.011        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      674 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      287 |     63400 |            0.45 |
+| Slice Logic    |    <0.001 |      677 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      293 |     63400 |            0.46 |
+|   Register     |    <0.001 |      299 |    126800 |            0.24 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Register     |    <0.001 |      300 |    126800 |            0.24 |
-|   F7/F8 Muxes  |    <0.001 |       26 |     63400 |            0.04 |
+|   F7/F8 Muxes  |    <0.001 |       31 |     63400 |            0.05 |
 |   CARRY4       |    <0.001 |        2 |     15850 |            0.01 |
 |   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |      601 |       --- |             --- |
+| Signals        |    <0.001 |      591 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |       135 |            0.37 |
-| I/O            |     0.006 |       38 |       210 |           18.10 |
+| I/O            |     0.010 |       38 |       210 |           18.10 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.104 |          |           |                 |
+| Total          |     0.108 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,7 +143,7 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| PWF                         |     0.007 |
+| PWF                         |     0.011 |
 |   DataPathComp              |    <0.001 |
 |     RegFile                 |    <0.001 |
 |       U1                    |    <0.001 |
@@ -285,70 +285,6 @@ Table of Contents
 |     InstReg                 |    <0.001 |
 |     ProgCount               |    <0.001 |
 |   Port_Register             |    <0.001 |
-|     MR0_gen[0].UMR0_gen     |    <0.001 |
-|     MR0_gen[1].UMR0_gen     |    <0.001 |
-|     MR0_gen[2].UMR0_gen     |    <0.001 |
-|     MR0_gen[3].UMR0_gen     |    <0.001 |
-|     MR0_gen[4].UMR0_gen     |    <0.001 |
-|     MR0_gen[5].UMR0_gen     |    <0.001 |
-|     MR0_gen[6].UMR0_gen     |    <0.001 |
-|     MR0_gen[7].UMR0_gen     |    <0.001 |
-|     MR1_gen[0].UMR1_gen     |    <0.001 |
-|     MR1_gen[1].UMR1_gen     |    <0.001 |
-|     MR1_gen[2].UMR1_gen     |    <0.001 |
-|     MR1_gen[3].UMR1_gen     |    <0.001 |
-|     MR1_gen[4].UMR1_gen     |    <0.001 |
-|     MR1_gen[5].UMR1_gen     |    <0.001 |
-|     MR1_gen[6].UMR1_gen     |    <0.001 |
-|     MR1_gen[7].UMR1_gen     |    <0.001 |
-|     MR2_gen[0].UMR2_gen     |    <0.001 |
-|     MR2_gen[1].UMR2_gen     |    <0.001 |
-|     MR2_gen[2].UMR2_gen     |    <0.001 |
-|     MR2_gen[3].UMR2_gen     |    <0.001 |
-|     MR2_gen[4].UMR2_gen     |    <0.001 |
-|     MR2_gen[5].UMR2_gen     |    <0.001 |
-|     MR2_gen[6].UMR2_gen     |    <0.001 |
-|     MR2_gen[7].UMR2_gen     |    <0.001 |
-|     MR3_gen[0].UMR3_gen     |    <0.001 |
-|     MR3_gen[1].UMR3_gen     |    <0.001 |
-|     MR3_gen[2].UMR3_gen     |    <0.001 |
-|     MR3_gen[3].UMR3_gen     |    <0.001 |
-|     MR3_gen[4].UMR3_gen     |    <0.001 |
-|     MR3_gen[5].UMR3_gen     |    <0.001 |
-|     MR3_gen[6].UMR3_gen     |    <0.001 |
-|     MR3_gen[7].UMR3_gen     |    <0.001 |
-|     MR4_gen[0].UMR4_gen     |    <0.001 |
-|     MR4_gen[1].UMR4_gen     |    <0.001 |
-|     MR4_gen[2].UMR4_gen     |    <0.001 |
-|     MR4_gen[3].UMR4_gen     |    <0.001 |
-|     MR4_gen[4].UMR4_gen     |    <0.001 |
-|     MR4_gen[5].UMR4_gen     |    <0.001 |
-|     MR4_gen[6].UMR4_gen     |    <0.001 |
-|     MR4_gen[7].UMR4_gen     |    <0.001 |
-|     MR5_gen[0].UMR5_gen     |    <0.001 |
-|     MR5_gen[1].UMR5_gen     |    <0.001 |
-|     MR5_gen[2].UMR5_gen     |    <0.001 |
-|     MR5_gen[3].UMR5_gen     |    <0.001 |
-|     MR5_gen[4].UMR5_gen     |    <0.001 |
-|     MR5_gen[5].UMR5_gen     |    <0.001 |
-|     MR5_gen[6].UMR5_gen     |    <0.001 |
-|     MR5_gen[7].UMR5_gen     |    <0.001 |
-|     MR6_gen[0].UMR6_gen     |    <0.001 |
-|     MR6_gen[1].UMR6_gen     |    <0.001 |
-|     MR6_gen[2].UMR6_gen     |    <0.001 |
-|     MR6_gen[3].UMR6_gen     |    <0.001 |
-|     MR6_gen[4].UMR6_gen     |    <0.001 |
-|     MR6_gen[5].UMR6_gen     |    <0.001 |
-|     MR6_gen[6].UMR6_gen     |    <0.001 |
-|     MR6_gen[7].UMR6_gen     |    <0.001 |
-|     MR7_gen[0].UMR7_gen     |    <0.001 |
-|     MR7_gen[1].UMR7_gen     |    <0.001 |
-|     MR7_gen[2].UMR7_gen     |    <0.001 |
-|     MR7_gen[3].UMR7_gen     |    <0.001 |
-|     MR7_gen[4].UMR7_gen     |    <0.001 |
-|     MR7_gen[5].UMR7_gen     |    <0.001 |
-|     MR7_gen[6].UMR7_gen     |    <0.001 |
-|     MR7_gen[7].UMR7_gen     |    <0.001 |
 |   RAM                       |    <0.001 |
 |     BRAM_SINGLE_MACRO_inst  |    <0.001 |
 |   SevenSeg                  |    <0.001 |

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed May  3 09:20:10 2023
+| Date         : Thu May  4 12:03:11 2023
 | Host         : n-62-27-19 running 64-bit Scientific Linux release 7.9 (Nitrogen)
 | Command      : report_control_sets -verbose -file PWF_control_sets_placed.rpt
 | Design       : PWF
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    37 |
-| Unused register locations in slices containing registers |    32 |
+| Number of unique control sets                            |    36 |
+| Unused register locations in slices containing registers |    34 |
 +----------------------------------------------------------+-------+
 
 
@@ -37,7 +37,7 @@ Table of Contents
 |      2 |            3 |
 |      4 |            1 |
 |      8 |            1 |
-|    16+ |           32 |
+|    16+ |           31 |
 +--------+--------------+
 
 
@@ -47,11 +47,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              84 |           17 |
-| No           | No                    | Yes                    |              20 |            6 |
+| No           | No                    | No                     |              84 |           16 |
+| No           | No                    | Yes                    |              18 |            6 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             496 |           85 |
+| Yes          | No                    | No                     |             144 |           21 |
+| Yes          | No                    | Yes                    |             352 |           62 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -62,43 +62,42 @@ Table of Contents
 +----------------------------------------+-------------------------------------------------+-----------------------------------------------------+------------------+----------------+
 |              Clock Signal              |                  Enable Signal                  |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
 +----------------------------------------+-------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|  MPC/InstDecCont/MM_reg_i_1_n_0        |                                                 |                                                     |                1 |              2 |
-|  MPC/InstDecCont/MD_reg_i_2_n_0        |                                                 |                                                     |                1 |              2 |
 |  MPC/InstDecCont/MB_reg_i_2_n_0        |                                                 |                                                     |                1 |              2 |
+|  MPC/InstDecCont/MD_reg_i_2_n_0        |                                                 |                                                     |                1 |              2 |
+|  MPC/InstDecCont/MM_reg_i_1_n_0        |                                                 |                                                     |                1 |              2 |
 |  CLK_IBUF_BUFG                         |                                                 |                                                     |                1 |              4 |
 |  MPC/InstDecCont/FS_reg[3]_i_2_n_0     |                                                 |                                                     |                1 |              8 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | BTNU_IBUF                                       | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                6 |             16 |
-|  SCLK_BUFG                             | MPC/ProgCount/Load                              | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
+|  SCLK_BUFG                             | MPC/InstDecCont/Data_outR_reg[0][0]             |                                                     |                4 |             16 |
 |  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                5 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             | BTNC_IBUF                                       | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
-|  SCLK_BUFG                             | BTND_IBUF                                       | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | BTNR_IBUF                                       | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | BTNL_IBUF                                       | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
-|  SCLK_BUFG                             | MPC/ProgCount/Q_reg                             | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR30                              |                                                     |                1 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR40                              |                                                     |                3 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR50                              |                                                     |                2 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR60                              |                                                     |                2 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR70                              |                                                     |                2 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                1 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR0_reg[7]_0[0]                   | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR2_reg[7][0]                     | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR1_reg[7]_0[0]                   | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
 |  SCLK_BUFG                             | MPC/InstDecCont/PC_var_reg[0][0]                | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             16 |
-|  SCLK_BUFG                             | MPC/ProgCount/LED_reg[7][0]                     | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | MPC/ProgCount/Data_outR_reg[7][0]               | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                6 |             16 |
-|  SCLK_BUFG                             | MPC/ProgCount/Q_reg_2                           | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
-|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[2] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
-|  SCLK_BUFG                             |                                                 | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                6 |             20 |
-|  SCLK_BUFG                             | MPC/ProgCount/E[0]                              | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                3 |             32 |
-|  CLK_IBUF_BUFG                         | MPC/InstDecCont/E[0]                            | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                5 |             32 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[1] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                4 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[3] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                2 |             16 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[0] | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                6 |             16 |
+|  SCLK_BUFG                             |                                                 | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                6 |             18 |
 |  MPC/InstDecCont/opcode_reg[6]_i_2_n_0 |                                                 |                                                     |                5 |             32 |
-|  MPC/InstDecCont/PS_reg[1]_i_2_n_0     |                                                 |                                                     |                7 |             34 |
+|  CLK_IBUF_BUFG                         | MPC/InstDecCont/E[0]                            | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                7 |             32 |
+|  MPC/InstDecCont/PS_reg[1]_i_2_n_0     |                                                 |                                                     |                6 |             34 |
+|  SCLK_BUFG                             | RESET_IBUF                                      |                                                     |                7 |             48 |
 +----------------------------------------+-------------------------------------------------+-----------------------------------------------------+------------------+----------------+
 
 
