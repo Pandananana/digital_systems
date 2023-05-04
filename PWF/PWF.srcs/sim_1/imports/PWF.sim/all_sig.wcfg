@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="742946709fs"></ZoomEndTime>
-      <Cursor1Time time="65831000fs"></Cursor1Time>
+      <ZoomEndTime time="100000001fs"></ZoomEndTime>
+      <Cursor1Time time="17097000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="217"></NameColumnWidth>
+      <NameColumnWidth column_width="209"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="11" />
    <wvobject type="group" fp_name="group538">
       <obj_property name="label">Ole Test</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -97,8 +97,8 @@
          <obj_property name="ObjectShortName">Cathode[6:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/PWF_testbench/Anode">
-         <obj_property name="ElementShortName">Anode[3:0]</obj_property>
-         <obj_property name="ObjectShortName">Anode[3:0]</obj_property>
+         <obj_property name="ElementShortName">Anode[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Anode[7:0]</obj_property>
       </wvobject>
       <wvobject type="other" fp_name="/PWF_testbench/Clk50_period">
          <obj_property name="ElementShortName">Clk50_period</obj_property>
@@ -231,6 +231,8 @@
       <wvobject type="array" fp_name="/PWF_testbench/UUT/Port_Register/D_word">
          <obj_property name="ElementShortName">D_word[15:0]</obj_property>
          <obj_property name="ObjectShortName">D_word[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/PWF_testbench/UUT/Port_Register/Data_outR">
          <obj_property name="ElementShortName">Data_outR[15:0]</obj_property>
@@ -319,8 +321,8 @@
          <obj_property name="ObjectShortName">cat[6:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/PWF_testbench/UUT/SevenSeg/an">
-         <obj_property name="ElementShortName">an[3:0]</obj_property>
-         <obj_property name="ObjectShortName">an[3:0]</obj_property>
+         <obj_property name="ElementShortName">an[7:0]</obj_property>
+         <obj_property name="ObjectShortName">an[7:0]</obj_property>
       </wvobject>
       <wvobject type="other" fp_name="/PWF_testbench/UUT/SevenSeg/DispCount">
          <obj_property name="ElementShortName">DispCount</obj_property>
@@ -1354,7 +1356,6 @@
       <wvobject type="group" fp_name="group5577">
          <obj_property name="label">ZeroFiller</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/ZerFil/IR">
             <obj_property name="ElementShortName">IR[15:0]</obj_property>
             <obj_property name="ObjectShortName">IR[15:0]</obj_property>
@@ -1363,6 +1364,39 @@
             <obj_property name="ElementShortName">ZeroFilled_8[7:0]</obj_property>
             <obj_property name="ObjectShortName">ZeroFilled_8[7:0]</obj_property>
          </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2160">
+      <obj_property name="label">DivClk</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/PWF_testbench/UUT/DisplayClock/Reset">
+         <obj_property name="ElementShortName">Reset</obj_property>
+         <obj_property name="ObjectShortName">Reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PWF_testbench/UUT/DisplayClock/Clk">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/PWF_testbench/UUT/DisplayClock/TimeP">
+         <obj_property name="ElementShortName">TimeP</obj_property>
+         <obj_property name="ObjectShortName">TimeP</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PWF_testbench/UUT/DisplayClock/Clk1">
+         <obj_property name="ElementShortName">Clk1</obj_property>
+         <obj_property name="ObjectShortName">Clk1</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/PWF_testbench/UUT/DisplayClock/Cnt1">
+         <obj_property name="ElementShortName">Cnt1</obj_property>
+         <obj_property name="ObjectShortName">Cnt1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PWF_testbench/UUT/DisplayClock/Clear1">
+         <obj_property name="ElementShortName">Clear1</obj_property>
+         <obj_property name="ObjectShortName">Clear1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PWF_testbench/UUT/DisplayClock/Clk1_D">
+         <obj_property name="ElementShortName">Clk1_D</obj_property>
+         <obj_property name="ObjectShortName">Clk1_D</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

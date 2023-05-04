@@ -74,6 +74,7 @@ ARCHITECTURE Behavioral OF PWF IS
 
     -- Clock Scaling
     SIGNAL SCLK : STD_LOGIC := '0';
+    SIGNAL DCLK : STD_LOGIC;
     
     -- Inverted Clock
     SIGNAL inv_Reset : STD_LOGIC;
@@ -164,6 +165,13 @@ ARCHITECTURE Behavioral OF PWF IS
             MB, MD, RW, MM, MW : OUT STD_LOGIC);
     END COMPONENT;
 
+    COMPONENT DivClk is
+        port ( Reset: in STD_LOGIC;     -- Global Reset (BTN1)
+               Clk: in STD_LOGIC;     -- Master Clock (50 MHz)
+               TimeP: in integer;     -- Time periode of the divided clock (50e6)
+               Clk1: out STD_LOGIC);   -- Divided clock1 (1 Hz)
+    end COMPONENT;
+
     SIGNAL counter : INTEGER RANGE 0 TO 1 := 0;
 
 BEGIN
@@ -234,7 +242,7 @@ BEGIN
 
     SevenSeg : SevenSeg4
     PORT MAP(
-        inv_Reset, sClk, D_word_sig, Cathode, Anode
+        inv_Reset, DCLK, D_word_sig, Cathode, Anode
     );
 
     DataPathComp : DataPath
@@ -283,6 +291,11 @@ BEGIN
         RW              =>  RW_sig,
         MM              =>  MM_sig,
         MW              =>  MW_sig
+    );
+
+    DisplayClock : DivClk
+    port map (
+        inv_Reset,Clk,25e6,DCLK
     );
     
     inv_Reset <= NOT Reset;
