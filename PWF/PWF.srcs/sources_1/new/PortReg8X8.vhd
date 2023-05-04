@@ -65,6 +65,83 @@ ARCHITECTURE Behavioral OF PortReg8x8 IS
     
 BEGIN
 
+
+    MMR_set: process(Adress_in,MW) is
+    begin
+        if Adress_in >= x"f8" and MW = '0' then
+            MMR <= '1';
+        else
+            MMR <= '0';
+        end if;
+    end process;
+        
+    write: process(clk, reset) is
+    begin
+        if reset = '1' then 
+            MR0 <= (others=>'0');
+            MR1 <= (others=>'0');
+            MR2 <= (others=>'0');
+        elsif rising_edge(CLK) then
+        D_word <= MR0 & MR1;
+        LED <= MR2;
+            if MW = '1' then
+                case Adress_in is
+                    when "11111000" =>
+                        MR0 <= Data_in;
+                    when "11111001" =>
+                        MR1 <= Data_in;
+                    when "11111010" =>
+                        MR2 <= Data_in;
+                    when others => NULL;
+                end case;
+            elsif MW = '0' then
+                case Adress_in is
+                      when "11111000" =>
+                        Data_outR <= X"00" & MR0;
+                      when "11111001" =>
+                        Data_outR <= X"00" & MR1;
+                      when "11111010" =>
+                        Data_outR <= X"00" & MR2;
+                      when "11111011" =>
+                        Data_outR <= X"00" & MR3;
+                      when "11111100" =>
+                        Data_outR <= X"00" & MR4;
+                      when "11111101" =>
+                        Data_outR <= X"00" & MR5;
+                      when "11111110" =>
+                        Data_outR <= X"00" & MR6;
+                      when "11111111" =>
+                        Data_outR <= X"00" & MR7;
+                      when others => NULL;
+                    end case;  
+                end if;
+                if BTNR = '1' then
+                    MR3 <= SW;
+                end if;
+                if BTNL = '1' then
+                                    MR4 <= SW;
+                                end if;
+                 if BTND = '1' then
+                                                    MR5 <= SW;
+                                                end if;
+                if BTNU = '1' then
+                                                                    MR6 <= SW;
+                                                                end if;
+                if BTNC = '1' then
+                                                                                    MR7 <= SW;
+                                                                                end if;
+                
+            end if;
+            
+       end process;
+            
+
+
+
+
+
+
+
     ---- Register 8x8 ----
 
     load <= "001" when Adress_in = "11111000" and MW = '1' else
