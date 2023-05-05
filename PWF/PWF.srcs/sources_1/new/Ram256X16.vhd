@@ -51,7 +51,7 @@ ARCHITECTURE Behavioral OF Ram256X16 IS
 BEGIN
 
    ADDR_sig <= "00" & Adress_in;
-   MW_sig <= '0' & MW;
+   MW_sig <= MW & MW;
 
    BRAM_SINGLE_MACRO_inst : BRAM_SINGLE_MACRO
    GENERIC MAP(

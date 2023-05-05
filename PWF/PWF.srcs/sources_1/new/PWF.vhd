@@ -295,7 +295,7 @@ BEGIN
 
     DisplayClock : DivClk
     port map (
-        inv_Reset,Clk,25e6,DCLK
+        inv_Reset,Clk,100e3,DCLK
     );
     
     inv_Reset <= NOT Reset;

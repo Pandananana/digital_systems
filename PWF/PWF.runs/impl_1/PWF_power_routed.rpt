@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Thu May  4 12:03:55 2023
-| Host             : n-62-27-19 running 64-bit Scientific Linux release 7.9 (Nitrogen)
+| Date             : Fri May  5 10:41:58 2023
+| Host             : n-62-30-3 running 64-bit Scientific Linux release 7.9 (Nitrogen)
 | Command          : report_power -file PWF_power_routed.rpt -pb PWF_power_summary_routed.pb -rpx PWF_power_routed.rpx
 | Design           : PWF
 | Device           : xc7a100tcsg324-1
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      677 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      293 |     63400 |            0.46 |
-|   Register     |    <0.001 |      299 |    126800 |            0.24 |
+| Slice Logic    |    <0.001 |      749 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      314 |     63400 |            0.50 |
+|   Register     |    <0.001 |      325 |    126800 |            0.26 |
+|   CARRY4       |    <0.001 |       11 |     15850 |            0.07 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |       31 |     63400 |            0.05 |
-|   CARRY4       |    <0.001 |        2 |     15850 |            0.01 |
-|   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |      591 |       --- |             --- |
+|   Others       |     0.000 |       13 |       --- |             --- |
+| Signals        |    <0.001 |      647 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |       135 |            0.37 |
 | I/O            |     0.010 |       38 |       210 |           18.10 |
 | Static Power   |     0.097 |          |           |                 |
@@ -280,6 +280,7 @@ Table of Contents
 |         R9_gen[5].UR9_gen   |    <0.001 |
 |         R9_gen[6].UR9_gen   |    <0.001 |
 |         R9_gen[7].UR9_gen   |    <0.001 |
+|   DisplayClock              |    <0.001 |
 |   MPC                       |    <0.001 |
 |     InstDecCont             |    <0.001 |
 |     InstReg                 |    <0.001 |
