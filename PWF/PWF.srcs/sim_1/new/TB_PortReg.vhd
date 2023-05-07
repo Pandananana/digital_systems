@@ -36,6 +36,7 @@ END TB_PortReg;
 ARCHITECTURE Behavioral OF TB_PortReg IS
     COMPONENT PortReg8X8 IS
         PORT (
+            reset : in std_logic;
             clk : IN STD_LOGIC;
             MW : IN STD_LOGIC;
             Data_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -52,6 +53,7 @@ ARCHITECTURE Behavioral OF TB_PortReg IS
             LED : OUT STD_LOGIC_VECTOR (7 DOWNTO 0));
     END COMPONENT;
 
+    SIGNAL reset : std_logic;
     SIGNAL clk : STD_LOGIC;
     SIGNAL MW : STD_LOGIC;
     SIGNAL Data_in : STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -72,7 +74,7 @@ ARCHITECTURE Behavioral OF TB_PortReg IS
 BEGIN
 
     UUT : PortReg8X8 PORT MAP(
-        clk, MW, Data_in, Adress_in, SW, BTNC, BTNU, BTNL, BTNR, BTND, MMR, D_word, Data_outR, LED
+        reset, clk, MW, Data_in, Adress_in, SW, BTNC, BTNU, BTNL, BTNR, BTND, MMR, D_word, Data_outR, LED
     );
 
     Clk50_process : PROCESS
@@ -85,14 +87,81 @@ BEGIN
 
     stimulus : PROCESS
     BEGIN
-        MW <= '1';
-        Data_in <= (OTHERS => '1');
+        reset <= '1';
+        SW <= (others=>'0');
+        BTNR <= '0';
+        BTNL <= '0';
+        BTND <= '0';
+        BTNU <= '0';
+        BTNC <= '0';
+        wait for Clk50_period*2;
+        reset <= '0';
+
         Adress_in <= "11111000";
+        Data_in <= x"FF";
+        MW <= '1';
+
+        WAIT FOR Clk50_period*2;
+        Data_in <= x"01";
+        Adress_in <= "11111001";
+
+        WAIT FOR Clk50_period*2;
+        Data_in <= x"02";
+        Adress_in <= "11111010";
 
         WAIT FOR Clk50_period*2;
         MW <= '0';
+        Adress_in <= "11111000";
+        SW <= x"03";
+        BTNR <= '1';
+        
+        WAIT FOR Clk50_period*2;
+        BTNR <= '0';
+        SW <= x"04";
+        BTNL <= '1';
+        
+        WAIT FOR Clk50_period*2;
+        BTNL <= '0';
+        SW <= x"05";
+        BTND <= '1';
+        
+        WAIT FOR Clk50_period*2;
+        BTND <= '0';
+        SW <= x"06";
+        BTNU <= '1';
+        
+        WAIT FOR Clk50_period*2;
+        BTNU <= '0';
+        SW <= x"07";
+        BTNC <= '1';
+        
 
+        WAIT FOR Clk50_period*2;
+        BTNC <= '0';
+        Adress_in <= "11111000";
 
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111001";
+
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111010";
+
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111011";
+
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111100";
+
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111101";
+
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111110";
+
+        WAIT FOR Clk50_period*2;
+        Adress_in <= "11111111";
+
+        WAIT FOR Clk50_period*2;
 
         WAIT;
     END PROCESS;
