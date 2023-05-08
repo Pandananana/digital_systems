@@ -6,7 +6,7 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
 #fix for loop errors
 set_property SEVERITY {Warning} [get_drc_checks LUTLP-1]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE
+set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
 
 ## Clock signal
 set_property -dict { PACKAGE_PIN E3   IOSTANDARD LVCMOS33 } [get_ports { CLK}]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
@@ -69,7 +69,7 @@ set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { Cathod
 set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { Cathode[5] }]; # F IO_L19P_T3_A10_D26_14 Sch=cf
 set_property -dict { PACKAGE_PIN L18   IOSTANDARD LVCMOS33 } [get_ports { Cathode[6]}]; # GIO_L4P_T0_D04_14 Sch=cg
 
-#set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { dp }]; #IO_L19N_T3_A21_VREF_15 Sch=dp
+##set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { dp }]; #IO_L19N_T3_A21_VREF_15 Sch=dp
 
 set_property -dict { PACKAGE_PIN J17   IOSTANDARD LVCMOS33 } [get_ports { Anode[0] }]; #IO_L23P_T3_FOE_B_15 Sch=an[0]
 set_property -dict { PACKAGE_PIN J18   IOSTANDARD LVCMOS33 } [get_ports { Anode[1] }]; #IO_L23N_T3_FWE_B_15 Sch=an[1]

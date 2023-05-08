@@ -244,6 +244,7 @@ BEGIN
     PORT MAP(
         inv_Reset, DCLK, D_word_sig, Cathode, Anode
     );
+    
 
     DataPathComp : DataPath
     PORT MAP(

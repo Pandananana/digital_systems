@@ -62,6 +62,22 @@ BEGIN
 
     Control_logic : PROCESS (state, IR, N, Z)
     BEGIN
+        IL <= '0';
+        PS <= "00";
+        DX <= "0000"; 
+        AX <= "0000"; 
+        BX <= "0000";
+        MB <= '0';
+        FS <= "0000";
+        MD <= '0';
+        RW <= '0';
+        MM <= '0';
+        MW <= '0';
+        opcode <= (others=>'0');
+        dx_sig <= (others=>'0');
+        bx_sig <= (others=>'0');
+        ax_sig <= (others=>'0');
+        NextState <= INF;
         CASE state IS
             when RST =>
                 IL <= '0';
@@ -80,7 +96,6 @@ BEGIN
                 bx_sig <= (others=>'0');
                 ax_sig <= (others=>'0');
                 NextState <= INF;
-                
 
             WHEN inf =>
                 IL <= '1';
