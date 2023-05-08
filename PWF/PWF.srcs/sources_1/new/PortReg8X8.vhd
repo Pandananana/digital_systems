@@ -70,7 +70,7 @@ BEGIN
         END IF;
     END PROCESS;
 
-    write : PROCESS (clk, reset) IS
+    READ_WRITE : PROCESS (clk, reset) IS
     BEGIN
         IF reset = '1' THEN
             MR0 <= (OTHERS => '0');
@@ -127,95 +127,5 @@ BEGIN
             END IF;
         END IF;
     END PROCESS;
-    ---- Register 8x8 ----
-
-    -- load <= "001" WHEN Adress_in = "11111000" AND MW = '1' ELSE
-    --     "010" WHEN Adress_in = "11111001" AND MW = '1' ELSE
-    --     "100" WHEN Adress_in = "11111010" AND MW = '1' ELSE
-    --     "000";
-
-    -- MR0_gen : FOR i IN 0 TO 7 GENERATE
-    --     UMR0_gen : COMPONENT DFF_EN_RS
-    --         PORT MAP(Data_in(i), Reset, load(0), Clk, MR0(i));
-    --     END GENERATE;
-
-    --     MR1_gen : FOR i IN 0 TO 7 GENERATE
-    --         UMR1_gen : COMPONENT DFF_EN_RS
-    --             PORT MAP(Data_in(i), Reset, load(1), Clk, MR1(i));
-    --         END GENERATE;
-
-    --         MR2_gen : FOR i IN 0 TO 7 GENERATE
-    --             UMR2_gen : COMPONENT DFF_EN_RS
-    --                 PORT MAP(Data_in(i), Reset, load(2), Clk, MR2(i));
-    --             END GENERATE;
-
-    --             MR3_gen : FOR i IN 0 TO 7 GENERATE
-    --                 UMR3_gen : COMPONENT DFF_EN_RS
-    --                     PORT MAP(SW(i), Reset, BTNR, Clk, MR3(i));
-    --                 END GENERATE;
-
-    --                 MR4_gen : FOR i IN 0 TO 7 GENERATE
-    --                     UMR4_gen : COMPONENT DFF_EN_RS
-    --                         PORT MAP(SW(i), Reset, BTNL, Clk, MR4(i));
-    --                     END GENERATE;
-
-    --                     MR5_gen : FOR i IN 0 TO 7 GENERATE
-    --                         UMR5_gen : COMPONENT DFF_EN_RS
-    --                             PORT MAP(SW(i), Reset, BTND, Clk, MR5(i));
-    --                         END GENERATE;
-
-    --                         MR6_gen : FOR i IN 0 TO 7 GENERATE
-    --                             UMR6_gen : COMPONENT DFF_EN_RS
-    --                                 PORT MAP(SW(i), Reset, BTNU, Clk, MR6(i));
-    --                             END GENERATE;
-
-    --                             MR7_gen : FOR i IN 0 TO 7 GENERATE
-    --                                 UMR7_gen : COMPONENT DFF_EN_RS
-    --                                     PORT MAP(SW(i), Reset, BTNC, Clk, MR7(i));
-    --                                 END GENERATE;
-    --                                 ---- Write and read
-    --                                 MR_Process : PROCESS (reset, clk)
-    --                                 BEGIN
-    --                                     IF reset = '1' THEN
-    --                                         MMR <= '0';
-    --                                         D_word <= (OTHERS => '0');
-    --                                         LED <= (OTHERS => '0');
-    --                                         Data_outR <= (OTHERS => '0');
-    --                                     ELSIF rising_edge(CLK) THEN
-    --                                         IF MW = '0' THEN
-    --                                             MMR <= '1';
-    --                                             CASE Adress_in IS
-    --                                                 WHEN "11111000" =>
-    --                                                     Data_outR <= "00000000" & MR0;
-    --                                                     D_word <= MR1 & MR0;
-
-    --                                                 WHEN "11111001" =>
-    --                                                     Data_outR <= "00000000" & MR1;
-    --                                                     D_word <= MR1 & MR0;
-
-    --                                                 WHEN "11111010" =>
-    --                                                     Data_outR <= "00000000" & MR2;
-    --                                                     LED <= MR2;
-
-    --                                                 WHEN "11111011" =>
-    --                                                     Data_outR <= "00000000" & MR3;
-
-    --                                                 WHEN "11111100" =>
-    --                                                     Data_outR <= "00000000" & MR4;
-
-    --                                                 WHEN "11111101" =>
-    --                                                     Data_outR <= "00000000" & MR5;
-
-    --                                                 WHEN "11111110" =>
-    --                                                     Data_outR <= "00000000" & MR6;
-
-    --                                                 WHEN "11111111" =>
-    --                                                     Data_outR <= "00000000" & MR7;
-
-    --                                                 WHEN OTHERS =>
-    --                                                     MMR <= '0';
-    --                                             END CASE;
-    --                                         END IF;
-    --                                     END IF;
-    --                                 END PROCESS;
+    
 END Behavioral;
