@@ -1,8 +1,14 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
+<<<<<<< HEAD
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 | Date         : Mon May  8 16:20:49 2023
 | Host         : Olivers-Matebook running 64-bit major release  (build 9200)
+=======
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue May  9 08:35:47 2023
+| Host         : n-62-27-17 running 64-bit Scientific Linux release 7.9 (Nitrogen)
+>>>>>>> 79af668 (Oles ændringer)
 | Command      : report_control_sets -verbose -file PWF_control_sets_placed.rpt
 | Design       : PWF
 | Device       : xc7a100t
@@ -23,8 +29,13 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
+<<<<<<< HEAD
 | Number of unique control sets                            |    32 |
 | Unused register locations in slices containing registers |    14 |
+=======
+| Number of unique control sets                            |    51 |
+| Unused register locations in slices containing registers |   146 |
+>>>>>>> 79af668 (Oles ændringer)
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +45,18 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+<<<<<<< HEAD
 |      4 |            2 |
 |     14 |            1 |
 |    16+ |           29 |
+=======
+|      4 |            1 |
+|      6 |           16 |
+|      8 |            2 |
+|     10 |           17 |
+|     14 |            1 |
+|    16+ |           14 |
+>>>>>>> 79af668 (Oles ændringer)
 +--------+--------------+
 
 
@@ -46,11 +66,19 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
+<<<<<<< HEAD
 | No           | No                    | No                     |               4 |            1 |
 | No           | No                    | Yes                    |              70 |            8 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |             144 |           26 |
 | Yes          | No                    | Yes                    |             352 |           51 |
+=======
+| No           | No                    | No                     |              88 |           14 |
+| No           | No                    | Yes                    |              70 |           12 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             144 |           22 |
+| Yes          | No                    | Yes                    |             352 |           78 |
+>>>>>>> 79af668 (Oles ændringer)
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -58,6 +86,7 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
+<<<<<<< HEAD
 +-------------------+-------------------------------+-----------------------------------------------------+------------------+----------------+
 |    Clock Signal   |         Enable Signal         |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
 +-------------------+-------------------------------+-----------------------------------------------------+------------------+----------------+
@@ -94,5 +123,62 @@ Table of Contents
 |  SCLK_BUFG        | RESET_IBUF                    |                                                     |                8 |             48 |
 |  CLK_IBUF_BUFG    |                               | DataPathComp/RegFile/U2/R15_gen[7].UR15_gen/Q_reg_0 |                5 |             52 |
 +-------------------+-------------------------------+-----------------------------------------------------+------------------+----------------+
+=======
++----------------------------------------+-------------------------------------------------+--------------------------+------------------+----------------+
+|              Clock Signal              |                  Enable Signal                  |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------------------------------+-------------------------------------------------+--------------------------+------------------+----------------+
+|  DisplayClock/CLK                      |                                                 | Reset                    |                1 |              4 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[2] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[2] | inv_Reset_reg_rep_n_0    |                1 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[1] | inv_Reset_reg_rep_n_0    |                1 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[3] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[0] | inv_Reset_reg_rep_n_0    |                1 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[0] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[2] | inv_Reset_reg_rep_n_0    |                1 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[3] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[3] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[1] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[1] | inv_Reset_reg_rep_n_0    |                3 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[0] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[0] | inv_Reset_reg_rep_n_0    |                1 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[3] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[2] | inv_Reset_reg_rep_n_0    |                1 |              6 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[1] | inv_Reset_reg_rep_n_0    |                2 |              6 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR1_reg[7][0]                     | inv_Reset_reg_rep_n_0    |                1 |              8 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR1_reg[7][0]                     | inv_Reset_reg_rep__0_n_0 |                2 |              8 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[1] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[3] | inv_Reset_reg_rep__0_n_0 |                2 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[0] | inv_Reset_reg_rep__0_n_0 |                2 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[0] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[2] | inv_Reset_reg_rep__0_n_0 |                1 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[0].U2_gen/LoadSig[3] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[1] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[3] | inv_Reset_reg_rep__0_n_0 |                2 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[1] | inv_Reset_reg_rep__0_n_0 |                1 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[1].U2_gen/LoadSig[2] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[2] | inv_Reset_reg_rep__0_n_0 |                1 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[3].U2_gen/LoadSig[0] | inv_Reset_reg_rep__0_n_0 |                1 |             10 |
+|  CLK_IBUF_BUFG                         |                                                 |                          |                2 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[0] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[1] | inv_Reset_reg_rep__0_n_0 |                2 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[2] | inv_Reset_reg_rep__0_n_0 |                3 |             10 |
+|  SCLK_BUFG                             | DataPathComp/RegFile/U1/U2[2].U2_gen/LoadSig[3] | inv_Reset_reg_rep__0_n_0 |                2 |             10 |
+|  SCLK_BUFG                             |                                                 | inv_Reset_reg_rep_n_0    |                5 |             14 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR0_reg[7]_0[0]                   | inv_Reset_reg_rep_n_0    |                1 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR30                              |                          |                1 |             16 |
+|  SCLK_BUFG                             | MPC/InstDecCont/E[0]                            | inv_Reset_reg_rep_n_0    |                5 |             16 |
+|  SCLK_BUFG                             | MPC/ProgCount/E[0]                              |                          |                5 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR40                              |                          |                2 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR50                              |                          |                3 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR60                              |                          |                1 |             16 |
+|  SCLK_BUFG                             | Port_Register/MR70                              |                          |                2 |             16 |
+|  SCLK_BUFG                             | MPC/ProgCount/MR2_reg[7][0]                     | inv_Reset_reg_rep__0_n_0 |                1 |             16 |
+|  MPC/InstDecCont/opcode_reg[6]_i_2_n_0 |                                                 |                          |                5 |             32 |
+|  CLK_IBUF_BUFG                         | MPC/InstDecCont/MM_sig                          | inv_Reset_reg_rep_n_0    |                6 |             32 |
+|  MPC/InstDecCont/PS_reg[1]_i_2_n_0     |                                                 |                          |                7 |             46 |
+|  SCLK_BUFG                             | Port_Register/D_word[15]_i_1_n_0                |                          |                8 |             48 |
+|  CLK_IBUF_BUFG                         |                                                 | Reset                    |                6 |             52 |
++----------------------------------------+-------------------------------------------------+--------------------------+------------------+----------------+
+>>>>>>> 79af668 (Oles ændringer)
 
 

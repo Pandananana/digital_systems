@@ -2,6 +2,7 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+<<<<<<< HEAD
 # Start of session at: Mon May  8 16:04:06 2023
 # Process ID: 39032
 # Current directory: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.sim/sim_1/behav/xsim
@@ -10,3 +11,13 @@
 # Journal file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Oliver/Desktop/Digitale -notrace
+=======
+# Start of session at: Mon May  8 16:41:52 2023
+# Process ID: 9491
+# Current directory: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/xsim.dir/TB_PortReg_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /zhome/66/2/168935/uni/digital_systems/PWF/PWF.sim/sim_1/behav/xsim/xsim.dir/TB_PortReg_behav/webtalk/xsim_webtalk.tcl -notrace
+>>>>>>> 79af668 (Oles ændringer)

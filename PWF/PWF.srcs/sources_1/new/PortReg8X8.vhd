@@ -76,6 +76,11 @@ BEGIN
             MR0 <= (OTHERS => '0');
             MR1 <= (OTHERS => '0');
             MR2 <= (OTHERS => '0');
+            MR3 <= (OTHERS => '0');
+            MR4 <= (OTHERS => '0');
+            MR5 <= (OTHERS => '0');
+            MR6 <= (OTHERS => '0');
+            MR7 <= (OTHERS => '0');
         ELSIF rising_edge(CLK) THEN
             D_word <= MR1 & MR0;
             LED <= MR2;

@@ -59,10 +59,10 @@ begin
                  sum_sig when J_select = "0101" else
                  sum_sig when J_select = "0110" else
                  A when J_select = "0111" else
-                 A or B when J_select = "1000" else
-                 A and B when J_select = "1001" else
-                 A xor B when J_select = "1010" else
-                 (not A) when J_select = "1011" else
+                 A or B when J_select = "1000" or J_select = "1100"  else
+                 A and B when J_select = "1001" or J_select = "1101"  else
+                 A xor B when J_select = "1010" or J_select = "1110"  else
+                 (not A) when J_select = "1011" or J_select = "1111"  else
                  "00000000";
                  
             y_sig <= A;

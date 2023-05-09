@@ -1,8 +1,14 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 | Date         : Mon May  8 16:21:27 2023
 | Host         : Olivers-Matebook running 64-bit major release  (build 9200)
+=======
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue May  9 08:36:27 2023
+| Host         : n-62-27-17 running 64-bit Scientific Linux release 7.9 (Nitrogen)
+>>>>>>> 79af668 (Oles ændringer)
 | Command      : report_methodology -file PWF_methodology_drc_routed.rpt -pb PWF_methodology_drc_routed.pb -rpx PWF_methodology_drc_routed.rpx
 | Design       : PWF
 | Device       : xc7a100tcsg324-1
@@ -23,12 +29,20 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
+<<<<<<< HEAD
              Violations found: 242
+=======
+             Violations found: 281
+>>>>>>> 79af668 (Oles ændringer)
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 241        |
 | TIMING-18 | Warning  | Missing input or output delay | 1          |
+<<<<<<< HEAD
+=======
+| TIMING-20 | Warning  | Non-clocked latch             | 39         |
+>>>>>>> 79af668 (Oles ændringer)
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -1243,4 +1257,202 @@ Missing input or output delay
 An input delay is missing on RESET relative to clock(s) CLK
 Related violations: <none>
 
+<<<<<<< HEAD
+=======
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/AX_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/AX_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/AX_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/AX_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/AX_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/AX_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/AX_reg[3] cannot be properly analyzed as its control pin MPC/InstDecCont/AX_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/BX_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/BX_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/BX_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/BX_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/BX_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/BX_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/BX_reg[3] cannot be properly analyzed as its control pin MPC/InstDecCont/BX_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/DX_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/DX_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/DX_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/DX_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/DX_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/DX_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/DX_reg[3] cannot be properly analyzed as its control pin MPC/InstDecCont/DX_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/FS_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/FS_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/FS_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/FS_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/FS_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/FS_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/FS_reg[3] cannot be properly analyzed as its control pin MPC/InstDecCont/FS_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/IL_reg cannot be properly analyzed as its control pin MPC/InstDecCont/IL_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/MB_reg cannot be properly analyzed as its control pin MPC/InstDecCont/MB_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/MD_reg cannot be properly analyzed as its control pin MPC/InstDecCont/MD_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/MW_reg cannot be properly analyzed as its control pin MPC/InstDecCont/MW_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/PS_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/PS_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/PS_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/PS_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/RW_reg cannot be properly analyzed as its control pin MPC/InstDecCont/RW_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/ax_sig_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/ax_sig_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/ax_sig_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/ax_sig_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/ax_sig_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/ax_sig_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/bx_sig_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/bx_sig_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/bx_sig_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/bx_sig_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/bx_sig_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/bx_sig_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/dx_sig_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/dx_sig_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/dx_sig_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/dx_sig_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/dx_sig_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/dx_sig_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[0] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[1] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[2] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[3] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[4] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[5] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch MPC/InstDecCont/opcode_reg[6] cannot be properly analyzed as its control pin MPC/InstDecCont/opcode_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+>>>>>>> 79af668 (Oles ændringer)
 

@@ -179,6 +179,11 @@ BEGIN
     ClockDiv : PROCESS (clk)
     BEGIN
         IF rising_edge(clk) THEN
+            IF Reset = '0' then
+                inv_reset <= '1';
+            else
+                inv_reset <= '0';
+            end if;
             counter <= counter + 1;
             IF counter = 1 THEN
                 counter <= 0;
@@ -245,7 +250,10 @@ BEGIN
         inv_Reset, DCLK, D_word_sig, Cathode, Anode
     );
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 79af668 (Oles ændringer)
     DataPathComp : DataPath
     PORT MAP(
         Reset           => inv_Reset,    
@@ -296,9 +304,7 @@ BEGIN
 
     DisplayClock : DivClk
     port map (
-        inv_Reset,Clk,100e3,DCLK
+        inv_Reset,Clk,1,DCLK
     );
-    
-    inv_Reset <= NOT Reset;
 
 END Behavioral;

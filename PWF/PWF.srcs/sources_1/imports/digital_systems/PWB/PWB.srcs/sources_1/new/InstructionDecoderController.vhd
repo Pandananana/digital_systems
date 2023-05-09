@@ -62,6 +62,7 @@ BEGIN
 
     Control_logic : PROCESS (state, IR, N, Z)
     BEGIN
+<<<<<<< HEAD
         IL <= '0';
         PS <= "00";
         DX <= "0000"; 
@@ -77,6 +78,8 @@ BEGIN
         dx_sig <= (others=>'0');
         bx_sig <= (others=>'0');
         ax_sig <= (others=>'0');
+=======
+>>>>>>> 79af668 (Oles ændringer)
         NextState <= INF;
         CASE state IS
             when RST =>
@@ -100,12 +103,12 @@ BEGIN
             WHEN inf =>
                 IL <= '1';
                 PS <= "00";
-                DX <= '-' & dx_sig;
-                AX <= '-' & ax_sig;
-                BX <= '-' & bx_sig;
-                MB <= '-';
-                FS <= "----";
-                    MD <= '-';
+                DX <= '0' & dx_sig;
+                AX <= '0' & ax_sig;
+                BX <= '0' & bx_sig;
+                MB <= '0';
+                FS <= "0000";
+                    MD <= '0';
                 RW <= '0';
                 MM <= '1';
                 MW <= '0';
@@ -122,12 +125,12 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0000001" =>
@@ -135,12 +138,12 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0001";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0000010" =>
@@ -153,7 +156,7 @@ BEGIN
                         FS <= "0010";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0000101" =>
@@ -166,7 +169,7 @@ BEGIN
                         FS <= "0101";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0000110" =>
@@ -174,12 +177,12 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0110";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0001000" =>
@@ -192,7 +195,7 @@ BEGIN
                         FS <= "1000";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0001001" =>
@@ -205,7 +208,7 @@ BEGIN
                         FS <= "1001";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0001010" =>
@@ -218,7 +221,7 @@ BEGIN
                         FS <= "1010";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0001011" =>
@@ -226,25 +229,25 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "1011";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0001100" =>
                         IL <= '0';
                         PS <= "01";
                         DX <= '0' & dx_sig;
-                        AX <= '-' & ax_sig;
+                        AX <= '0' & ax_sig;
                         BX <= '0' & bx_sig;
                         MB <= '0';
                         FS <= "1100";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN "0010000" =>
@@ -252,9 +255,9 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
-                        FS <= "----";
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
+                        FS <= "0000";
                             MD <= '1';
                         RW <= '1';
                         MM <= '0';
@@ -263,12 +266,12 @@ BEGIN
                     WHEN "0100000" =>
                         IL <= '0';
                         PS <= "01";
-                        DX <= '-' & dx_sig;
+                        DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
                         BX <= '0' & bx_sig;
                         MB <= '0';
-                        FS <= "----";
-                            MD <= '-';
+                        FS <= "0000";
+                            MD <= '0';
                         RW <= '0';
                         MM <= '0';
                         MW <= '1';
@@ -277,8 +280,8 @@ BEGIN
                         IL <= '0';
                         PS <= "01";
                         DX <= '0' & dx_sig;
-                        AX <= '-' & ax_sig;
-                        BX <= '-' & bx_sig;
+                        AX <= '0' & ax_sig;
+                        BX <= '0' & bx_sig;
                         MB <= '1';
                         FS <= "1100";
                         MD <= '0';
@@ -291,7 +294,7 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
+                        BX <= '0' & bx_sig;
                         MB <= '1';
                         FS <= "0010";
                         MD <= '0';
@@ -306,12 +309,12 @@ BEGIN
                             PS <= "01";
                         END IF;
                         IL <= '0';
-                        DX <= '-' & dx_sig;
+                        DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
-                        MD <= '-';
+                        MD <= '0';
                         RW <= '0';
                         MM <= '0';
                         MW <= '0';
@@ -323,12 +326,12 @@ BEGIN
                             PS <= "01";
                         END IF;
                         IL <= '0';
-                        DX <= '-' & dx_sig;
+                        DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
-                        MD <= '-';
+                        MD <= '0';
                         RW <= '0';
                         MM <= '0';
                         MW <= '0';
@@ -336,12 +339,12 @@ BEGIN
                     WHEN "1110000" =>
                         IL <= '0';
                         PS <= "11";
-                        DX <= '-' & dx_sig;
+                        DX <= '0' & dx_sig;
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
-                        MD <= '-';
+                        MD <= '0';
                         RW <= '0';
                         MM <= '0';
                         MW <= '0';
@@ -351,8 +354,8 @@ BEGIN
                         PS <= "00";
                         DX <= "1000";
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
                         MD <= '1';
                         RW <= '1';
@@ -370,12 +373,12 @@ BEGIN
                         IL <= '0';
                         DX <= "1000";
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                     WHEN "0001110" =>
                         IF Z = '1' THEN
@@ -388,12 +391,12 @@ BEGIN
                         IL <= '0';
                         DX <= "1000";
                         AX <= '0' & ax_sig;
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                     WHEN OTHERS =>
                         nextstate <= inf;
@@ -407,8 +410,8 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= "1000";
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
                         MD <= '1';
                         RW <= '1';
@@ -425,13 +428,13 @@ BEGIN
                         END IF;
                         IL <= '0';
                         DX <= "1001";
-                        AX <= '-' & ax_sig;
-                        BX <= '-' & bx_sig;
+                        AX <= '0' & ax_sig;
+                        BX <= '0' & bx_sig;
                         MB <= '1';
                         FS <= "1100";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                     WHEN "0001110" =>
                         IF Z = '1' THEN
@@ -443,13 +446,13 @@ BEGIN
                         END IF;
                         IL <= '0';
                         DX <= "1001";
-                        AX <= '-' & ax_sig;
-                        BX <= '-' & bx_sig;
+                        AX <= '0' & ax_sig;
+                        BX <= '0' & bx_sig;
                         MB <= '1';
                         FS <= "1100";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                     WHEN OTHERS =>
                         nextstate <= inf;
@@ -461,26 +464,26 @@ BEGIN
                         IL <= '0';
                         PS <= "00";
                         DX <= "1000";
-                        AX <= '-' & ax_sig;
+                        AX <= '0' & ax_sig;
                         BX <= "1000";
                         MB <= '0';
                         FS <= "1101";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= ex3;
                     WHEN "0001110" =>
                         IL <= '0';
                         PS <= "00";
                         DX <= "1000";
-                        AX <= '-' & ax_sig;
+                        AX <= '0' & ax_sig;
                         BX <= "1000";
                         MB <= '0';
                         FS <= "1110";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= ex3;
                     WHEN OTHERS =>
@@ -499,12 +502,12 @@ BEGIN
                         IL <= '0';
                         DX <= "1001";
                         AX <= "1001";
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0110";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                     WHEN "0001110" =>
                         IF Z = '1' THEN
@@ -516,12 +519,12 @@ BEGIN
                         IL <= '0';
                         DX <= "1001";
                         AX <= "1001";
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0110";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                     WHEN OTHERS =>
                         nextstate <= inf;
@@ -534,17 +537,35 @@ BEGIN
                         PS <= "01";
                         DX <= '0' & dx_sig;
                         AX <= "1000";
-                        BX <= '-' & bx_sig;
-                        MB <= '-';
+                        BX <= '0' & bx_sig;
+                        MB <= '0';
                         FS <= "0000";
                         MD <= '0';
                         RW <= '1';
-                        MM <= '-';
+                        MM <= '0';
                         MW <= '0';
                         nextstate <= inf;
                     WHEN OTHERS =>
                         nextstate <= inf;
                 END CASE;
+
+            when others =>
+                IL <= '0';
+                PS <= "00";
+                DX <= "0000"; 
+                AX <= "0000"; 
+                BX <= "0000";
+                MB <= '0';
+                FS <= "0000";
+                MD <= '0';
+                RW <= '0';
+                MM <= '0';
+                MW <= '0';
+                opcode <= (others=>'0');
+                dx_sig <= (others=>'0');
+                bx_sig <= (others=>'0');
+                ax_sig <= (others=>'0');
+                
         END CASE;
     END PROCESS;
 END Behavioral;

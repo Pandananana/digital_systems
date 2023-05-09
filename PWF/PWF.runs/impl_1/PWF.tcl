@@ -75,7 +75,19 @@ set_msg_config  -ruleid {2}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-333
 set_msg_config  -ruleid {20}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design SignExtender has unconnected port IR[5]}}  -suppress 
 set_msg_config  -ruleid {21}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design SignExtender has unconnected port IR[4]}}  -suppress 
 set_msg_config  -ruleid {22}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design SignExtender has unconnected port IR[3]}}  -suppress 
+<<<<<<< HEAD
 set_msg_config  -ruleid {3}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[12]}}  -suppress 
+=======
+set_msg_config  -ruleid {23}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[15]}}  -suppress 
+set_msg_config  -ruleid {24}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design InstructionDecoderController has unconnected port V}}  -suppress 
+set_msg_config  -ruleid {25}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design InstructionDecoderController has unconnected port C}}  -suppress 
+set_msg_config  -ruleid {26}  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design PWF has port Anode[7] driven by constant 1}}  -suppress 
+set_msg_config  -ruleid {27}  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design PWF has port Anode[6] driven by constant 1}}  -suppress 
+set_msg_config  -ruleid {28}  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design PWF has port Anode[5] driven by constant 1}}  -suppress 
+set_msg_config  -ruleid {29}  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design PWF has port Anode[4] driven by constant 1}}  -suppress 
+set_msg_config  -ruleid {3}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[12]}}  -suppress 
+set_msg_config  -ruleid {30}  -id {Constraints 18-5210}  -string {{WARNING: [Constraints 18-5210] No constraint will be written out.}}  -suppress 
+>>>>>>> 79af668 (Oles ændringer)
 set_msg_config  -ruleid {4}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[11]}}  -suppress 
 set_msg_config  -ruleid {5}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[10]}}  -suppress 
 set_msg_config  -ruleid {6}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[9]}}  -suppress 
@@ -83,13 +95,108 @@ set_msg_config  -ruleid {7}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-333
 set_msg_config  -ruleid {8}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[7]}}  -suppress 
 set_msg_config  -ruleid {9}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[6]}}  -suppress 
 
+<<<<<<< HEAD
+=======
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  create_project -in_memory -part xc7a100tcsg324-1
+  set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir /zhome/66/2/168935/uni/digital_systems/PWF/PWF.cache/wt [current_project]
+  set_property parent.project_path /zhome/66/2/168935/uni/digital_systems/PWF/PWF.xpr [current_project]
+  set_property ip_output_repo /zhome/66/2/168935/uni/digital_systems/PWF/PWF.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet /zhome/66/2/168935/uni/digital_systems/PWF/PWF.runs/synth_1/PWF.dcp
+  read_xdc /zhome/66/2/168935/uni/digital_systems/PWF/PWF.srcs/constrs_1/imports/Downloads/Nexys_4_DDR_Master.xdc
+  link_design -top PWF -part xc7a100tcsg324-1
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force PWF_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file PWF_drc_opted.rpt -pb PWF_drc_opted.pb -rpx PWF_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force PWF_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file PWF_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file PWF_utilization_placed.rpt -pb PWF_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file PWF_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force PWF_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file PWF_drc_routed.rpt -pb PWF_drc_routed.pb -rpx PWF_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file PWF_methodology_drc_routed.rpt -pb PWF_methodology_drc_routed.pb -rpx PWF_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file PWF_power_routed.rpt -pb PWF_power_summary_routed.pb -rpx PWF_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file PWF_route_status.rpt -pb PWF_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file PWF_timing_summary_routed.rpt -pb PWF_timing_summary_routed.pb -rpx PWF_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file PWF_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file PWF_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file PWF_bus_skew_routed.rpt -pb PWF_bus_skew_routed.pb -rpx PWF_bus_skew_routed.rpx"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force PWF_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
+>>>>>>> 79af668 (Oles ændringer)
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+<<<<<<< HEAD
   set_param xicom.use_bs_reader 1
   open_checkpoint PWF_routed.dcp
   set_property webtalk.parent_dir {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.cache/wt} [current_project]
+=======
+>>>>>>> 79af668 (Oles ændringer)
   catch { write_mem_info -force PWF.mmi }
   write_bitstream -force PWF.bit 
   catch {write_debug_probes -quiet -force PWF}

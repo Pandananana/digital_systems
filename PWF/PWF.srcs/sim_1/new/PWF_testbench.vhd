@@ -74,9 +74,20 @@ Clk50_process : PROCESS
 stimulus : PROCESS
     BEGIN
         Reset <= '0';
+        BTNC <= '0';
+        BTNU <= '0';
+        BTNL <= '0';
+        BTNR <= '0';
+        BTND <= '0';
+        SW <= x"00";
         WAIT FOR clk50_period*2;
         Reset <= '1';
-        WAIT FOR clk50_period*20;
+        WAIT FOR 900 ns;
+        SW <= x"02";
+        BTNL <= '1';
+        wait for clk50_period*2;
+        BTNL <= '0';
+        
         
 --        SW <= x"02";
 --        BTNC <= '0';

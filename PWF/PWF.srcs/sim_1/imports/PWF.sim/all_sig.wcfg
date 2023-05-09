@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1294960000fs"></ZoomStartTime>
-      <ZoomEndTime time="1803960001fs"></ZoomEndTime>
-      <Cursor1Time time="1570960000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5656435848fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="197"></NameColumnWidth>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="12" />
    <wvobject type="group" fp_name="group538">
       <obj_property name="label">Ole Test</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -50,6 +50,43 @@
       <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R6">
          <obj_property name="ElementShortName">R6[7:0]</obj_property>
          <obj_property name="ObjectShortName">R6[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group5004">
+      <obj_property name="label">Branch Test</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/MPC/ProgCount/PC">
+         <obj_property name="ElementShortName">PC[7:0]</obj_property>
+         <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/SW">
+         <obj_property name="ElementShortName">SW[7:0]</obj_property>
+         <obj_property name="ObjectShortName">SW[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PWF_testbench/BTNL">
+         <obj_property name="ElementShortName">BTNL</obj_property>
+         <obj_property name="ObjectShortName">BTNL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/Port_Register/MR0">
+         <obj_property name="ElementShortName">MR0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">MR0[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/Port_Register/MR4">
+         <obj_property name="ElementShortName">MR4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">MR4[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R0">
+         <obj_property name="ElementShortName">R0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R0[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/DataPathComp/RegFile/U2/R1">
+         <obj_property name="ElementShortName">R1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">R1[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/D_word_sig">
+         <obj_property name="ElementShortName">D_word_sig[15:0]</obj_property>
+         <obj_property name="ObjectShortName">D_word_sig[15:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group5591">
@@ -92,10 +129,13 @@
          <obj_property name="ElementShortName">LED[7:0]</obj_property>
          <obj_property name="ObjectShortName">LED[7:0]</obj_property>
       </wvobject>
+      <wvobject type="array" fp_name="/PWF_testbench/UUT/D_word_sig">
+         <obj_property name="ElementShortName">D_word_sig[15:0]</obj_property>
+         <obj_property name="ObjectShortName">D_word_sig[15:0]</obj_property>
+      </wvobject>
       <wvobject type="array" fp_name="/PWF_testbench/Cathode">
          <obj_property name="ElementShortName">Cathode[6:0]</obj_property>
          <obj_property name="ObjectShortName">Cathode[6:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/PWF_testbench/Anode">
          <obj_property name="ElementShortName">Anode[7:0]</obj_property>
@@ -426,6 +466,7 @@
       <wvobject type="group" fp_name="group5378">
          <obj_property name="label">RegFile</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="group" fp_name="group5385">
             <obj_property name="label">IO</obj_property>
             <obj_property name="DisplayName">label</obj_property>
