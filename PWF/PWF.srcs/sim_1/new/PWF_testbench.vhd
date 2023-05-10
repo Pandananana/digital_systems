@@ -83,10 +83,15 @@ stimulus : PROCESS
         WAIT FOR clk50_period*2;
         Reset <= '1';
         WAIT FOR 900 ns;
-        SW <= x"02";
-        BTNL <= '1';
+        SW <= x"1b";
+        BTNU <= '1';
         wait for clk50_period*2;
-        BTNL <= '0';
+        BTNU <= '0';
+        wait for clk50_period*2;
+        SW <= x"05";
+        BTND <= '1';
+        wait for clk50_period*2;
+        BTND <= '0';
         
         
 --        SW <= x"02";

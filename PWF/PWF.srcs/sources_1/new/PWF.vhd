@@ -154,15 +154,15 @@ ARCHITECTURE Behavioral OF PWF IS
 
     COMPONENT MicroprogramController IS
         PORT (
-            RESET : IN STD_LOGIC;
-            CLK, FCLK : IN STD_LOGIC;
-            Adress_In : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-            Adress_out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-            Instruction_In : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-            Constant_Out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-            V, C, N, Z : IN STD_LOGIC;
-            DX, AX, BX, FS : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
-            MB, MD, RW, MM, MW : OUT STD_LOGIC);
+            RESET : in STD_LOGIC;
+           CLK, FCLK : in STD_LOGIC;
+           Adress_In : in STD_LOGIC_VECTOR (7 downto 0);
+           Adress_out : out STD_LOGIC_VECTOR (7 downto 0);
+           Instruction_In : in STD_LOGIC_VECTOR (15 downto 0);
+           Constant_Out : out STD_LOGIC_VECTOR (7 downto 0);
+           V,C,N,Z : in STD_LOGIC;
+           DX,AX,BX,FS : out STD_LOGIC_VECTOR (3 downto 0);
+           MB,MD,RW,MM,MW : out STD_LOGIC);
     END COMPONENT;
 
     COMPONENT DivClk is
@@ -176,20 +176,13 @@ ARCHITECTURE Behavioral OF PWF IS
 
 BEGIN
 
+inv_reset <= not RESET;
+
     ClockDiv : PROCESS (clk)
     BEGIN
         IF rising_edge(clk) THEN
-            IF Reset = '0' then
-                inv_reset <= '1';
-            else
-                inv_reset <= '0';
-            end if;
-            counter <= counter + 1;
-            IF counter = 1 THEN
-                counter <= 0;
-                sclk <= NOT sclk;
-            END IF;
-        END IF;
+         sclk <= NOT sclk;
+         end if;
     END PROCESS;
     
     DP_Data_in_sig <= MPC_Instruction_In_sig(7 downto 0);
@@ -221,7 +214,7 @@ BEGIN
     Port_Register : PortReg8X8
     PORT MAP(
         Reset => inv_Reset,
-        clk => sclk,
+        clk => clk,
         MW => MW_sig,
         Data_in => DP_Data_out_sig,
         Adress_in => PR_Address_In_sig,
@@ -250,10 +243,6 @@ BEGIN
         inv_Reset, DCLK, D_word_sig, Cathode, Anode
     );
     
-<<<<<<< HEAD
-
-=======
->>>>>>> 79af668 (Oles ændringer)
     DataPathComp : DataPath
     PORT MAP(
         Reset           => inv_Reset,    
@@ -304,7 +293,7 @@ BEGIN
 
     DisplayClock : DivClk
     port map (
-        inv_Reset,Clk,1,DCLK
+        inv_Reset,Clk,100e3,DCLK
     );
 
 END Behavioral;

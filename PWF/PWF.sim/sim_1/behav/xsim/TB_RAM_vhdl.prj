@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../PWF.srcs/sources_1/new/Ram256X16.vhd" \
-"../../../../PWF.srcs/sim_1/new/TB_RAM.vhd" \
-
-# Do not sort compile order
-nosort

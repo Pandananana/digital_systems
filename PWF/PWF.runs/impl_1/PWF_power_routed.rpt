@@ -1,14 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon May  8 16:21:27 2023
-| Host             : Olivers-Matebook running 64-bit major release  (build 9200)
-=======
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Tue May  9 08:36:29 2023
-| Host             : n-62-27-17 running 64-bit Scientific Linux release 7.9 (Nitrogen)
->>>>>>> 79af668 (Oles ændringer)
+| Date             : Tue May  9 22:52:23 2023
+| Host             : n-62-30-2 running 64-bit Scientific Linux release 7.9 (Nitrogen)
 | Command          : report_power -file PWF_power_routed.rpt -pb PWF_power_summary_routed.pb -rpx PWF_power_routed.rpx
 | Design           : PWF
 | Device           : xc7a100tcsg324-1
@@ -36,17 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-<<<<<<< HEAD
-| Total On-Chip Power (W)  | 0.107        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.010        |
-=======
 | Total On-Chip Power (W)  | 0.108        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.011        |
->>>>>>> 79af668 (Oles ændringer)
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -66,33 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-<<<<<<< HEAD
-| Slice Logic    |    <0.001 |      583 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      225 |     63400 |            0.35 |
-|   Register     |    <0.001 |      285 |    126800 |            0.22 |
-|   CARRY4       |    <0.001 |       11 |     15850 |            0.07 |
+| Slice Logic    |    <0.001 |      700 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      286 |     63400 |            0.45 |
+|   Register     |    <0.001 |      307 |    126800 |            0.24 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |        8 |     63400 |            0.01 |
-|   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |      536 |       --- |             --- |
-| Block RAM      |    <0.001 |      0.5 |       135 |            0.37 |
-| I/O            |     0.008 |       38 |       210 |           18.10 |
-| Static Power   |     0.097 |          |           |                 |
-| Total          |     0.107 |          |           |                 |
-=======
-| Slice Logic    |    <0.001 |      749 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      317 |     63400 |            0.50 |
-|   Register     |    <0.001 |      327 |    126800 |            0.26 |
 |   CARRY4       |    <0.001 |       11 |     15850 |            0.07 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |       24 |     63400 |            0.04 |
+|   F7/F8 Muxes  |    <0.001 |       28 |     63400 |            0.04 |
 |   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |    <0.001 |      659 |       --- |             --- |
+| Signals        |    <0.001 |      602 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |       135 |            0.37 |
 | I/O            |     0.010 |       38 |       210 |           18.10 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.108 |          |           |                 |
->>>>>>> 79af668 (Oles ændringer)
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -103,12 +75,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
-<<<<<<< HEAD
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
-=======
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
->>>>>>> 79af668 (Oles ændringer)
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -175,11 +143,6 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-<<<<<<< HEAD
-| PWF                         |     0.010 |
-|   DataPathComp              |    <0.001 |
-|     RegFile                 |    <0.001 |
-=======
 | PWF                         |     0.011 |
 |   DataPathComp              |    <0.001 |
 |     RegFile                 |    <0.001 |
@@ -188,7 +151,6 @@ Table of Contents
 |         U2[1].U2_gen        |    <0.001 |
 |         U2[2].U2_gen        |    <0.001 |
 |         U2[3].U2_gen        |    <0.001 |
->>>>>>> 79af668 (Oles ændringer)
 |       U2                    |    <0.001 |
 |         R0_gen[0].UR0_gen   |    <0.001 |
 |         R0_gen[1].UR0_gen   |    <0.001 |

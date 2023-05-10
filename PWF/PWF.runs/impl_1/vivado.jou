@@ -1,23 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2018.2 (64-bit)
-<<<<<<< HEAD
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon May  8 16:26:58 2023
-# Process ID: 17452
-# Current directory: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.runs/impl_1
-# Command line: vivado.exe -log PWF.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PWF.tcl -notrace
-# Log file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.runs/impl_1/PWF.vdi
-# Journal file: C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.runs/impl_1\vivado.jou
-=======
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue May  9 08:33:17 2023
-# Process ID: 20666
+# Start of session at: Tue May  9 22:49:31 2023
+# Process ID: 6420
 # Current directory: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.runs/impl_1
 # Command line: vivado -log PWF.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PWF.tcl -notrace
 # Log file: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.runs/impl_1/PWF.vdi
 # Journal file: /zhome/66/2/168935/uni/digital_systems/PWF/PWF.runs/impl_1/vivado.jou
->>>>>>> 79af668 (Oles ændringer)
 #-----------------------------------------------------------
 source PWF.tcl -notrace

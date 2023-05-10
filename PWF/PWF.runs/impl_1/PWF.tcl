@@ -75,9 +75,6 @@ set_msg_config  -ruleid {2}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-333
 set_msg_config  -ruleid {20}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design SignExtender has unconnected port IR[5]}}  -suppress 
 set_msg_config  -ruleid {21}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design SignExtender has unconnected port IR[4]}}  -suppress 
 set_msg_config  -ruleid {22}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design SignExtender has unconnected port IR[3]}}  -suppress 
-<<<<<<< HEAD
-set_msg_config  -ruleid {3}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[12]}}  -suppress 
-=======
 set_msg_config  -ruleid {23}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[15]}}  -suppress 
 set_msg_config  -ruleid {24}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design InstructionDecoderController has unconnected port V}}  -suppress 
 set_msg_config  -ruleid {25}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design InstructionDecoderController has unconnected port C}}  -suppress 
@@ -87,7 +84,6 @@ set_msg_config  -ruleid {28}  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-39
 set_msg_config  -ruleid {29}  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design PWF has port Anode[4] driven by constant 1}}  -suppress 
 set_msg_config  -ruleid {3}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[12]}}  -suppress 
 set_msg_config  -ruleid {30}  -id {Constraints 18-5210}  -string {{WARNING: [Constraints 18-5210] No constraint will be written out.}}  -suppress 
->>>>>>> 79af668 (Oles ændringer)
 set_msg_config  -ruleid {4}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[11]}}  -suppress 
 set_msg_config  -ruleid {5}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[10]}}  -suppress 
 set_msg_config  -ruleid {6}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[9]}}  -suppress 
@@ -95,8 +91,6 @@ set_msg_config  -ruleid {7}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-333
 set_msg_config  -ruleid {8}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[7]}}  -suppress 
 set_msg_config  -ruleid {9}  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design ZeroFiller has unconnected port IR[6]}}  -suppress 
 
-<<<<<<< HEAD
-=======
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
@@ -186,17 +180,10 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
->>>>>>> 79af668 (Oles ændringer)
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-<<<<<<< HEAD
-  set_param xicom.use_bs_reader 1
-  open_checkpoint PWF_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/Oliver/Desktop/Digitale systemer/digital_systems/PWF/PWF.cache/wt} [current_project]
-=======
->>>>>>> 79af668 (Oles ændringer)
   catch { write_mem_info -force PWF.mmi }
   write_bitstream -force PWF.bit 
   catch {write_debug_probes -quiet -force PWF}
